@@ -1,0 +1,180 @@
+<div class="row ">
+    <!--     ---------------------------------------------------INICIA MODULO DE IMAGENES ---------------------------------- -->
+    <!--[hidden]="!layoutComponent.selectempresa.idEmpresa"-->
+    <div class="col-md-12" id="storenav" >
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header" style="background-color: #ef3b3a; color: white; font-size: medium;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="my-0 font-weight-normal">Imágenes</h4>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div id="tablestore3">
+                            <button data-toggle="tooltip" title="Filtrar Imágenes" class="btn btn-plus btn-fa" (click)="searchshow()"><a class="fa fa-search"></a> </button>
+                            <button data-toggle="tooltip" title="Borrar Imágenes" class="btn btn-plus  btn-fa" (click)="borrarImagenes(modaldeleteImagenes)"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+                            <button data-toggle="tooltip" title="Agregar Imágenes" class="btn btn-plus"><i class="fa fa-plus-circle" aria-hidden="true" (click)="agregar(modalCreateImagen)"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+
+            <div class="row d-flex justify-content-center" id="tablestore2" style="margin: 5px;" [hidden]="show">
+                <form class="form-inline">
+                    <div class="col-auto">
+                        <label class="sr-only" for="lblHeaderImagen">Imágen</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-puzzle-piece"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="lblHeaderImagen" name="lblHeaderImagen" placeholder="Imágen" autocomplete="off" [(ngModel)]="filterText.imagen">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" data-toggle="tooltip" title="Limpiar" class="btn btn-plus" (click)="clean()"><i class="fa fa-eraser" aria-hidden="true"></i></button>&nbsp;
+                        <button type="submit" data-toggle="tooltip" title="Buscar" class="btn btn-delete" (click)="filter()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card-body" id="tablestore">
+                <table class="table table-striped table-hover ">
+                    <caption>Listado de Imágenes</caption>
+                    <thead>
+                    <tr class="row" >
+                        <th scope="col" class="col-md-0">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="checkcpall" [(ngModel)]="checkstatus" (change)="checkall()">
+                                <label class="custom-control-label" for="checkcpall"></label>
+                            </div>
+                        </th>
+                        <th scope="col" class="col-md-3"><strong>Imagen</strong></th>
+                        <th scope="col"  class="col-md-2"><strong>Descripción</strong></th>
+                        <th scope="col"  class="col-md-2"><strong>Acciones</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row" *ngFor="let item of collection.data | paginate: config; index as i">
+                        <td class="col-md-0">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" [id]="item.numImagen" [(ngModel)]="item.check">
+                                <label class="custom-control-label" [for]="item.numImagen"></label>
+                            </div>
+                        </td>
+                        <td class="col-md-3"><img [src]="item.imagen" width="100" height="100" class="rounded-circle increase" (click)="showIncrease(modalshowImage, item)"></td>
+                       <td class="col-md-2">{{item.descripcion}}</td>
+
+                        <td class="col-md-1">
+                        	<!--*ngIf="userAuth.varDto.editTda"-->
+                            <a class="icon-s" data-toggle="tooltip" title="Editar Imágen" (click)="openUpdate(modalCreateImagen, item)"> <em class="fa fa-edit fa-2x"></em></a>
+                            <a class="icon-s" data-toggle="tooltip" title="Borrar Imágen" (click)="openDeleteOne(modaldeleteImagenes, i)"><i class="fas fa-trash fa-2x"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr><br>
+                <div  class="row">
+                    <div class=" col-md-2 text-left">
+                        <div class="form-inline">
+                            <label  for = "comboFiltro" >Ver por Página&nbsp;</label>
+                            <select name="optionSelect" id="comboFiltro" class="form-control pagination-show" [(ngModel)]="config.itemsPerPage">
+                                <option [ngValue]="item" *ngFor="let item of optionSelect">{{item}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8 text-center">
+                        <pagination-controls
+                                [responsive]="true"
+                                [nextLabel]="labels.nextLabel"
+                                [previousLabel]="labels.previousLabel"
+                                [maxSize]="maxSize"
+                                [directionLinks]="true"
+                                [autoHide]="false"
+                                (pageChange)="onPageChange($event)">
+                        </pagination-controls>
+                    </div>
+                    <div class="col-md-2 text-right">
+                        Total:&nbsp;{{collection.count}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #modalshowImage let-modal>
+    <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <img [src]="imagen.imagen" class="imagenFluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #modaldeleteImagenes let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Eliminar Imágen(es)</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>¿Estás seguro de eliminar la(s) imágen(es)?</p>
+        <p class="text-warning"><small  style="color: #ff3737;">La acción no podra ser reversible.</small></p>
+    </div>
+    <div class="modal-footer ">
+        <div class="text-center col-md-12">
+            <button type="button" class="btn btn-delete btn-sm"  (click)="cancelModal()">Cancelar</button>&nbsp;
+            <button type="button" class="btn btn-plus btn-sm"  (click)="delete()">Confirmar</button>
+        </div>
+    </div>
+</ng-template>
+
+
+
+<ng-template #modalCreateImagen let-modal>
+    <div class="modal-header text-center">
+        <h4 class="modal-title " [hidden]="!form">Agregar Imágen</h4>
+        <h4 class="modal-title" [hidden]="form">Actualizar Imágen</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class=" col-md-12 col-lg-12">
+                    <p style="color: red;">*Campo Obligatorio</p>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="descImg"><a style="color: red;">*</a>Descripción Imágen</label>
+                     <textarea class="form-control" id="descImg" rows="3" placeholder="Descripción Imágen" [(ngModel)]="imagen.descripcion" ></textarea>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="imagenI"><a style="color: red;">*</a>Selecciona Imagen</label>
+                    <input type="file" class="form-control-file" [(ngModel)]="imagen.file" id="imagenI" (change)="convertir($event)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-plus btn-sm" (click)="cancelModal()">Cancelar</button>&nbsp;
+            <button type="button" class="btn btn-delete btn-sm btn-style"  (click)="save()" [disabled]="validateForm()" [hidden]="!form" >Guardar</button>
+            <button type="button" class="btn btn-delete btn-sm btn-style" [hidden]="form" (click)="updateOne()" [disabled]="validateForm()">Actualizar</button>
+        </div>
+    </div>
+</ng-template>

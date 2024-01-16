@@ -1,0 +1,26 @@
+          <div class="form-group">
+            <label for="nameempresa"><a style="color: red;">*</a>Etiqueta</label>
+            <input class="form-control" id="nameempresa" type="text" placeholder="Etiqueta" disabled [(ngModel)]="texto">
+          </div>
+          <div class="form-group">
+          <label for="numstore"><a style="color: red;">*</a>Texto</label>
+          <input type="text" id="numstore"  class="form-control" placeholder="PLACEHOLDER" [(ngModel)]="numero" maxlength="5" [disabled]="false" numbersOnly >
+        </div>
+        <div class="form-group">
+                <div class="input-group mb-3">
+                  <label for="lblSelectCP"></label>
+                  <select name="lblSelectCP" id="lblSelectCP" class="form-control" [(ngModel)]="selectCP">
+                    <option [ngValue]="cpitem" *ngFor="let cpitem of cplist" >{{cpitem.cp}}</option>
+                  </select> 
+                </div>
+              </div>
+
+            <div class="form-group">
+    <label for="fileUploader">Selecciona Archivo</label>
+    <input type="file" class="form-control-file" id="fileUploader" (change)="convertir($event)">
+  </div>
+
+              <div class="form-group">
+    <label for="fileUploaderM">Selecciona Archivos</label>
+    <input type="file" class="form-control-file" id="fileUploaderM" multiple>
+  </div>

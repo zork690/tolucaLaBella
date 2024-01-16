@@ -1,0 +1,10 @@
+.icon-s{cursor: pointer;}
+[hidden] { display: none !important;}
+.increase:hover {
+transform: scale(1.9);
+cursor: pointer;
+}
+.imagenFluid{
+	width: 100%;
+	height: 100%;
+}
