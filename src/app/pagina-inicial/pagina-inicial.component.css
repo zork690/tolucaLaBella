@@ -1,25 +1,48 @@
 .mainContainer{
-  border: 1px solid green;
+  border: 1px solid none;
   display: flex;
   height: 80vh;
 }
 
 .categoriesContainer{
-  border: 1px solid blue;
+  border: 1px solid none;
   width: 20%;
-  background-color: aquamarine;
+  background-color: #cef5d9;
+  padding: 20px 10px;
+}
+
+.categoriesContainer a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.categoriesContainer li{
+  padding: 5px 0;
+  font-size: 1.2vw;
+  list-style-type: none;
+  width: 100%;
+  border: 1px solid none;
+}
+
+.categoriesContainer li:hover{
+  background-color: #FFF7CC;
+}
+
+#navegationBar{
+  display: none;
 }
 
 #categoriesButton{
   display: none;
 }
 
-.ulCategories{
+.divCategories{
   display: block;
 }
 
 .contentContainer{
-  border: 1px solid black;
+  border: 1px solid none;
   width: 80%;
   background-color: antiquewhite ;
   overflow: auto;
@@ -28,6 +51,12 @@
   margin: 0;
   padding: 0;
   align-items: center;
+}
+
+.nombreCategoria{
+  border: 1px solid none;
+  margin: 10px 0;
+  padding: 15px;
 }
 
 .negocioRow{
@@ -58,6 +87,10 @@
     flex-direction: column;
   }
 
+  #navegationBar{
+    display: block;
+  }
+
   .categoriesContainer{
     width: 100%;
   }
@@ -66,7 +99,7 @@
     display: block;
   }
 
-  .ulCategories{
+  .divCategories{
     display: none;
   }
 

@@ -10,32 +10,42 @@ declare let $ : any;
 export class PaginaInicialComponent implements OnInit, AfterViewInit {
 
   @ViewChild('categoriesButton') categoriesButton: ElementRef;
-  @ViewChild('ulCategories') ulCategories: ElementRef;
+  @ViewChild('categoriesContainer') categoriesContainer: ElementRef;
 
   categoriesButtonClicked: Subscription = new Subscription();
   isShowing:boolean = false;
+  categoria: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.categoria = "Peluquerias";
   }
 
   ngAfterViewInit():void{
       this.getWhenCategoriesButtonIsClicked();
+      
+  }
+
+  public changeCategoryName(category: string): void{
+    console.log(category,"was selected ...");
+    this.categoria = category;
   }
 
   private getWhenCategoriesButtonIsClicked(): void{
     this.categoriesButtonClicked = fromEvent(this.categoriesButton.nativeElement, "click")
     .subscribe(()=>{
       if(!this.isShowing){ 
-        this.ulCategories.nativeElement.classList.remove("ulCategories");
+        this.categoriesContainer.nativeElement.classList.remove("divCategories");
         this.isShowing = true;
       }else{
-        this.ulCategories.nativeElement.classList.add("ulCategories");
+        this.categoriesContainer.nativeElement.classList.add("divCategories");
         this.isShowing = false;
       }
     });
   }
+
+
 
   ngOnDestroy(){
     //For performance reasons

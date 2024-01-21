@@ -1,31 +1,30 @@
 <div class="mainContainer">
 
-  <div class="categoriesContainer">
-    <button #categoriesButton id="categoriesButton">Categories</button>
-    <ul #ulCategories class="ulCategories">
-      <li>Categoria 1</li>
-      <li>Categoria 2</li>
-      <li>Categoria 3</li>
-      <li>Categoria 4</li>
-      <li>Categoria 5</li>
-      <li>Categoria 6</li>
-      <li>Categoria 7</li>
-      <li>Categoria 8</li>
-      <li>Categoria 9</li>
-      <li>Categoria 10</li>
+  <div #categoriesContainer class="categoriesContainer divCategories">
+    <ul>
+      <a (click)="changeCategoryName('Peluquerias')"><li>Peluquerias</li></a>
+      <a (click)="changeCategoryName('Ropa')"><li>Ropa</li></a>
+      <a (click)="changeCategoryName('Computadoras')"><li>Computadoras</li></a>
+      <a (click)="changeCategoryName('Ferreterias')"><li>Ferreterias</li></a>
+      <a (click)="changeCategoryName('Materiales de construcción')">
+        <li>Materiales de construcción</li></a>
+      <a (click)="changeCategoryName('Abarrotes')"><li>Abarrotes</li></a>
+      <a (click)="changeCategoryName('Farmacias')"><li>Farmacias</li></a>
+      <a (click)="changeCategoryName('Hospitales')"><li>Hospitales</li></a>
+      <a (click)="changeCategoryName('Veterinarias')"><li>Veterinarias</li></a>
+      <a (click)="changeCategoryName('Electrónica')"><li>Electrónica</li></a>
     </ul>
   </div>
-  <!--<nav class="navbar navbar-dark bg-dark" id="navegationBar">
-    <button class="navbar-toggler" type="button" 
-    data-toggle="collapse" 
-    data-target="#navbarToggleExternalContent" 
-    aria-controls="navbarToggleExternalContent" 
-    aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+
+  <nav class="navbar navbar-dark bg-dark" id="navegationBar">
+        <button #categoriesButton id="categoriesButton">
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
-  </nav>-->
+  </nav>
 
   <div class="contentContainer">
+
+    <h4 class="nombreCategoria">{{categoria}}</h4>
 
     <div class="negocioRow">
     <div class="negocio">
