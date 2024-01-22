@@ -1,9 +1,16 @@
 .titleNav, .footerNav{
     background-color: bisque;
     text-align: center;
+}
+
+.titleNav{
     height: 10vh;
 }
 
+.footerNav{
+    height: 5vh;
+}
+
 .mainContent{
-    height: 80vh;
+    height: 85vh;
 }
