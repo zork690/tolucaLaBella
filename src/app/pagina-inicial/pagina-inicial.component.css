@@ -1,31 +1,30 @@
 .mainContainer{
   border: 1px solid none;
   display: flex;
-  height: 80vh;
+  height: 85vh;
 }
 
 .categoriesContainer{
   border: 1px solid none;
-  width: 20%;
+  width: 10%;
+  padding: 0;
+  margin: 0;
+}
+
+.navColor{
   background-color: #cef5d9;
-  padding: 20px 10px;
 }
 
 .categoriesContainer a{
   text-decoration: none;
   color: black;
   cursor: pointer;
-}
-
-.categoriesContainer li{
-  padding: 5px 0;
-  font-size: 1.2vw;
-  list-style-type: none;
-  width: 100%;
   border: 1px solid none;
+  display: block;
+  margin: 15px;
 }
 
-.categoriesContainer li:hover{
+.categoriesContainer a:hover{
   background-color: #FFF7CC;
 }
 
@@ -43,7 +42,7 @@
 
 .contentContainer{
   border: 1px solid none;
-  width: 80%;
+  width: 90%;
   background-color: antiquewhite ;
   overflow: auto;
   display: flex;

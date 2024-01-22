@@ -28,8 +28,9 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit {
   }
 
   public changeCategoryName(category: string): void{
-    console.log(category,"was selected ...");
     this.categoria = category;
+    this.isShowing = false;
+    this.categoriesContainer.nativeElement.classList.add("divCategories");
   }
 
   private getWhenCategoriesButtonIsClicked(): void{
