@@ -12,7 +12,7 @@ import { AuthSecureService } from './secure/auth-secure.service';
 
 const routes: Routes = [
   {
-    path: 'principal',
+    path: '',
     component: LayoutsComponent,
     //canActivate: [AuthGuard],
     children: [
