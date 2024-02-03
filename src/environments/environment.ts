@@ -5,11 +5,12 @@
 export const environment = {
   production: false,
   JSON: '/config/igni.json',
-  api: '',
+  api: 'back-toluca-bella',
   registro: "registrar",
   imagen: "imagenes",
   usuario: 'usuarios',
-  permiso: 'permisosPerfiles'
+  permiso: 'permisosPerfiles',
+  cliente: ""
 };
 
 /*
