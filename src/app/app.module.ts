@@ -19,6 +19,7 @@ import { AppConfig } from './servicios/config/app.config';
 import { Interceptor } from './servicios/config/interceptor.config';
 import { LoginComponent } from './login/login.component';
 import { AuthSecureService } from './secure/auth-secure.service';
+import { APP_INITIALIZER } from '@angular/core';
 import { NgxSpinnerModule } from "ngx-spinner";
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ImagenesComponent } from './imagenes/imagenes.component';
@@ -51,7 +52,13 @@ export function initConfig(config: AppConfig) {
     NgxPaginationModule,
     ToastrModule.forRoot()
   ],
-  providers: [AuthSecureService, AppConfig, 
+  providers: [AuthSecureService, AppConfig,
+  { 
+    provide: APP_INITIALIZER,
+    useFactory: initConfig,
+    deps: [AppConfig],
+    multi: true 
+  },
   { provide: HTTP_INTERCEPTORS, 
     useClass: Interceptor, 
     multi: true }],
