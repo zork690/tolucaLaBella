@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
+import { ClienteService } from '../../app/servicios/clientes/cliente.service';
 declare let $ : any;
 
 @Component({
@@ -7,7 +8,7 @@ declare let $ : any;
   templateUrl: './pagina-inicial.component.html',
   styleUrls: ['./pagina-inicial.component.css']
 })
-export class PaginaInicialComponent implements OnInit, AfterViewInit {
+export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild('categoriesButton') categoriesButton: ElementRef;
   @ViewChild('categoriesContainer') categoriesContainer: ElementRef;
@@ -15,15 +16,20 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit {
   categoriesButtonClicked: Subscription = new Subscription();
   isShowing:boolean = false;
   categoria: string;
+  conteo: number = 0;
+  mensaje:string = "";
+  isHappy: boolean = true;
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
     this.categoria = "Peluquerias";
   }
 
   ngAfterViewInit():void{
-      this.getWhenCategoriesButtonIsClicked();
+      //this.getWhenCategoriesButtonIsClicked();
+      this.getConteoClientes();
+      this.whatsAppChat();
       
   }
 
@@ -46,6 +52,38 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit {
     });
   }
 
+  private getConteoClientes(){
+    this.clienteService.getConteoClientes().subscribe((result: any) => {
+      console.log("Result: ",result);
+
+      this.conteo = 100 - result.conteo;
+      if(this.conteo >= 50){
+        this.mensaje = `¡Vamos menos de la mitad, lanzaremos en unos días más!`;
+        this.isHappy = false;
+      }else{
+        this.mensaje = "¡Ya nos faltan menos de la mitad, ya casi lanzamos!"
+        this.isHappy = true;
+      }
+    },
+    (responseError) => {
+      console.log("Ocurrio error en conteo clientes: ", responseError);
+    });
+
+  }
+
+  private whatsAppChat(){
+    $("#WAButton")
+    .floatingWhatsApp({
+    phone: '5217224304100', //WhatsApp Business phone number
+             headerTitle: 'Platica con nosotros via WhatsApp!', //Popup Title
+             popupMessage: 'Hola, mándanos un mensaje', //Popup Message
+             showPopup: true, //Enables popup display
+             buttonImage: '<img src="/assets/imagenes/whatsapp.jpeg" />', //Button Image
+             //headerColor: 'crimson', //Custom header color
+             //backgroundColor: 'crimson', //Custom background button color
+             position: "right" //Position: left | right
+    });
+  }
 
 
   ngOnDestroy(){
