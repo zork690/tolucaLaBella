@@ -1,4 +1,4 @@
-<div class="mainContainer">
+<!--<div class="mainContainer">
 
   <div #categoriesContainer class="categoriesContainer navColor divCategories">
       <a (click)="changeCategoryName('Peluquerias')">Peluquerias</a>
@@ -124,4 +124,23 @@
 
   </div>
 
-</div>
+</div>-->
+
+<div id="contenido" style="text-align: center;">
+  <h3>Estamos por lanzar una plataforma de <span style="color: burlywood;">PUBLICIDAD</span>
+     para Toluca</h3>
+  <h1>Toluca la Bella</h1>
+  <h3>Se uno de los primeros 100 negocios que aparezcan publicados</h3>
+  <h2>¡Ponte en contacto con nosotros!</h2>
+  <h2>Ya solo nos faltan: <span style="color: red; font-weight: bolder;">{{conteo}}</span></h2>
+  <h2 *ngIf="isHappy; then happyFace; else sadFace"></h2>
+  <ng-template #sadFace>
+    <i class="fas fa-sad-cry fa-5x"></i>
+  </ng-template>
+  <ng-template #happyFace>
+    <i class="fas fa-smile fa-5x"></i>
+  </ng-template>
+  <h5>({{mensaje}})</h5>
+</div> 
+
+<div id="WAButton"></div>
