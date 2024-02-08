@@ -80,6 +80,17 @@
   height: 100px;
 }
 
+#tolucaLaBellaImg{
+    max-width:100%;
+    height: 50vh;
+    border: 1px solid none;
+}
+
+#contenido{
+  height:100%;
+  overflow: auto;
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .mainContainer{
