@@ -7,6 +7,14 @@
     height: 10vh;
 }
 
+.titleNav h1{
+    display: inline-block;
+}
+
+#tolucaLaBellaImg{
+    height: 10vh;
+}
+
 .footerNav{
     height: 5vh;
 }
