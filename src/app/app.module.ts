@@ -23,6 +23,7 @@ import { APP_INITIALIZER } from '@angular/core';
 import { NgxSpinnerModule } from "ngx-spinner";
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ImagenesComponent } from './imagenes/imagenes.component';
+import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -38,7 +39,8 @@ export function initConfig(config: AppConfig) {
     LayoutsComponent,
     RegistroComponent,
     LoginComponent,
-    ImagenesComponent
+    ImagenesComponent,
+    FormatoPagoComponent
   ],
   imports: [
     BrowserModule,
