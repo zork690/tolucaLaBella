@@ -1,0 +1,70 @@
+<button id="generatePDFButton">Generate PDF invoice payment</button>
+<div id="mainContainer">
+    <div id="headerDiv">
+    <h2>Formato Pago</h2>
+    <div id="divLogos">
+        <img class="imageLogo" src="{{srcBase64ZorkTolucoLogo}}"  />
+        <img class="imageLogo" src="{{srcBase64TolucaLaBellaLogo}}" />
+    </div>
+    </div>
+    <div id="divInfoRemitente">
+        <p>Zorktech</p>
+        <p>5 de Mayo 53</p>
+        <p>50010, San Lorenzo Tepaltitlán, Toluca, Edo. Mex.</p>
+    </div>
+    <div id="divInfoDestinatario">
+        <div id="divInfoDestinatario_A">
+            <h5>A</h5>
+            <p>Nombre del cliente</p>
+            <p>Folio del cliente</p>
+            <p>Calle y numero del cliente</p>
+            <p>codigo postal, colonia, municipio, estado cliente</p>
+        </div>
+        <div id="datosRecibo">
+            <p>No. Recibo </p>
+            <p>Fecha emision recibo</p>
+            <p>Fecha vencimiento recibo</p>
+        </div>
+    </div>
+
+    <table id="conceptosTable">
+        <tr>
+          <th>Cantidad</th>
+          <th>Descripción</th>
+          <th>Precio Unitario</th>
+          <th>Importe</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Por mensualidad de publicidad en tolucalabella.com.mx</td>
+          <td>200</td>
+          <td>200</td>
+        </tr>
+      </table>
+
+      <div id="montoTotalContainer">
+        <div id="montoTotalContainerSub">
+        <p><span class="montoText">SUBTOTAL</span><span>$168.00</span></p>
+        <p><span class="montoText">IVA 16%</span><span>$32.00</span></p>
+        <p><span class="montoText">TOTAL</span><span>$200.00</span></p>
+        </div>
+      </div>
+
+      <div id="footerDiv">
+        <div id="condicionesPagoDiv">
+            <h6>Condiciones y forma de pago</h6>
+            <p>El pago deberá realizarse en una sola exhibición</p>
+            <div id="datosPago">
+            <p>César Alberto Soto Reyes</p>
+            <p>Banco BBVA</p>
+            <p><span>Cuenta:</span><span>xxxxxxxxxxxx</span></p>
+            <p><span>CLABE:</span><span>xxxxxxxxxxxxxxx</span></p>
+            </div>
+        </div>
+        <div id="logoFooter">
+            <img class="imageLogo" src="{{srcBase64ZorkTolucoLogo}}"
+             />
+        </div>
+      </div>
+
+</div>

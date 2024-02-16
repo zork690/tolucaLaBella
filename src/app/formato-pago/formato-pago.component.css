@@ -1,0 +1,94 @@
+#mainContainer{
+    border: 2px solid black;
+}
+
+#headerDiv{
+    border: 1px solid none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#divInfoRemitente p{
+    padding: 0;
+    margin: 0;
+}
+
+#divInfoDestinatario{
+    border: 1px solid none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#divInfoDestinatario_A p{
+    padding: 0;
+    margin: 0;
+}
+
+#datosRecibo p{
+    margin: 0;
+    padding: 0;
+}
+
+#conceptosTable{
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#conceptosTable tr{
+    border: 1px solid black;
+}
+
+#conceptosTable th{
+    background-color: grey;
+    border: 1px solid black;
+}
+
+#conceptosTable td{
+    border: 1px solid black;
+}
+
+#montoTotalContainer{
+    border: 1px solid none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#montoTotalContainer p{
+    margin: 0;
+    padding: 0;
+}
+
+#montoTotalContainerSub{
+    text-align: left;
+}
+
+.montoText{
+    font-weight: bolder;
+}
+
+#footerDiv{
+    border: 1px solid none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#datosPago{
+    border: 1px solid black;
+}
+
+#datosPago p{
+    margin: 0;
+    padding: 0;
+}
+
+#logoFooter{
+    display: flex;
+    align-self: flex-end;
+}
+
+.imageLogo{
+    max-width: 100px;
+}
