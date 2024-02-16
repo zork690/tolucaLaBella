@@ -25,7 +25,8 @@ export class FormatoPagoComponent implements OnInit, AfterViewInit {
   private buildPDF(){
     console.log("Generating PDF ...");
     let invoicePayment = document.getElementById("mainContainer");
-    html2canvas(invoicePayment,{useCORS: true}).then((canvas)=>{
+    invoicePayment.style.width = "215.0mm";
+    html2canvas(invoicePayment,{windowWidth: 1900}).then((canvas)=>{
       //convert the canvas  into a string url
       const image = canvas.toDataURL("image/png");
       //console.log(image);
@@ -40,6 +41,7 @@ export class FormatoPagoComponent implements OnInit, AfterViewInit {
       const pdf = new jsPDF("p", "mm", "letter");
       pdf.addImage(image, 'PNG', 0, 0, widthPage, heightCalculate);
       pdf.save("reciboPago.pdf");
+      invoicePayment.style.width = "100%";
     });
   }
 
