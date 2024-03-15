@@ -24,6 +24,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ImagenesComponent } from './imagenes/imagenes.component';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
+import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -40,7 +41,8 @@ export function initConfig(config: AppConfig) {
     RegistroComponent,
     LoginComponent,
     ImagenesComponent,
-    FormatoPagoComponent
+    FormatoPagoComponent,
+    FormularioNegociosComponent
   ],
   imports: [
     BrowserModule,
