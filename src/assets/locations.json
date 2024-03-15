@@ -1,0 +1,3926 @@
+[
+	{
+		"id" : 1,
+		"colonia" : "AGRICOLA BELLAVISTA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 2,
+		"colonia" : "AGRICOLA LAZARO CARDENAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52148
+	},
+	{
+		"id" : 3,
+		"colonia" : "AGRICOLA LAZARO CARDENAS AMPL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52148
+	},
+	{
+		"id" : 4,
+		"colonia" : "AHIJADERO EL BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 5,
+		"colonia" : "AHUEHUETES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50240
+	},
+	{
+		"id" : 6,
+		"colonia" : "ALAMEDAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 7,
+		"colonia" : "ALAMILLO CONJ",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 8,
+		"colonia" : "ALAMOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 9,
+		"colonia" : "ALAMOS 1 FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 10,
+		"colonia" : "ALAMOS 2 FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 11,
+		"colonia" : "ALBORADA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 12,
+		"colonia" : "ALCATRACES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 13,
+		"colonia" : "ALCATRAZ RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 14,
+		"colonia" : "ALCARAZ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 15,
+		"colonia" : "ALMENDROS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 16,
+		"colonia" : "ALTAMIRA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 17,
+		"colonia" : "ALTAMIRANO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50130
+	},
+	{
+		"id" : 18,
+		"colonia" : "AMARENA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 19,
+		"colonia" : "AMERICAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50130
+	},
+	{
+		"id" : 20,
+		"colonia" : "AMERICAS 1 Y 2 SECC RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 21,
+		"colonia" : "AMPHITRITE RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 22,
+		"colonia" : "ANGEL RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52160
+	},
+	{
+		"id" : 23,
+		"colonia" : "ANGELES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50020
+	},
+	{
+		"id" : 24,
+		"colonia" : "ANTIGUA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 25,
+		"colonia" : "AQUITANIA CONJ HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 26,
+		"colonia" : "ARBOL DE LA VIDA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 27,
+		"colonia" : "ARBOLEDAS CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52154
+	},
+	{
+		"id" : 28,
+		"colonia" : "ARBOLEDAS 1",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 29,
+		"colonia" : "ARBOLEDAS 2 RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50226
+	},
+	{
+		"id" : 30,
+		"colonia" : "ARBOLEDAS 3",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50226
+	},
+	{
+		"id" : 31,
+		"colonia" : "ARBOLEDAS 4",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 32,
+		"colonia" : "ARBOLEDAS 5",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 33,
+		"colonia" : "ARENAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 34,
+		"colonia" : "ARROYO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 35,
+		"colonia" : "ARROYO VISTA HERMOSA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50236
+	},
+	{
+		"id" : 36,
+		"colonia" : "ASUNCION",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52143
+	},
+	{
+		"id" : 37,
+		"colonia" : "ASUNCION FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 38,
+		"colonia" : "AZALEAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 39,
+		"colonia" : "AZALEAS FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 40,
+		"colonia" : "AZTECA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 41,
+		"colonia" : "AZTECA AMPL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 42,
+		"colonia" : "BALCON",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 43,
+		"colonia" : "BALCONES DE SAN FELIPE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50254
+	},
+	{
+		"id" : 44,
+		"colonia" : "BALDAQUIN RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 45,
+		"colonia" : "BELLAVISTA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 46,
+		"colonia" : "BELLAVISTA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 47,
+		"colonia" : "BONANZA FRAC",
+		"municipio" : "CALIMAYA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 48,
+		"colonia" : "BORDO DE LAS CANASTAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50225
+	},
+	{
+		"id" : 49,
+		"colonia" : "BOSQUE DE SAUCES RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 50,
+		"colonia" : "BOSQUE SAN JUAN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 51,
+		"colonia" : "BOSQUE DE CIRUELOS RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 52,
+		"colonia" : "BOSQUES DE COLON",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 53,
+		"colonia" : "BOSQUES DE METEPEC RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52176
+	},
+	{
+		"id" : 54,
+		"colonia" : "BOSQUES DEL NEVADO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50270
+	},
+	{
+		"id" : 55,
+		"colonia" : "BRECHA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 56,
+		"colonia" : "BRISAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50017
+	},
+	{
+		"id" : 57,
+		"colonia" : "BUENAVISTA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50060
+	},
+	{
+		"id" : 58,
+		"colonia" : "BUENAVISTA",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52105
+	},
+	{
+		"id" : 59,
+		"colonia" : "BUGAMBILIAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 60,
+		"colonia" : "DANZA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 61,
+		"colonia" : "DEPORTE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 62,
+		"colonia" : "DEPORTIVA",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51356
+	},
+	{
+		"id" : 63,
+		"colonia" : "DEPORTIVA 2 SEC",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51356
+	},
+	{
+		"id" : 64,
+		"colonia" : "DEPORTIVA 3 SEC",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51356
+	},
+	{
+		"id" : 65,
+		"colonia" : "DIAMANTE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 66,
+		"colonia" : "DIAMANTE CONDOMINIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52179
+	},
+	{
+		"id" : 67,
+		"colonia" : "DOCTORES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50060
+	},
+	{
+		"id" : 68,
+		"colonia" : "DON ADOLFO RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 69,
+		"colonia" : "DON ELOY RES",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 70,
+		"colonia" : "DON JOSE FRAC",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51356
+	},
+	{
+		"id" : 71,
+		"colonia" : "DOÑA ROSA PARQUE IND Y TEC",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 72,
+		"colonia" : "DORADO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 73,
+		"colonia" : "DORADO FRAC",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 74,
+		"colonia" : "DOS RIOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50253
+	},
+	{
+		"id" : 75,
+		"colonia" : "EJIDO BUENAVISTA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 76,
+		"colonia" : "EJIDO SAN CRISTOBAL HUICHOCHITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 77,
+		"colonia" : "EJIDO SAN LORENZO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 78,
+		"colonia" : "EJIDO SAN MATEO ATENCO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 79,
+		"colonia" : "EJIDO SAN PEDRO TOTOLTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 80,
+		"colonia" : "EJIDO SANTIAGO MILTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50020
+	},
+	{
+		"id" : 81,
+		"colonia" : "ELECTRICISTAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 82,
+		"colonia" : "ENCANTO RESIDENCIAL",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 83,
+		"colonia" : "ENCINO RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 84,
+		"colonia" : "ENSUEÑO CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52179
+	},
+	{
+		"id" : 85,
+		"colonia" : "ERA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50260
+	},
+	{
+		"id" : 86,
+		"colonia" : "ERA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 87,
+		"colonia" : "ESMERALDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 88,
+		"colonia" : "ESPERANZA RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 89,
+		"colonia" : "ESPIRITU SANTO BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 90,
+		"colonia" : "ESTACION",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52006
+	},
+	{
+		"id" : 91,
+		"colonia" : "ESTORIL RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 92,
+		"colonia" : "ESTRELLA FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 93,
+		"colonia" : "EX HACIENDA SAN JORGE FRAC",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51355
+	},
+	{
+		"id" : 94,
+		"colonia" : "EXPORTEC 2 ZONA IND",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50223
+	},
+	{
+		"id" : 95,
+		"colonia" : "EXPLANADA DEL PARQUE FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 96,
+		"colonia" : "FABELA ISIDRO",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 97,
+		"colonia" : "FABELA ISIDRO 1 SEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 98,
+		"colonia" : "FABELA ISIDRO 2 SEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 99,
+		"colonia" : "FABELA ISIDRO U HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 100,
+		"colonia" : "FATIMA",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 101,
+		"colonia" : "FEDERAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50120
+	},
+	{
+		"id" : 102,
+		"colonia" : "FERNANDEZ ALBARRAN JUAN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 103,
+		"colonia" : "FERNANDEZ ALBARRAN JUAN U HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 104,
+		"colonia" : "FLORES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50018
+	},
+	{
+		"id" : 105,
+		"colonia" : "FLORESTA FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 106,
+		"colonia" : "FORTANET RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52159
+	},
+	{
+		"id" : 107,
+		"colonia" : "FORTIN RES",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 108,
+		"colonia" : "FRAILES FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50020
+	},
+	{
+		"id" : 109,
+		"colonia" : "FRESNOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 110,
+		"colonia" : "FUENTES DE ORDAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 111,
+		"colonia" : "FUENTES DE TLACOPA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 112,
+		"colonia" : "FUENTES INN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 113,
+		"colonia" : "FUENTES RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 114,
+		"colonia" : "FUENTES RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 115,
+		"colonia" : "GALAXIAS LERMA FRAC",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 116,
+		"colonia" : "GALAXIAS SAN LORENZO FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 117,
+		"colonia" : "GALINDO IRMA PATRICIA",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51356
+	},
+	{
+		"id" : 118,
+		"colonia" : "GARCIA E AGRIPIN PROF U SIND",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52165
+	},
+	{
+		"id" : 119,
+		"colonia" : "GARCIA LOVERA JESUS U HAB",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 120,
+		"colonia" : "GARDENIAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 121,
+		"colonia" : "GAVIA 1 Y 2 RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 122,
+		"colonia" : "GAVIA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 123,
+		"colonia" : "GEOVILLAS DEL CENTENARIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50225
+	},
+	{
+		"id" : 124,
+		"colonia" : "GEOVILLAS DE LA INDEPENDENCIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 125,
+		"colonia" : "GEOVILLAS SAN MATEO FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 126,
+		"colonia" : "GIRASOLES 1",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 127,
+		"colonia" : "GIRASOLES 2",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 128,
+		"colonia" : "GIRASOLES 3",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 129,
+		"colonia" : "GIRASOLES 4",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 130,
+		"colonia" : "GIRASOLES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 131,
+		"colonia" : "GIRASOLES 5",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 132,
+		"colonia" : "GLADIOLAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 133,
+		"colonia" : "GLORIAS CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 134,
+		"colonia" : "GRAN MORADA RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 135,
+		"colonia" : "GRAN ROBLE RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 136,
+		"colonia" : "GUADALUPE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 137,
+		"colonia" : "GUADALUPE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 138,
+		"colonia" : "GUADALUPE (CIENEGA)",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 139,
+		"colonia" : "GUADALUPE (CIENEGA)",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 140,
+		"colonia" : "GUADALUPE BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50235
+	},
+	{
+		"id" : 141,
+		"colonia" : "GUADALUPE BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52107
+	},
+	{
+		"id" : 142,
+		"colonia" : "GUERRERO COND HORIZONTAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 143,
+		"colonia" : "GUERRERO VICENTE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 144,
+		"colonia" : "GLORAS RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 145,
+		"colonia" : "HABITAT FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 146,
+		"colonia" : "HABITAT FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 147,
+		"colonia" : "HACIENDA DE GUADALUPE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 148,
+		"colonia" : "HACIENDA DE LA MORA RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 149,
+		"colonia" : "HACIENDA DEL BOSQUE RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 150,
+		"colonia" : "HACIENDA EL DORADO 2",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 151,
+		"colonia" : "HACIENDA LA GALIA FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 152,
+		"colonia" : "HACIENDA SAN ANTONIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 153,
+		"colonia" : "HACIENDA SANTA CLARA",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 154,
+		"colonia" : "HACIENDA VISTA HERMOSA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 155,
+		"colonia" : "HACIENDAS INDEPENDENCIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 156,
+		"colonia" : "HACIENDAS FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 157,
+		"colonia" : "HACIENDAS FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52157
+	},
+	{
+		"id" : 158,
+		"colonia" : "HANK GONZALEZ CARLOS FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50026
+	},
+	{
+		"id" : 159,
+		"colonia" : "HANK GONZALEZ U HAB",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 160,
+		"colonia" : "HEROES DEL CINCO DE MAYO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 161,
+		"colonia" : "HEROES TOLUCA 1 SEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 162,
+		"colonia" : "HEROES TOLUCA FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50246
+	},
+	{
+		"id" : 163,
+		"colonia" : "HERRADURA 2",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 164,
+		"colonia" : "HERRADURA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 165,
+		"colonia" : "HERRADURA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 166,
+		"colonia" : "HESPERIDES FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 167,
+		"colonia" : "HIDALGO MIGUEL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 168,
+		"colonia" : "HIPICO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52156
+	},
+	{
+		"id" : 169,
+		"colonia" : "HORTALIZA U HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 170,
+		"colonia" : "IBIZA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 171,
+		"colonia" : "IMAGENES RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 172,
+		"colonia" : "INDEPENDENCIA Y METEORO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50070
+	},
+	{
+		"id" : 173,
+		"colonia" : "INFONAVIT LA CRESPA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 174,
+		"colonia" : "ISLA RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 175,
+		"colonia" : "IZCALLI CUAUHTEMOC FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52176
+	},
+	{
+		"id" : 176,
+		"colonia" : "IZCALLI IPIEM",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50150
+	},
+	{
+		"id" : 177,
+		"colonia" : "IZCALLI TOLUCA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50150
+	},
+	{
+		"id" : 178,
+		"colonia" : "JACARANDAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 179,
+		"colonia" : "JACARANDAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 180,
+		"colonia" : "JARAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52160
+	},
+	{
+		"id" : 181,
+		"colonia" : "JARDINES DE TLACOPA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 182,
+		"colonia" : "JIMENEZ CANTU JORGE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52166
+	},
+	{
+		"id" : 183,
+		"colonia" : "JIMENEZ GARALLARDO J FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 184,
+		"colonia" : "JIMENEZ GALLARDO JESUS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 185,
+		"colonia" : "JOYA",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51355
+	},
+	{
+		"id" : 186,
+		"colonia" : "JOYA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 187,
+		"colonia" : "JOYA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 188,
+		"colonia" : "JOYA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52159
+	},
+	{
+		"id" : 189,
+		"colonia" : "JOYA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50254
+	},
+	{
+		"id" : 190,
+		"colonia" : "JOYA RES",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 191,
+		"colonia" : "JOYA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 192,
+		"colonia" : "JUAREZ BENITO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50190
+	},
+	{
+		"id" : 193,
+		"colonia" : "JUNTA DE CAMINOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50285
+	},
+	{
+		"id" : 194,
+		"colonia" : "LA BOMBA PARQUE INDUSTRIAL",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 195,
+		"colonia" : "LAREDO GARCIA J U HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 196,
+		"colonia" : "LERMA CENTRO",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52000
+	},
+	{
+		"id" : 197,
+		"colonia" : "LERMA DE VILLADA",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52000
+	},
+	{
+		"id" : 198,
+		"colonia" : "LERMA PARQUE INDUSTRIAL",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 199,
+		"colonia" : "LIMONCITO RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 200,
+		"colonia" : "LINDAVISTA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 201,
+		"colonia" : "LIRIOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 202,
+		"colonia" : "LLANO DE TULTITLAN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 203,
+		"colonia" : "LLANO GRANDE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52148
+	},
+	{
+		"id" : 204,
+		"colonia" : "LOMA BONITA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 205,
+		"colonia" : "LOMA BONITA CALIMAYA",
+		"municipio" : "CALIMAYA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 206,
+		"colonia" : "LOMA 1",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 207,
+		"colonia" : "LOMA 2 RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 208,
+		"colonia" : "LOMA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50265
+	},
+	{
+		"id" : 209,
+		"colonia" : "LOMA RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 210,
+		"colonia" : "LOMA REAL RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 211,
+		"colonia" : "LOMAS ALTAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50060
+	},
+	{
+		"id" : 212,
+		"colonia" : "LOMAS DE SAN ISIDRO CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 213,
+		"colonia" : "LOMAS DE SAN MATEO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 214,
+		"colonia" : "LOMAS DE VISTA HERMOSA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 215,
+		"colonia" : "LOMAS DE VISTA HERMOSA",
+		"municipio" : "CALIMAYA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 216,
+		"colonia" : "MACARIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 217,
+		"colonia" : "MACHINCUEPA FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50160
+	},
+	{
+		"id" : 218,
+		"colonia" : "MADERO FRANCISCO I",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 219,
+		"colonia" : "MADERO FRANCISCO I",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52106
+	},
+	{
+		"id" : 220,
+		"colonia" : "MAGDALENA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50190
+	},
+	{
+		"id" : 221,
+		"colonia" : "MAGDALENA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 222,
+		"colonia" : "MAGDALENA BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 223,
+		"colonia" : "MAGDALENA OCOTITLAN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52161
+	},
+	{
+		"id" : 224,
+		"colonia" : "MAGNOLIAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 225,
+		"colonia" : "MALAGA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 226,
+		"colonia" : "MANANTIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 227,
+		"colonia" : "MARGARITAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 228,
+		"colonia" : "MARGARITAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52165
+	},
+	{
+		"id" : 229,
+		"colonia" : "MARINAS FRAC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52176
+	},
+	{
+		"id" : 230,
+		"colonia" : "MAYA DE RANCHO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 231,
+		"colonia" : "MAYORAZGO CONDOMINIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 232,
+		"colonia" : "MAZO ALFREDO",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52030
+	},
+	{
+		"id" : 233,
+		"colonia" : "MERCED",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52006
+	},
+	{
+		"id" : 234,
+		"colonia" : "MERCED Y LA ALAMEDA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50080
+	},
+	{
+		"id" : 235,
+		"colonia" : "METEPEC CONJ RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 236,
+		"colonia" : "METEPEC RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52156
+	},
+	{
+		"id" : 237,
+		"colonia" : "MEXICANA RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 238,
+		"colonia" : "MICHOACANA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52166
+	},
+	{
+		"id" : 239,
+		"colonia" : "MISION VIEJO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 240,
+		"colonia" : "MISIONES SANTA ESPERANZA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 241,
+		"colonia" : "MITA DE SANTIAGO C HAB",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 242,
+		"colonia" : "MITRAS CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 243,
+		"colonia" : "MODERNA DE LA CRUZ",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 244,
+		"colonia" : "MOLINA ENRIQUEZ A C HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 245,
+		"colonia" : "MONTE BELLO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 246,
+		"colonia" : "MONTE LLANO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 247,
+		"colonia" : "MONTIEL ARTURO",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52000
+	},
+	{
+		"id" : 248,
+		"colonia" : "MORELOS 1 SEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50120
+	},
+	{
+		"id" : 249,
+		"colonia" : "MORELOS 2 SEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50120
+	},
+	{
+		"id" : 250,
+		"colonia" : "MORILLOS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 251,
+		"colonia" : "MUNICIPAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52168
+	},
+	{
+		"id" : 252,
+		"colonia" : "MURGUIA FRANCISCO (EL RANCHITO)",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50130
+	},
+	{
+		"id" : 253,
+		"colonia" : "NARANJOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 254,
+		"colonia" : "NEYRA CHAVEZ ARMANDO FRAC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 255,
+		"colonia" : "NIÑOS HEROES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 256,
+		"colonia" : "NIÑOS HEROES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50060
+	},
+	{
+		"id" : 257,
+		"colonia" : "NIZA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 258,
+		"colonia" : "NOGALES FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52168
+	},
+	{
+		"id" : 259,
+		"colonia" : "NORMANDIA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 260,
+		"colonia" : "NOVA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 52161
+	},
+	{
+		"id" : 261,
+		"colonia" : "NUEVA OXTOTITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 262,
+		"colonia" : "NUEVA SAN FRANCISCO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50225
+	},
+	{
+		"id" : 263,
+		"colonia" : "NUEVA SAN LUIS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 264,
+		"colonia" : "NUEVA SANTA MARIA DE LAS ROSAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50140
+	},
+	{
+		"id" : 265,
+		"colonia" : "OBREGON ALVARO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52105
+	},
+	{
+		"id" : 266,
+		"colonia" : "OBREGON ALVARO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52144
+	},
+	{
+		"id" : 267,
+		"colonia" : "OCHO CEDROS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 268,
+		"colonia" : "OJUELOS",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51355
+	},
+	{
+		"id" : 269,
+		"colonia" : "OLIMPO FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50240
+	},
+	{
+		"id" : 270,
+		"colonia" : "OLIVAR DEL PRADO RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 271,
+		"colonia" : "OLMOS FRACC",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52107
+	},
+	{
+		"id" : 272,
+		"colonia" : "PACIFICO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50260
+	},
+	{
+		"id" : 273,
+		"colonia" : "PALMA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 274,
+		"colonia" : "PALMA REAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 275,
+		"colonia" : "PALMA REAL 1, 2 Y 3",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 276,
+		"colonia" : "PALMAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 277,
+		"colonia" : "PALMAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 278,
+		"colonia" : "PALMAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50256
+	},
+	{
+		"id" : 279,
+		"colonia" : "PALOMAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50265
+	},
+	{
+		"id" : 280,
+		"colonia" : "PARAJE LA TAZA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 281,
+		"colonia" : "PARQUE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 282,
+		"colonia" : "PARQUE RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 283,
+		"colonia" : "PARQUE RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 284,
+		"colonia" : "PARQUE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 285,
+		"colonia" : "PARQUE 1, 2 Y 3 CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 286,
+		"colonia" : "PARQUE SAN MATEO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 287,
+		"colonia" : "PARQUES NACIONALES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 288,
+		"colonia" : "PASEO DE SAN SALVADOR FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 289,
+		"colonia" : "PASEO SAN ISIDRO CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 290,
+		"colonia" : "PASEOS DE TOLUCA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 291,
+		"colonia" : "PASEOS DEL VALLE 1 Y 2 FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50260
+	},
+	{
+		"id" : 292,
+		"colonia" : "PEDREGAL RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 293,
+		"colonia" : "PEÑITA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 294,
+		"colonia" : "PILAR RINCONADA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 295,
+		"colonia" : "PILARES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52179
+	},
+	{
+		"id" : 296,
+		"colonia" : "PINOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50263
+	},
+	{
+		"id" : 297,
+		"colonia" : "PIRAMIDES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 298,
+		"colonia" : "PIRULES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 299,
+		"colonia" : "PLAZAS SAN BUENAVENTURA FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 300,
+		"colonia" : "POLARIS PARQUE INDUSTRIAL",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 301,
+		"colonia" : "PORVENIR 2",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52000
+	},
+	{
+		"id" : 302,
+		"colonia" : "PRADO NORTE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 303,
+		"colonia" : "PRADOS DE TLACOPA FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 304,
+		"colonia" : "PRADOS DE TOLLOCAN FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50240
+	},
+	{
+		"id" : 305,
+		"colonia" : "PRESA FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 306,
+		"colonia" : "PROTINBOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 307,
+		"colonia" : "PROVIDENCIA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 308,
+		"colonia" : "PROVIDENCIA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 309,
+		"colonia" : "PROVIDENCIA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 310,
+		"colonia" : "PUEBLITO FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 311,
+		"colonia" : "PUERTA DE HIERRO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 312,
+		"colonia" : "PUERTA DEL BOSQUE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 313,
+		"colonia" : "PURISIMA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 314,
+		"colonia" : "QUINTAS DE SAN JERONIMO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 315,
+		"colonia" : "QUINTAS LAS MARGARITAS RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 316,
+		"colonia" : "QUINTAS RESIDENCIAL",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 317,
+		"colonia" : "RANCHO INDEPENDENCIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50226
+	},
+	{
+		"id" : 318,
+		"colonia" : "RANCHO LA ASUNCION FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 319,
+		"colonia" : "RANCHO LA MORA FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50020
+	},
+	{
+		"id" : 320,
+		"colonia" : "RANCHO LA NORIA",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 321,
+		"colonia" : "RANCHO LA VIRGEN RES CAMPESTRE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 322,
+		"colonia" : "RANCHO LAS PALOMAS RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 323,
+		"colonia" : "RANCHO SAN LUCAS FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 324,
+		"colonia" : "REAL AZALEAS 3",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 325,
+		"colonia" : "REAL DE ARCOS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52154
+	},
+	{
+		"id" : 326,
+		"colonia" : "REAL DE SAN JAVIER",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 327,
+		"colonia" : "REAL DE SAN JAVIER FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 328,
+		"colonia" : "REAL DE SAN JERONIMO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52170
+	},
+	{
+		"id" : 329,
+		"colonia" : "REAL DE SANTO TOMAS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 330,
+		"colonia" : "REAL DEL BOSQUE FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 331,
+		"colonia" : "REAL DEL PUENTE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50280
+	},
+	{
+		"id" : 332,
+		"colonia" : "REAL LOS NOGALES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 333,
+		"colonia" : "REAL METEPEC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 334,
+		"colonia" : "REAL SANTA CLARA",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 335,
+		"colonia" : "REFORMA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 336,
+		"colonia" : "REFORMA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50070
+	},
+	{
+		"id" : 337,
+		"colonia" : "REFORMA FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 338,
+		"colonia" : "REFORMA Y FERROCARRIL NACIONAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 339,
+		"colonia" : "REFUGIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 340,
+		"colonia" : "RENACIMIENTO CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52175
+	},
+	{
+		"id" : 341,
+		"colonia" : "RETAMA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 342,
+		"colonia" : "RINCON DE SAN GABRIEL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52158
+	},
+	{
+		"id" : 343,
+		"colonia" : "RINCON DE SAN LORENZO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50017
+	},
+	{
+		"id" : 344,
+		"colonia" : "RINCON DEL BOSQUE RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 345,
+		"colonia" : "RINCON VIEJO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 346,
+		"colonia" : "RINCONADA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 347,
+		"colonia" : "RINCONADA SAN ISIDRO CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 348,
+		"colonia" : "RIVERA 1",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 349,
+		"colonia" : "RIVERA 2",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 350,
+		"colonia" : "RIVERA 3",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 351,
+		"colonia" : "ROBLES CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 352,
+		"colonia" : "RODEO FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52157
+	},
+	{
+		"id" : 353,
+		"colonia" : "ROSARIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 354,
+		"colonia" : "ROSARIO 1 Y 2 FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50258
+	},
+	{
+		"id" : 355,
+		"colonia" : "ROSAS RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 356,
+		"colonia" : "RUBI",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 357,
+		"colonia" : "TECUANAPA",
+		"municipio" : "MEXICALTZINGO",
+		"codigo_postal" : 52182
+	},
+	{
+		"id" : 358,
+		"colonia" : "TEJA FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 359,
+		"colonia" : "TEJA U HAB",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 360,
+		"colonia" : "TEJOCOTE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 361,
+		"colonia" : "TERESONA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 362,
+		"colonia" : "TERESONA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 363,
+		"colonia" : "TERRALTA METEPEC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 364,
+		"colonia" : "TEXCOCO CONDOMINIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 365,
+		"colonia" : "TIZATLALLI RINCONADA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 366,
+		"colonia" : "TLACOPA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 367,
+		"colonia" : "TLALNEPANTLA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50274
+	},
+	{
+		"id" : 368,
+		"colonia" : "TOLLOCAN 2",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52179
+	},
+	{
+		"id" : 369,
+		"colonia" : "TOLLOCAN INFONAVIT",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50123
+	},
+	{
+		"id" : 370,
+		"colonia" : "TOLUCA CENTRO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50000
+	},
+	{
+		"id" : 371,
+		"colonia" : "TOLUCA PARQUE INDUSTRIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50071
+	},
+	{
+		"id" : 372,
+		"colonia" : "TOLUCA ZONA INDUSTRIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50071
+	},
+	{
+		"id" : 373,
+		"colonia" : "TOMAPA",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 374,
+		"colonia" : "TORRE VIEJA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 375,
+		"colonia" : "TORRECILLAS RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 376,
+		"colonia" : "TORRES INDEPENDENCIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 377,
+		"colonia" : "TORRES FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50075
+	},
+	{
+		"id" : 378,
+		"colonia" : "TORRES RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50076
+	},
+	{
+		"id" : 379,
+		"colonia" : "TOSCANA RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 380,
+		"colonia" : "TRES CAMINOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50020
+	},
+	{
+		"id" : 381,
+		"colonia" : "TRIGO FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 382,
+		"colonia" : "TRINIDAD BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 383,
+		"colonia" : "TULIPANES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 384,
+		"colonia" : "TURIN RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 385,
+		"colonia" : "UNION",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 386,
+		"colonia" : "UNIVERSIDAD",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50130
+	},
+	{
+		"id" : 387,
+		"colonia" : "UNIVERSIDAD FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 388,
+		"colonia" : "VALLE DE LERMA FRACC",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 389,
+		"colonia" : "VALLE DEL CRISTAL FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 390,
+		"colonia" : "VALLE DEL ZAMARRERO",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51355
+	},
+	{
+		"id" : 391,
+		"colonia" : "VALLE DON CAMILO FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50140
+	},
+	{
+		"id" : 392,
+		"colonia" : "VALLE SAN JAVIER CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 393,
+		"colonia" : "VALLE SAN PEDRO CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 394,
+		"colonia" : "VALLE VERDE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50140
+	},
+	{
+		"id" : 395,
+		"colonia" : "VEGA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50039
+	},
+	{
+		"id" : 396,
+		"colonia" : "VELAZQUEZ FIDEL U HAB",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50070
+	},
+	{
+		"id" : 397,
+		"colonia" : "VENUS RES",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 398,
+		"colonia" : "VERTICAL COND",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 399,
+		"colonia" : "VIANDAS FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52178
+	},
+	{
+		"id" : 400,
+		"colonia" : "VILLA ALTEZA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 401,
+		"colonia" : "VILLA DORADA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 402,
+		"colonia" : "VILLA ESPERANZA CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 403,
+		"colonia" : "VILLA FONTANA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50070
+	},
+	{
+		"id" : 404,
+		"colonia" : "VILLA HOGAR",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 405,
+		"colonia" : "VILLA LA MAGDALENA 4",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 406,
+		"colonia" : "VILLA METEPEC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 407,
+		"colonia" : "VILLA ROMANA 1 Y 2",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 408,
+		"colonia" : "VILLA TULIPANES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50210
+	},
+	{
+		"id" : 409,
+		"colonia" : "VILLAS ALPES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 410,
+		"colonia" : "VILLAS AMOZOC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 411,
+		"colonia" : "VILLAS ANDES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 412,
+		"colonia" : "VILLAS CHAPULTEPEC RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 413,
+		"colonia" : "VILLAS COUNTRY",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 414,
+		"colonia" : "VILLAS DE ATENCO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52107
+	},
+	{
+		"id" : 415,
+		"colonia" : "VILLAS DE SAN ANDRES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 416,
+		"colonia" : "VILLAS DE SAN MATEO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50220
+	},
+	{
+		"id" : 417,
+		"colonia" : "VILLAS DE SAN MATEO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 418,
+		"colonia" : "VILLAS DE SAN MATEO 1",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 419,
+		"colonia" : "VILLAS DE SANTA ANA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50160
+	},
+	{
+		"id" : 420,
+		"colonia" : "VILLAS DE SANTA MARTHA",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 421,
+		"colonia" : "VILLAS DE SANTA MONICA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50227
+	},
+	{
+		"id" : 422,
+		"colonia" : "VILLAS DEL SOL RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 423,
+		"colonia" : "VILLAS ESTEFANIA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52154
+	},
+	{
+		"id" : 424,
+		"colonia" : "VILLAS EVEREST",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 425,
+		"colonia" : "VILLAS FLORENCIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50140
+	},
+	{
+		"id" : 426,
+		"colonia" : "VILLAS FONTANA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50260
+	},
+	{
+		"id" : 427,
+		"colonia" : "VILLAS FONTANA 2",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50070
+	},
+	{
+		"id" : 428,
+		"colonia" : "VILLAS GALAXIAS FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 429,
+		"colonia" : "VILLAS HIMALAYA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 430,
+		"colonia" : "VILLAS 2 RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 431,
+		"colonia" : "VILLAS 3 RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 432,
+		"colonia" : "VILLAS KENT",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 433,
+		"colonia" : "VILLAS LA MAGDALENA CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 434,
+		"colonia" : "VILLAS LA MAGDALENA 1 Y 2",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 435,
+		"colonia" : "VILLAS NARANJOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 436,
+		"colonia" : "VILLAS PIRINEOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 437,
+		"colonia" : "VILLAS SAN AGUSTIN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 438,
+		"colonia" : "VILLAS SAN BUENAVENTURA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 439,
+		"colonia" : "VILLAS SAN GREGORIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 440,
+		"colonia" : "VILLAS SANTA CRUZ",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 441,
+		"colonia" : "VILLAS SANTA ISABEL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 442,
+		"colonia" : "VILLAS SANTA ISABEL 1 Y 2",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 443,
+		"colonia" : "VILLAS SANTORINI",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 444,
+		"colonia" : "VILLAS TEPALTITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 445,
+		"colonia" : "VILLAS VISTA VERDE",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 446,
+		"colonia" : "VILLAS ZAFIRO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 447,
+		"colonia" : "VIRREY CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52178
+	},
+	{
+		"id" : 448,
+		"colonia" : "VIRREYES RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52155
+	},
+	{
+		"id" : 449,
+		"colonia" : "VITRALES FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 450,
+		"colonia" : "XINANTECATL FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52169
+	},
+	{
+		"id" : 451,
+		"colonia" : "ZAFIRO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 452,
+		"colonia" : "ZAPATA EMILIANO",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 453,
+		"colonia" : "ZAPATA EMILIANO",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51355
+	},
+	{
+		"id" : 454,
+		"colonia" : "ZAPATA EMILIANO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50190
+	},
+	{
+		"id" : 455,
+		"colonia" : "ZOPILOCALCO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50050
+	},
+	{
+		"id" : 456,
+		"colonia" : "CACALOMACAN PUEBLO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50265
+	},
+	{
+		"id" : 457,
+		"colonia" : "CALIXTLAHUACA PUEBLO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50280
+	},
+	{
+		"id" : 458,
+		"colonia" : "CALVARIO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 459,
+		"colonia" : "CALVARIO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50253
+	},
+	{
+		"id" : 460,
+		"colonia" : "CALZADA AL CAMPO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 461,
+		"colonia" : "CAMPANARIO RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 462,
+		"colonia" : "CAMPESINA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52175
+	},
+	{
+		"id" : 463,
+		"colonia" : "CAMPESTRE DEL VALLE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 464,
+		"colonia" : "CAMPESTRE METEPEC CLUB PRIVADO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52164
+	},
+	{
+		"id" : 465,
+		"colonia" : "CAMPESTRE SANTA ANA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50160
+	},
+	{
+		"id" : 466,
+		"colonia" : "CAMPESTRE SANTA ANA 2",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50160
+	},
+	{
+		"id" : 467,
+		"colonia" : "CAMPO REAL FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 468,
+		"colonia" : "CAMPO REAL 1, 2 Y 3 FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 469,
+		"colonia" : "CAMPOS DE JIMENEZ CANTU . ISABEL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52166
+	},
+	{
+		"id" : 470,
+		"colonia" : "CANDILEJAS RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 471,
+		"colonia" : "CAPULTITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50260
+	},
+	{
+		"id" : 472,
+		"colonia" : "CARDENAS LAZARO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 473,
+		"colonia" : "CARDENAS LAZARO AMPL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50180
+	},
+	{
+		"id" : 474,
+		"colonia" : "CARDENAS LAZARO U HAB",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52177
+	},
+	{
+		"id" : 475,
+		"colonia" : "CARMEN CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52170
+	},
+	{
+		"id" : 476,
+		"colonia" : "CARMEN TOTOLTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50240
+	},
+	{
+		"id" : 477,
+		"colonia" : "CARMEN TOTOLTEPEC BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50240
+	},
+	{
+		"id" : 478,
+		"colonia" : "CASA BLANCA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52175
+	},
+	{
+		"id" : 479,
+		"colonia" : "CASA BLANCA FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52175
+	},
+	{
+		"id" : 480,
+		"colonia" : "CASA DE LOS CANTAROS",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 481,
+		"colonia" : "CASA DEL CAMPO RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 482,
+		"colonia" : "CASA DEL PEDREGAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 483,
+		"colonia" : "CASA DEL VALLE",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52164
+	},
+	{
+		"id" : 484,
+		"colonia" : "CASA MAGNA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 485,
+		"colonia" : "CASA REAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 486,
+		"colonia" : "CASCADA DEL ANGEL RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 487,
+		"colonia" : "CASCADA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 488,
+		"colonia" : "CASERIO DE LA ALDABA",
+		"municipio" : "LERMA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 489,
+		"colonia" : "CASTAÑO RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 490,
+		"colonia" : "CATORCE DE DICIEMBRE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 491,
+		"colonia" : "CAÑADA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 492,
+		"colonia" : "CEDROS FRACC",
+		"municipio" : "LERMA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 493,
+		"colonia" : "CEDROS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 494,
+		"colonia" : "CEDROS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 495,
+		"colonia" : "CEDROS FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52154
+	},
+	{
+		"id" : 496,
+		"colonia" : "CEDROS RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 497,
+		"colonia" : "CELANESE",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 498,
+		"colonia" : "CERRILLO 1 PARQUE INDUSTRIAL",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 499,
+		"colonia" : "CERRILLO 2 PARQUE INDUSTRIAL",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 500,
+		"colonia" : "CERRILLO VISTA HERMOSA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50235
+	},
+	{
+		"id" : 501,
+		"colonia" : "CHARCO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50019
+	},
+	{
+		"id" : 502,
+		"colonia" : "CHICHIPICAS RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50290
+	},
+	{
+		"id" : 503,
+		"colonia" : "CIENTIFICOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50075
+	},
+	{
+		"id" : 504,
+		"colonia" : "CINCO DE MAYO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50090
+	},
+	{
+		"id" : 505,
+		"colonia" : "CIPRESES BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 506,
+		"colonia" : "CIPRESES CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52167
+	},
+	{
+		"id" : 507,
+		"colonia" : "CIPRESES RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50120
+	},
+	{
+		"id" : 508,
+		"colonia" : "CIPRESES RESIDENCIAL",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 509,
+		"colonia" : "CITLALLI RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 510,
+		"colonia" : "CIUDAD VICTORIA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50190
+	},
+	{
+		"id" : 511,
+		"colonia" : "CLUB CAMPESTRE SAN CARLOS FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52159
+	},
+	{
+		"id" : 512,
+		"colonia" : "CLUB JARDIN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 513,
+		"colonia" : "COAXUSTENCO BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 514,
+		"colonia" : "COECILLO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50246
+	},
+	{
+		"id" : 515,
+		"colonia" : "COECILLO PARQUE INDUSTRIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 516,
+		"colonia" : "COLON Y CIPRES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50120
+	},
+	{
+		"id" : 517,
+		"colonia" : "COLONIAL RINCONADA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 518,
+		"colonia" : "COMPUERTA NOVA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 519,
+		"colonia" : "CONCEPCION BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52105
+	},
+	{
+		"id" : 520,
+		"colonia" : "CONCORDIA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 521,
+		"colonia" : "COPORO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50050
+	},
+	{
+		"id" : 522,
+		"colonia" : "COUNTRY CLUB RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52159
+	},
+	{
+		"id" : 523,
+		"colonia" : "CRESPA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50016
+	},
+	{
+		"id" : 524,
+		"colonia" : "CRESPA INFONAVIT",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50016
+	},
+	{
+		"id" : 525,
+		"colonia" : "CRISTO REY BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50263
+	},
+	{
+		"id" : 526,
+		"colonia" : "CRUZ COMALCO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 527,
+		"colonia" : "CRUZ DE LA MISION BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 528,
+		"colonia" : "CRUZ",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50270
+	},
+	{
+		"id" : 529,
+		"colonia" : "CRYSTAL LAGOONS FORESTA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52144
+	},
+	{
+		"id" : 530,
+		"colonia" : "CUAUHTEMOC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50130
+	},
+	{
+		"id" : 531,
+		"colonia" : "CUAUHTEMOC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52175
+	},
+	{
+		"id" : 532,
+		"colonia" : "CUAUHTEMOC UNIDAD",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 533,
+		"colonia" : "CUCHILLA",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 534,
+		"colonia" : "CULTURAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 535,
+		"colonia" : "CURVA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 536,
+		"colonia" : "SABINOS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50228
+	},
+	{
+		"id" : 537,
+		"colonia" : "SAMANO DE LOPEZ MATEOS EVA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50190
+	},
+	{
+		"id" : 538,
+		"colonia" : "SAN AGUSTIN BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 539,
+		"colonia" : "SAN ANGEL 1, 2 Y 3 RES",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 540,
+		"colonia" : "SAN ANGEL INN RNDA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 541,
+		"colonia" : "SAN ANGEL RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 542,
+		"colonia" : "SAN ANTONIO ABAD",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 543,
+		"colonia" : "SAN ANTONIO BUENAVISTA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50266
+	},
+	{
+		"id" : 544,
+		"colonia" : "SAN BARTOLOME TLALTELULCO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52160
+	},
+	{
+		"id" : 545,
+		"colonia" : "SAN BERNARDINO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50080
+	},
+	{
+		"id" : 546,
+		"colonia" : "SAN BUENAVENTURA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50110
+	},
+	{
+		"id" : 547,
+		"colonia" : "SAN BUENAVENTURA RNDA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 548,
+		"colonia" : "SAN CARLOS FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52159
+	},
+	{
+		"id" : 549,
+		"colonia" : "SAN CARLOS RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52158
+	},
+	{
+		"id" : 550,
+		"colonia" : "SAN CARLOS RNDA",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52107
+	},
+	{
+		"id" : 551,
+		"colonia" : "SAN CRISTOBAL HUICHOCHITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 552,
+		"colonia" : "SAN FELIPE TLALMIMILOLPAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 553,
+		"colonia" : "SAN FRANCISCO BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 554,
+		"colonia" : "SAN FRANCISCO COAXUSCO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52158
+	},
+	{
+		"id" : 555,
+		"colonia" : "SAN FRANCISCO INFONAVIT",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52176
+	},
+	{
+		"id" : 556,
+		"colonia" : "SAN FRANCISCO TOTOLTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50235
+	},
+	{
+		"id" : 557,
+		"colonia" : "SAN GABRIEL INFONAVIT",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52159
+	},
+	{
+		"id" : 558,
+		"colonia" : "SAN GASPAR TLAHUELILPAN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52147
+	},
+	{
+		"id" : 559,
+		"colonia" : "SAN ISIDRO",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 560,
+		"colonia" : "SAN ISIDRO",
+		"municipio" : "MEXICALTZINGO",
+		"codigo_postal" : 52189
+	},
+	{
+		"id" : 561,
+		"colonia" : "SAN ISIDRO BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52105
+	},
+	{
+		"id" : 562,
+		"colonia" : "SAN JACINTO FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 563,
+		"colonia" : "SAN JAVIER RESIDENCIAL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 564,
+		"colonia" : "SAN JERONIMO CHICAHUALCO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52170
+	},
+	{
+		"id" : 565,
+		"colonia" : "SAN JERONIMO RINCONADA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 566,
+		"colonia" : "SAN JOAQUIN RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 567,
+		"colonia" : "SAN JORGE FRACC",
+		"municipio" : "ZINACANTEPEC",
+		"codigo_postal" : 51355
+	},
+	{
+		"id" : 568,
+		"colonia" : "SAN JORGE FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 569,
+		"colonia" : "SAN JORGE PUEBLO NUEVO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52164
+	},
+	{
+		"id" : 570,
+		"colonia" : "SAN JOSE LA PILA U INFONAVIT",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52149
+	},
+	{
+		"id" : 571,
+		"colonia" : "SAN JOSE RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 572,
+		"colonia" : "SAN JUAN BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 573,
+		"colonia" : "SAN JUAN BARIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 574,
+		"colonia" : "SAN JUAN DE LA CRUZ",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 575,
+		"colonia" : "SAN JUAN TILAPA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 576,
+		"colonia" : "SAN LORENZO COACALCO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 577,
+		"colonia" : "SAN LORENZO TEPALTITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50010
+	},
+	{
+		"id" : 578,
+		"colonia" : "SAN LUCAS TUNCO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52145
+	},
+	{
+		"id" : 579,
+		"colonia" : "SAN LUIS OBISPO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 580,
+		"colonia" : "SAN LUIS RNDA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 581,
+		"colonia" : "SAN LUQUITAS BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52107
+	},
+	{
+		"id" : 582,
+		"colonia" : "SAN MARCOS BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 583,
+		"colonia" : "SAN MARCOS YACHIHUACALTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50285
+	},
+	{
+		"id" : 584,
+		"colonia" : "SAN MARINO RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52158
+	},
+	{
+		"id" : 585,
+		"colonia" : "SAN MATEO ATENCO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52100
+	},
+	{
+		"id" : 586,
+		"colonia" : "SAN MATEO BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 587,
+		"colonia" : "SAN MATEO BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 588,
+		"colonia" : "SAN MATEO OTZACATIPAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50200
+	},
+	{
+		"id" : 589,
+		"colonia" : "SAN MATEO OTZACATIPAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50220
+	},
+	{
+		"id" : 590,
+		"colonia" : "SAN MATEO OXTOTITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50100
+	},
+	{
+		"id" : 591,
+		"colonia" : "SAN MATEO RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 592,
+		"colonia" : "SAN MIGUEL APINAHUIZCO BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 593,
+		"colonia" : "SAN MIGUEL BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 594,
+		"colonia" : "SAN MIGUEL BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 595,
+		"colonia" : "SAN MIGUEL RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 596,
+		"colonia" : "SAN MIGUEL TOTOCUITLAPILCO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52143
+	},
+	{
+		"id" : 597,
+		"colonia" : "SAN MIGUEL TOTOLTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50225
+	},
+	{
+		"id" : 598,
+		"colonia" : "SAN NICOLAS BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 599,
+		"colonia" : "SAN PEDRO BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52105
+	},
+	{
+		"id" : 600,
+		"colonia" : "SAN PEDRO TOTOLTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50226
+	},
+	{
+		"id" : 601,
+		"colonia" : "SAN PEDRO TULTEPEC",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52030
+	},
+	{
+		"id" : 602,
+		"colonia" : "SAN RAFAEL",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50019
+	},
+	{
+		"id" : 603,
+		"colonia" : "SAN ROMAN CONJ",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52107
+	},
+	{
+		"id" : 604,
+		"colonia" : "SAN SALVADOR TIZATLALLI",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 605,
+		"colonia" : "SAN SEBASTIAN",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52146
+	},
+	{
+		"id" : 606,
+		"colonia" : "SAN SEBASTIAN BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50150
+	},
+	{
+		"id" : 607,
+		"colonia" : "SANCHEZ COLIN SALVADOR",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50150
+	},
+	{
+		"id" : 608,
+		"colonia" : "SANTA ANA",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 609,
+		"colonia" : "SANTA ANA TLAPALTITLAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50160
+	},
+	{
+		"id" : 610,
+		"colonia" : "SANTA ANA V FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50160
+	},
+	{
+		"id" : 611,
+		"colonia" : "SANTA BARBARA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50050
+	},
+	{
+		"id" : 612,
+		"colonia" : "SANTA CECILIA 1 Y 2 RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 613,
+		"colonia" : "SANTA CECILIA 1 Y 2 RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 614,
+		"colonia" : "SANTA CECILIA 3 RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 615,
+		"colonia" : "SANTA CLARA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50090
+	},
+	{
+		"id" : 616,
+		"colonia" : "SANTA CLARA RESIDENCIAL",
+		"municipio" : "LERMA",
+		"codigo_postal" : 52004
+	},
+	{
+		"id" : 617,
+		"colonia" : "SANTA CRUZ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52160
+	},
+	{
+		"id" : 618,
+		"colonia" : "SANTA CRUZ ATZCAPOTZALTONGO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50290
+	},
+	{
+		"id" : 619,
+		"colonia" : "SANTA CRUZ BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 620,
+		"colonia" : "SANTA CRUZ OTZACATIPAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50210
+	},
+	{
+		"id" : 621,
+		"colonia" : "SANTA ELENA FRACC",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52105
+	},
+	{
+		"id" : 622,
+		"colonia" : "SANTA ESTHER RES",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 623,
+		"colonia" : "SANTA JUANITA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50250
+	},
+	{
+		"id" : 624,
+		"colonia" : "SANTA LUISA",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 625,
+		"colonia" : "SANTA LUISA RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 626,
+		"colonia" : "SANTA MARIA BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 627,
+		"colonia" : "SANTA MARIA BARRIO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 628,
+		"colonia" : "SANTA MARIA DE LAS ROSAS",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50140
+	},
+	{
+		"id" : 629,
+		"colonia" : "SANTA MARIA RESIDENCIAL",
+		"municipio" : "CALIMAYA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 630,
+		"colonia" : "SANTA MARIA TOTOLTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 631,
+		"colonia" : "SANTA MARIA ZOZOQUIPAN",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50168
+	},
+	{
+		"id" : 632,
+		"colonia" : "SANTA TERESA CONJ",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 633,
+		"colonia" : "SANTA TERESA FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 634,
+		"colonia" : "SANTA TERESA RANCHO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 635,
+		"colonia" : "SANTA TERESA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	},
+	{
+		"id" : 636,
+		"colonia" : "SANTIAGO MILTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50020
+	},
+	{
+		"id" : 637,
+		"colonia" : "SANTIAGO TLACOTEPEC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50255
+	},
+	{
+		"id" : 638,
+		"colonia" : "SANTIAGO TLAJOMULCO",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50280
+	},
+	{
+		"id" : 639,
+		"colonia" : "SANTIAGUITO BARRIO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 640,
+		"colonia" : "SANTIAGUITO BARRIO",
+		"municipio" : "SAN MATEO ATENCO",
+		"codigo_postal" : 52104
+	},
+	{
+		"id" : 641,
+		"colonia" : "SANTOS RES",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 642,
+		"colonia" : "SAUCES 2",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52140
+	},
+	{
+		"id" : 643,
+		"colonia" : "SECTOR POPULAR",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 644,
+		"colonia" : "SEMINARIO 1 SECC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 645,
+		"colonia" : "SEMINARIO 2 SECC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 646,
+		"colonia" : "SEMINARIO 3 SECC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 647,
+		"colonia" : "SEMINARIO 4 SECC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50170
+	},
+	{
+		"id" : 648,
+		"colonia" : "SEVILLA RESIDENCIAL",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 649,
+		"colonia" : "SOLAR CONJUNTO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52150
+	},
+	{
+		"id" : 650,
+		"colonia" : "SOLEDAD",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 651,
+		"colonia" : "SOLIDARIDAD FRACC",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 0
+	},
+	{
+		"id" : 652,
+		"colonia" : "SOR JUANA INES DE LA CRUZ",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50040
+	},
+	{
+		"id" : 653,
+		"colonia" : "SOR JUANA INES DE LA CRUZ FRACC",
+		"municipio" : "TOLUCA",
+		"codigo_postal" : 50245
+	},
+	{
+		"id" : 654,
+		"colonia" : "SUR DE LA HACIENDA CONJUNTO",
+		"municipio" : "METEPEC",
+		"codigo_postal" : 52172
+	}
+]
