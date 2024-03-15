@@ -10,6 +10,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { AuthSecureService } from './secure/auth-secure.service';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
+import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
       { path: 'imagenes', component: ImagenesComponent },
       { path: 'registro', component: RegistroComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'formato-pago', component: FormatoPagoComponent }
+      { path: 'formato-pago', component: FormatoPagoComponent },
+      { path: 'formulario-negocios', component: FormularioNegociosComponent }
     ]
   }
 ];
