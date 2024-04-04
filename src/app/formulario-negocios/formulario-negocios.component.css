@@ -1,0 +1,112 @@
+form{
+    background: #f4e3cf;
+}
+
+h1{
+    text-align: center;
+}
+
+fieldset{
+    border: 5px dotted #dab78f;
+    padding: 30px;
+    margin: 0 25px;
+    color: #3b2002;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+label:first-of-type{
+    margin: 0;
+}
+
+label{
+    margin: 30px 0 0 0;
+}
+
+input, select, textarea{
+    width: 60%;
+    margin: 0;
+}
+
+#imagesFieldSet{
+    display: flex;
+}
+
+input[type="file"]{
+    display: inline-block;
+}
+
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    background-color: #dab78f;
+    font-weight: bolder;
+    font-size: 2vw;
+    padding: 20px;
+    border-radius: 5px;
+    color: #3b2002;
+    margin: 20px 0;
+}
+
+.conteoCaracteres{
+    color: #3b2002;
+}
+
+.mandatoryPoint, .mensajes{
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 0px) and (max-width: 767.98px) {
+    input, select, textarea{
+        width: 100%;
+    }
+
+    #imagesFieldSet{
+        flex-direction: column;
+    }
+
+    fieldset:last-of-type input:last-of-type{
+        margin-bottom: 30px;
+    }
+
+    button{
+        font-size: 4vw;
+    }
+  }
+  
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    
+  
+  }
+  
+  /* Large devices (desktops, less than 1200px) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    
+  }
+  
+  /*  X-Large devices (large desktops, less than 1400px) */
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+    
+  }
+  
+  /* XX-Large devices (larger desktops) */
+  @media (min-width: 1400px) {
+    
+  }
+  
+  
+  @media (max-width: 360px){
+    input, select, textarea{
+        width: 100%;
+    }
+  }
