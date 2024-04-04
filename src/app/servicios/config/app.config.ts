@@ -25,6 +25,7 @@ export class AppConfig {
 
 
     if('apiEndPoint'== key)
+      //return 'http://localhost:8082'
      //return 'https://backend.zorktech.com.mx';
      return this.config[key];
   
