@@ -325,18 +325,21 @@ export class FormularioNegociosComponent implements OnInit {
 
   private enviar(){
     console.log("Enviando ...");
+    this.tituloModal = "¡ENVIANDO!";
+    this.mensajeModal = "ENVIANDO DATOS POR FAVOR ESPERE ...";
+    this.abrirModal();
     this.negocioService.createBusiness(this.payload()).subscribe((result)=>{
       console.log("datos enviados correctamente", result);
       this.tituloModal = "¡DATOS ENVIADOS!";
       this.mensajeModal = "TUS DATOS HAN SIDO ENVIADOS Y APARECERÁN PUBLICADOS DENTRO DE POCO";
-      this.abrirModal();
+      //this.abrirModal();
     },
     (error)=>{
       console.log("ocurrió un error enviando los datos", error);
       this.tituloModal = "¡DATOS NO ENVIADOS!";
       this.mensajeModal = `TUS DATOS NO SE HAN PODIDO ENVIAR DEBIDO A UN PROBLEMA CON ELLOS,
       POR FAVOR MANDANOS UN MENSAJE A LOS TELÉFONOS DE CONTACTO Y CON GUSTO TE AYUDAREMOS`;
-      this.abrirModal();
+      //this.abrirModal();
     });
   }
 
