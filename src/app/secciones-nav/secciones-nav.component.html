@@ -1,0 +1,16 @@
+<nav id="navegationBar">
+    <div #categoriesButton id="categoriesButton">
+        <img id="tolucaLaBellaImg" 
+        src="../../assets/imagenes/toluca-la-bella.png" alt="toluca-la-bella-logo" />
+    </div>
+</nav>
+<div #categoriesContainer class="divCategories">
+    <div class="ul" #categories (click)="changingColorSelectedCategori($event)">
+        <a routerLink="/inicio"><li>Inicio</li></a>
+        <a routerLink="/inicio"><li>Negocio Exitoso</li></a>
+        <a routerLink="/inicio"><li>Quienes somos</li></a>
+        <a routerLink="/inicio"><li>Marketing Digital</li></a>
+        <a routerLink="/formulario-negocios"><li>Formulario Registro</li></a>
+        <a routerLink="/inicio"><li>Socios Comerciales</li></a>
+    </div>
+</div>

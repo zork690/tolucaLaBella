@@ -25,6 +25,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { ImagenesComponent } from './imagenes/imagenes.component';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
+import { SeccionesNavComponent } from './secciones-nav/secciones-nav.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -42,7 +43,8 @@ export function initConfig(config: AppConfig) {
     LoginComponent,
     ImagenesComponent,
     FormatoPagoComponent,
-    FormularioNegociosComponent
+    FormularioNegociosComponent,
+    SeccionesNavComponent
   ],
   imports: [
     BrowserModule,

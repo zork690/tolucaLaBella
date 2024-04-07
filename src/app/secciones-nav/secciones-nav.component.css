@@ -1,0 +1,60 @@
+.ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    height: 10vh;
+    border: 1px solid none;
+}
+
+li{
+    list-style-type: none;
+    padding: 0 25px;
+    color: #3b2002;
+    font-weight:bolder;
+}
+
+a:hover{
+    background-color: #dab78f;
+    text-decoration: none;
+}
+
+.divCategories{
+    display: block;
+}
+
+#navegationBar{
+    display: none;
+    text-align: center;
+}
+
+#tolucaLaBellaImg{
+    height: 11vh;
+}
+
+#tolucaLaBellaImg:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:650px) {
+    .divCategories{
+        display: none;
+    }
+
+    .ul{
+        flex-direction: column;
+        background-color: #f7e1c9;
+        position: relative;
+        height: auto;
+    }
+
+    li{
+        padding: 0px;
+    }
+
+    #navegationBar{
+        display: block;
+      }
+
+}
