@@ -26,6 +26,7 @@ import { ImagenesComponent } from './imagenes/imagenes.component';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
 import { SeccionesNavComponent } from './secciones-nav/secciones-nav.component';
+import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -44,7 +45,8 @@ export function initConfig(config: AppConfig) {
     ImagenesComponent,
     FormatoPagoComponent,
     FormularioNegociosComponent,
-    SeccionesNavComponent
+    SeccionesNavComponent,
+    SociosComercialesComponent
   ],
   imports: [
     BrowserModule,
