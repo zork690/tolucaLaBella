@@ -1,0 +1,195 @@
+#navegationBar {
+    display: block;
+    text-align: left;
+    background-color: aqua;
+}
+
+#categoriesButton{
+    display: inline-block;
+}
+
+.divCategories {
+    display: none;
+}
+
+#categoriesIcon:hover, .ul > a{
+    cursor: pointer;
+}
+
+.ul > a:hover{
+    background-color: #dab78f;
+}
+
+.backgroundCategories{
+    background-color: aqua;
+}
+
+.categoriesContainer {
+    border: 1px solid none;
+    width: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+.categoriesContainer a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: 1px solid none;
+    display: block;
+    margin: 15px;
+}
+
+.categoriesContainer a:first-of-type,
+.categoriesContainer a:last-of-type {
+    margin: 0px 15px;
+}
+
+.categoriesContainer a:hover {
+    background-color: #FFF7CC;
+}
+
+.navColor {
+    background-color: #cef5d9;
+}
+
+.contentContainer {
+    border: 1px solid none;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;    
+}
+
+.nombreCategoria {
+    border: 1px solid none;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.negocioRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.negocio {
+    border: 1px solid saddlebrown;
+    margin: 20px;
+    width: 20%;
+}
+
+.negocioInfo img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.negocioImage {
+    width: 100%;
+    height: 100px;
+}
+
+.ul > a {
+    display: block;
+}
+
+.negocioTitle{
+    text-align: center;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .divCategories {
+        display: none;
+    }
+
+    .categoriesContainer {
+        width: 100%;
+    }
+
+    .negocioRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .negocio {
+        width: 100%;
+        margin: 0px;
+    }
+
+}
+
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .negocioRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .negocio {
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .negocioRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .negocio {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .negocioInfo{
+        display: flex;
+        align-items: stretch;
+
+    }
+
+    .negocioImage {
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+    }
+
+    .detailInfo{
+        width: 50%;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .detailInfoCard{
+        display: none;
+    }
+
+}
+
+/*  X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .detailInfoCard{
+        display: none;
+    }
+}
+
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1400px) {
+    .detailInfoCard{
+        display: none;
+    }
+}
+
+
+@media (max-width: 360px) {}
