@@ -195,7 +195,7 @@ export class FormularioNegociosComponent implements OnInit {
       { paragraphsObj.nombreNegocioValidacion.innerText
         = this.fieldSoloLetrasNumeros; return false; }
     
-    if(!this.validaSoloAlfaNumbericos(this.descripcionComercial.trim()))
+    if(!this.validaSoloAlfaNumbericos_(this.descripcionComercial.trim()))
       { paragraphsObj.descripcionComercialValidacion.innerText
         = this.fieldSoloLetrasNumeros; return false; }
     
@@ -237,6 +237,11 @@ export class FormularioNegociosComponent implements OnInit {
 
   private validaSoloAlfaNumbericos(inputStr:string):boolean{
     let regex = /^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]*$/;
+    return regex.test(inputStr);
+  }
+
+  private validaSoloAlfaNumbericos_(inputStr:string):boolean{
+    let regex = /^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ,." ]*$/;
     return regex.test(inputStr);
   }
 
