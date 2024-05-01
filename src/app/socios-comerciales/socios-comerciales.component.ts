@@ -4,8 +4,9 @@ import { Component, OnInit, ViewChild, ElementRef
  } from '@angular/core';
 
 import { fromEvent, Subscription } from 'rxjs';
-import { negociosInfo } from '../../assets/mockDemoNegociosInfo';
+//import { negociosInfo } from '../../assets/mockDemoNegociosInfo';
 import {AppConfig} from '../../app/servicios/config/app.config';
+import { NegociosService } from '../servicios/negocios/negocios.service';
 
 @Component({
   selector: 'app-socios-comerciales',
@@ -21,22 +22,25 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
 
   categoria: string;
   isShowing:boolean = false;
-  negociosInfo = negociosInfo;
+  negociosInfo:any;
   imagenesBasePath: string;
   apiEndPoint: string;
+  tituloModal:string;
+  mensajeModal: string;
 
-  constructor(private config: AppConfig) {
+  constructor(private config: AppConfig, private negocioService: NegociosService) {
     this.apiEndPoint = this.config.getConfig('apiEndPoint');
+    //this.apiEndPoint = "https://backend.zorktech.com.mx";
     this.imagenesBasePath = this.config.getConfig('pathImages');
    }
 
   ngOnInit(): void {
     this.categoria = "Peluquerias";
-    console.log("MOCK INFO: ",negociosInfo);
+    this.fetchNegocios();
   }
 
   ngAfterViewInit(): void{
-    this.getWhenCategoriesButtonIsClicked();
+    //this.getWhenCategoriesButtonIsClicked();
     //this.setColorAboutCategory();
   }
 
@@ -78,6 +82,22 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
     this.categoriesButtonClicked = fromEvent(this.categoriesButton.nativeElement, "click")
     .subscribe(()=>{
       this.x();
+    });
+  }
+
+  private fetchNegocios(){
+    this.tituloModal = "CARGANDO NEGOCIOS";
+    this.mensajeModal = "CARGANDO NEGOCIOS POR FAVOR ESPERE...";
+    this.negocioService.getNegocios().subscribe((result)=>{
+      console.log("Negocios list: ",result);
+      this.negociosInfo = result;
+      this.mensajeModal = "ok";
+    }
+    , (error)=>{
+      console.log("An error occured fetching data: ",error);
+      this.mensajeModal = `LOS NEGOCIOS NO SE HAN PODIDO CARGAR DEBIDO A UN PROBLEMA TÉCNICO
+      QUE EN BREVE SOLUCIONAREMOS, POR FAVOR MANDANOS UN MENSAJE A LOS TELÉFONOS DE CONTACTO
+      SI DESEAS LEVANTAR TU QUEJA.`;
     });
   }
 
