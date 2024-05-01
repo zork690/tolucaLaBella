@@ -35,7 +35,8 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
    }
 
   ngOnInit(): void {
-    this.categoria = "Peluquerias";
+    //this.categoria = "Peluquerias";
+    this.categoria = "Socios Comerciales";
     this.fetchNegocios();
   }
 
