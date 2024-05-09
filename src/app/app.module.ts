@@ -28,6 +28,7 @@ import { FormularioNegociosComponent } from './formulario-negocios/formulario-ne
 import { SeccionesNavComponent } from './secciones-nav/secciones-nav.component';
 import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
 import { VentanaModalInfoComponent } from './ventana-modal-info/ventana-modal-info.component';
+import { DetalleSociosComercialesComponent } from './detalle-socios-comerciales/detalle-socios-comerciales.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -48,7 +49,8 @@ export function initConfig(config: AppConfig) {
     FormularioNegociosComponent,
     SeccionesNavComponent,
     SociosComercialesComponent,
-    VentanaModalInfoComponent
+    VentanaModalInfoComponent,
+    DetalleSociosComercialesComponent
   ],
   imports: [
     BrowserModule,
