@@ -22,6 +22,7 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
 
   categoria: string;
   isShowing:boolean = false;
+  //negociosInfo:any = negociosInfo;
   negociosInfo:any;
   imagenesBasePath: string;
   apiEndPoint: string;
@@ -55,6 +56,10 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
     this.isShowing = true;
     this.changeCategoryName(event.target.text);
     this.x();
+  }
+
+  public getDetailsNegocio(negocio:any):void{
+    console.log("NEGOCIO A DETALLAR:", negocio);
   }
 
   private changeCategoryName(category: string): void{
