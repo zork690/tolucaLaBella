@@ -12,6 +12,8 @@ import { AuthSecureService } from './secure/auth-secure.service';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
 import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
+import { DetalleSociosComercialesComponent } from 
+'./detalle-socios-comerciales/detalle-socios-comerciales.component';
 
 const routes: Routes = [
   {
@@ -29,7 +31,8 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'formato-pago', component: FormatoPagoComponent },
       { path: 'formulario-negocios', component: FormularioNegociosComponent },
-      { path: 'socios-comerciales', component: SociosComercialesComponent }
+      { path: 'socios-comerciales', component: SociosComercialesComponent },
+      { path: 'socios-comerciales/:idNegocio', component: DetalleSociosComercialesComponent }
     ]
   }
 ];
