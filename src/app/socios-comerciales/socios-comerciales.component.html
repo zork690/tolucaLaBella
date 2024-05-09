@@ -25,7 +25,7 @@
     <div class="negocioRow">
 
         <div class="negocio" *ngFor="let negocio of negociosInfo">
-            <div class="negocioInfo">
+            <div class="negocioInfo" [routerLink]="['/socios-comerciales', negocio.idNegocio]">
                 <img *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} class="negocioImage" />
                 <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg" class="negocioImage" />
                 <div class="detailInfo">
