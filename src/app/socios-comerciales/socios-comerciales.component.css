@@ -83,6 +83,10 @@
     width: 20%;
 }
 
+.negocio{
+    cursor: pointer;
+}
+
 .negocioInfo img {
     max-width: 100%;
     height: auto;
