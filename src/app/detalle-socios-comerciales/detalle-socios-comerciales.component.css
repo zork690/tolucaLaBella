@@ -1,0 +1,19 @@
+.mainContainer{
+    text-align: center;
+}
+
+.whats a{
+    color: #174F17;
+    font-weight: bolder;
+}
+
+.whats a:hover{
+    text-decoration: none;
+}
+
+.negocioImage {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0px;
+    border: 1px solid gray;
+}
