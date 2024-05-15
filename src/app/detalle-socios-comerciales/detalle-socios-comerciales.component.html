@@ -1,4 +1,4 @@
-<div *ngIf="negocioObj">
+<div class="mainContainer" *ngIf="negocioObj">
     <h1>{{negocioObj.nombrEmpresa}}</h1>
     <p>{{negocioObj.descripcion}}</p>
     <div *ngIf="negocioObj.imagenes.length > 0">
@@ -10,10 +10,17 @@
         <img src="../../assets/imagenes/unavailable.jpg" class="negocioImage" />
     </div>
     <h2>{{negocioObj.telefono}}</h2>
+    <h2 class="whats">
+        <a href="https://api.whatsapp.com/send?phone={{negocioObj.telefono}}">WhatsApp</a>
+    </h2>
     <h2>{{negocioObj.ubicacion.municipio}}</h2>
     <h2>{{negocioObj.ubicacion.colonia}}</h2>
     <h2>Código Postal: {{negocioObj.ubicacion.codigoPostal}}</h2>
-    <h2>Dirección: {{negocioObj.calle}} {{negocioObj.numeroExterior}}</h2>
+    <h2>Dirección:
+        <span class="dirNegocio">
+            {{negocioObj.calle}} {{negocioObj.numeroExterior}}
+        </span>
+    </h2>
 </div>
 
 <app-ventana-modal-info [tituloModal]="tituloModal"
