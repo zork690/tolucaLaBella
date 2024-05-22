@@ -1,0 +1,21 @@
+#HeaderPanel{
+    border: solid 0px red;
+    background-color:antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerMenuScreen{
+    border: solid 1px gray;
+    display: flex;
+}
+
+#mainScreenPanel{
+    background-color: darkgray;
+}
+
+.actions{
+    text-decoration: none;
+    color: darkgrey;
+}

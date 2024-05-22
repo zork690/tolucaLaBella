@@ -29,6 +29,8 @@ import { SeccionesNavComponent } from './secciones-nav/secciones-nav.component';
 import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
 import { VentanaModalInfoComponent } from './ventana-modal-info/ventana-modal-info.component';
 import { DetalleSociosComercialesComponent } from './detalle-socios-comerciales/detalle-socios-comerciales.component';
+import { PanelComponent } from './panel/panel.component';
+import { PanelContentComponent } from './panel-content/panel-content.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -50,7 +52,9 @@ export function initConfig(config: AppConfig) {
     SeccionesNavComponent,
     SociosComercialesComponent,
     VentanaModalInfoComponent,
-    DetalleSociosComercialesComponent
+    DetalleSociosComercialesComponent,
+    PanelComponent,
+    PanelContentComponent
   ],
   imports: [
     BrowserModule,
