@@ -37,9 +37,14 @@ a:hover{
 }
 
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:815px) {
     .divCategories{
         display: none;
+    }
+
+    .apilamiento{
+        position: relative;
+        z-index: 10000;
     }
 
     .ul{
