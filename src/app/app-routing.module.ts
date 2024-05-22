@@ -14,6 +14,8 @@ import { FormularioNegociosComponent } from './formulario-negocios/formulario-ne
 import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
 import { DetalleSociosComercialesComponent } from 
 './detalle-socios-comerciales/detalle-socios-comerciales.component';
+import { PanelComponent } from 
+'./panel/panel.component';
 
 const routes: Routes = [
   {
@@ -32,7 +34,8 @@ const routes: Routes = [
       { path: 'formato-pago', component: FormatoPagoComponent },
       { path: 'formulario-negocios', component: FormularioNegociosComponent },
       { path: 'socios-comerciales', component: SociosComercialesComponent },
-      { path: 'socios-comerciales/:idNegocio', component: DetalleSociosComercialesComponent }
+      { path: 'socios-comerciales/:idNegocio', component: DetalleSociosComercialesComponent },
+      { path: 'panel-socios', component: PanelComponent }
     ]
   }
 ];
