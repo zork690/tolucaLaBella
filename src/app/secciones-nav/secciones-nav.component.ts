@@ -60,7 +60,9 @@ export class SeccionesNavComponent implements OnInit, AfterViewInit, OnDestroy {
       this.categoriesContainer.nativeElement.classList.remove("divCategories");
       this.isShowing = true;
     }else{
+      this.categoriesContainer.nativeElement.classList.add("apilamiento");
       this.categoriesContainer.nativeElement.classList.add("divCategories");
+      
       this.isShowing = false;
     }
   }
