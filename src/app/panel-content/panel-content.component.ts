@@ -526,7 +526,7 @@ export class PanelContentComponent implements OnInit {
       nombreEmpresa: this.negocio.nombrEmpresa,
       numeroExterior: this.negocio.numeroExterior,
       telefono: this.negocio.telefono,
-      valido: this.negocio.isValid
+      valido: this.negocio.valid
     }
     console.log("PAYLOAD: ", payload);
     return JSON.stringify(payload);
