@@ -151,7 +151,8 @@ export class PanelContentComponent implements OnInit {
     this.SpinnerService.show();
     this.negocioService.updateBusiness(this.payload()).subscribe((resData) => {
       this.toastr.success('Actualización exitosa.');
-      //this.cancelModal();
+      this.SpinnerService.hide();
+      this.cancelModal();
     },
       (jsonError) => {
         this.SpinnerService.hide();
