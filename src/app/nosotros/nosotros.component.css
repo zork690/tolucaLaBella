@@ -1,0 +1,184 @@
+#tolucaBellaDiv{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+#tolucaBellaDiv_{
+    display: flex;
+    align-items: end;
+    margin-right: 35px;
+
+}
+
+#tolucaBellaDiv_ div{
+    margin-bottom: 50px;
+    font-size: 3vh;
+}
+
+#tolucaBellaMainTitle{
+    font-size: 20vh;
+}
+
+#quienesSomosDiv{
+    margin: 40px 0;
+    display: flex;
+}
+
+#quienesSomosDiv_{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#quienesSomosDiv_ p{
+    text-align: justify;
+    margin: 0px 60px;
+}
+
+#masQueUnDirectorioDiv{
+    margin: 40px 0;
+}
+
+#masQueUnDirectorioDiv h2{
+    text-align: center;
+}
+
+#masQueUnDirectorioDiv_{
+    display: flex;
+}
+
+#masQueUnDirectorioDiv_ div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 25px;
+    text-align: justify;
+    flex-direction: column;
+}
+
+#descubreConectaDiv {
+    display: flex;
+    margin: 40px 0;
+}
+
+#descubreConectaDiv div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#descubreConectaDiv_{
+    display: flex;
+    flex-direction: column;
+}
+
+#tolucaAlcanceDiv {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#tolucaAlcanceDiv p {
+    border-bottom: 2px solid black;
+    display: inline-block;
+    font-size: 4vw;
+}
+
+#tolucaAlcanceDiv span {
+    display: block;
+}
+
+#tolucaAlcanceDiv button {
+    margin: 20px 0;
+}
+
+#apasionaDiv {
+    margin: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#apasionaDiv p {
+    text-align: justify;
+    margin: 0px 60px;
+}
+
+#posibilidadesDiv {
+    margin: 50px 0;
+}
+
+#posibilidadesDiv h4 {
+    text-align: center;
+    margin: 25px 0;
+}
+
+#posibilidadesDivSub {
+    display: flex;
+}
+
+li {
+    margin: 25px 10px;
+    text-align: justify;
+}
+
+#posibilidadesDivSub h3 {
+    display: inline;
+}
+
+#imagePosibilidades {
+    margin: 0px 25px;
+}
+
+#registraNegocioDiv {
+    margin: 100px 0;
+    text-align: center;
+}
+
+#historiasExitoTitle {
+    text-align: center;
+}
+
+#historiasExitoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#historiasExitoDiv div {
+    max-width: 20%;
+    margin-right: 15px;
+}
+
+#contactoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactoDiv div {
+    margin: 40px;
+}
+
+form {
+    border: 2px solid gray;
+    text-align: center;
+}
+
+#footerNosotros {
+    background-color: #F0F0F0;
+    padding: 50px;
+    text-align: center;
+}
+
+#botonFooterNosotros {
+    margin-left: 90px;
+}
+
+img{
+    max-width: 100%;
+}
