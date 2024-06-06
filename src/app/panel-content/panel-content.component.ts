@@ -153,6 +153,7 @@ export class PanelContentComponent implements OnInit {
       this.toastr.success('Actualización exitosa.');
       this.SpinnerService.hide();
       this.cancelModal();
+      this.ngOnInit();
     },
       (jsonError) => {
         this.SpinnerService.hide();
@@ -167,7 +168,9 @@ export class PanelContentComponent implements OnInit {
     this.negocioService.updateImages(this.imagenes).subscribe((response) => {
       this.toastr.success('Actualización exitosa.');
       console.log("Respuesta: ",response);
-      //this.cancelModal();
+      this.SpinnerService.hide();
+      this.cancelModal();
+      this.ngOnInit();
     },
       (jsonError) => {
         this.SpinnerService.hide();
@@ -209,7 +212,7 @@ export class PanelContentComponent implements OnInit {
   }
 
   /******** PARA PROBAR NEGOCIOS LOCALMENTE *********/
-  /*private getNegocios(): void {
+  private getNegocios(): void {
     //this.negocioService.getNegocios().subscribe((result: any[]) => {
     //console.log("Negocios: ",result);
     //this.imgFromServer = result;
@@ -229,10 +232,10 @@ export class PanelContentComponent implements OnInit {
     //  this.SpinnerService.hide();
     //  this.toastr.error("Error obteniendo los negocios", responseError);
     //});
-  }*/
+  }
 
   /* PARA PROBAR EN EL BACK */
-  private getNegocios(): void {
+  /*private getNegocios(): void {
     this.SpinnerService.show();
     this.negocioService.getNegociosTodos().subscribe((result: any[]) => {
       console.log("Negocios: ", result);
@@ -247,7 +250,7 @@ export class PanelContentComponent implements OnInit {
         this.toastr.error("Error obteniendo los negocios");
         console.log("Error obteniendo los negocios: ", responseError);
       });
-  }
+  }*/
 
   private gettingMunicipios(): void {
     let municipio: String = "";
