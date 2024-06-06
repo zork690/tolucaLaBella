@@ -212,7 +212,7 @@ export class PanelContentComponent implements OnInit {
   }
 
   /******** PARA PROBAR NEGOCIOS LOCALMENTE *********/
-  private getNegocios(): void {
+  /*private getNegocios(): void {
     //this.negocioService.getNegocios().subscribe((result: any[]) => {
     //console.log("Negocios: ",result);
     //this.imgFromServer = result;
@@ -232,10 +232,10 @@ export class PanelContentComponent implements OnInit {
     //  this.SpinnerService.hide();
     //  this.toastr.error("Error obteniendo los negocios", responseError);
     //});
-  }
+  }*/
 
   /* PARA PROBAR EN EL BACK */
-  /*private getNegocios(): void {
+  private getNegocios(): void {
     this.SpinnerService.show();
     this.negocioService.getNegociosTodos().subscribe((result: any[]) => {
       console.log("Negocios: ", result);
@@ -250,7 +250,7 @@ export class PanelContentComponent implements OnInit {
         this.toastr.error("Error obteniendo los negocios");
         console.log("Error obteniendo los negocios: ", responseError);
       });
-  }*/
+  }
 
   private gettingMunicipios(): void {
     let municipio: String = "";
