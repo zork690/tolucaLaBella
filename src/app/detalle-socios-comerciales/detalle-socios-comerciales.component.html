@@ -1,4 +1,208 @@
-<div class="mainContainer" *ngIf="negocioObj">
+<div id="seccion1">
+    <div>
+        <p>Entretenimiento/Cines/Cinemex Plaza Toluca</p>
+    </div>
+</div>
+<div id="seccion2">
+    <div>
+        <div id="seccion2_B">
+            <div id="seccion2_A">
+                <div>
+                    <img src="../../assets/imagenes/imagenCincoNosotros.PNG" />
+                </div>
+                <div>
+                    <h1>Nombre del Negocio</h1>
+                    <h2>Categoría</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nostrum a voluptatem! Adipisci
+                        sint, dolor ad tempore sunt magni earum nulla tempora modi odio? Quos eos modi eligendi est
+                        corporis.</p>
+                </div>
+            </div>
+            <div>
+                <h4>Galeria</h4>
+
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <!-- The slideshow -->
+                    <div class="container carousel-inner no-padding">
+                        <div class="carousel-item active">
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3">
+                                <img
+                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contactoInfo">
+        <h4>{{negocioObj.ubicacion.municipio}}</h4>
+        <h4>{{negocioObj.ubicacion.colonia}}</h4>
+        <h4>Código Postal: {{negocioObj.ubicacion.codigoPostal}}</h4>
+        <h4>{{negocioObj.telefono}}</h4>
+    </div>
+</div>
+<div id="seccion3">
+    <div>
+        <h4>Reseñas</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eaque laudantium at asperiores. Cupiditate,
+            eum ullam consequatur, ratione voluptatum excepturi saepe magni numquam ea aliquid enim alias deserunt
+            accusantium. Rem?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eaque laudantium at asperiores. Cupiditate,
+            eum ullam consequatur, ratione voluptatum excepturi saepe magni numquam ea aliquid enim alias deserunt
+            accusantium. Rem?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eaque laudantium at asperiores. Cupiditate,
+            eum ullam consequatur, ratione voluptatum excepturi saepe magni numquam ea aliquid enim alias deserunt
+            accusantium. Rem?</p>
+    </div>
+    <div>
+        <h4>Otros Negocios Relacionados</h4>
+
+        <div id="negociosRelacionados" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#negociosRelacionados" data-slide-to="0" class="active"></li>
+                <li data-target="#negociosRelacionados" data-slide-to="1"></li>
+                <li data-target="#negociosRelacionados" data-slide-to="2"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="container carousel-inner no-padding">
+                <div class="carousel-item active">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <img
+                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#negociosRelacionados" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#negociosRelacionados" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div id="footer">
+    <span>ENCUENTRA, DESCUBRE Y<strong> CONECTA</strong> CON LOS <strong>NEGOCIOS</strong> DE <strong> TOLUCA</strong></span>
+    <button id="botonFooter">Botón</button>
+</div>
+<app-footer></app-footer>
+
+<!--<div class="mainContainer" *ngIf="negocioObj">
     <h1>{{negocioObj.nombrEmpresa}}</h1>
     <p>{{negocioObj.descripcion}}</p>
     <div *ngIf="negocioObj.imagenes.length > 0">
@@ -21,7 +225,6 @@
             {{negocioObj.calle}} {{negocioObj.numeroExterior}}
         </span>
     </h2>
-</div>
+</div>-->
 
-<app-ventana-modal-info [tituloModal]="tituloModal"
-[mensajeModal]="mensajeModal"></app-ventana-modal-info>
+<app-ventana-modal-info [tituloModal]="tituloModal" [mensajeModal]="mensajeModal"></app-ventana-modal-info>

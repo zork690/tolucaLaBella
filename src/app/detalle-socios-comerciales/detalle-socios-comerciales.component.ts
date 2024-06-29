@@ -47,4 +47,52 @@ export class DetalleSociosComercialesComponent implements OnInit {
     });
   }
 
+  //PARA PRUEBAS EN LOCAL
+  /*private getDetails(idNegocio:string):void{
+    this.tituloModal = "CARGANDO NEGOCIO";
+    this.mensajeModal = "CARGANDO NEGOCIO POR FAVOR ESPERE...";
+    this.negocioObj = {
+      "id": 1,
+      "idNegocio": "1714097862223",
+      "nombre": "césar alberto soto reyes",
+      "telefono": "7224304100",
+      "email": "zork_690@hotmail.com",
+      "ubicacion": {
+        "id": 577,
+        "colonia": "SAN LORENZO TEPALTITLAN",
+        "municipio": "TOLUCA",
+        "codigoPostal": 50010
+      },
+      "descripcion": "Compañia especializada en tecnología de la información",
+      "calle": "5 de mayo",
+      "categoria": "pendiente de categorizar",
+      "nombrEmpresa": "ZORKTECH",
+      "numeroExterior": "53",
+      "valid": true,
+      "imagenes": [
+        {
+          "id": 2,
+          "nombre": "WhatsApp Image 2023-08-13 at 10.39.35 PM (1).jpeg",
+          "idNegocio": "1714097862223",
+          "valid": false
+        }
+      ]
+    };
+    setTimeout(()=>{
+      this.mensajeModal = "ok";
+    }, 1000); */
+
+    /*this.negocioService.getNegocio(idNegocio).subscribe((result)=>{
+      console.log("Negocio: ",result);
+      this.negocioObj = result;
+      this.mensajeModal = "ok";
+    }
+    , (error)=>{
+      console.log("An error occured fetching data: ",error);
+      this.mensajeModal = `EL NEGOCIO NO SE HAN PODIDO CARGAR DEBIDO A UN PROBLEMA TÉCNICO
+      QUE EN BREVE SOLUCIONAREMOS, POR FAVOR MÁNDENOS UN MENSAJE A LOS TELÉFONOS DE CONTACTO
+      SI DESEA LEVANTAR SU QUEJA.`;
+    }); */
+  //}
+
 }

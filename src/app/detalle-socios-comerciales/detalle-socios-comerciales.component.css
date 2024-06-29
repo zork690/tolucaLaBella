@@ -17,3 +17,43 @@
     margin: 20px 0px;
     border: 1px solid gray;
 }
+
+#seccion2{
+    display: flex;
+}
+
+#seccion2_A{
+    display: flex;
+}
+
+#contactoInfo{
+    background-color: antiquewhite;
+    padding: 15px;
+}
+
+.col-md-3{
+    display: inline-block;
+    margin-left:-4px;
+  }
+  .col-md-3 img{
+    width:100%;
+    height:auto;
+  }
+  body .carousel-indicators li{
+    background-color:red;
+  }
+  body .carousel-control-prev-icon,
+  body .carousel-control-next-icon{
+    background-color:red;
+  }
+
+
+  #footer{
+    background-color: #F0F0F0;
+    padding: 50px;
+    text-align: center;
+}
+
+#botonFooter{
+    margin-left: 90px;
+}
