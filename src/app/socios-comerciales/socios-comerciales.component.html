@@ -17,19 +17,71 @@
         <a>Electrónica</a>
     </div>
 </div>-->
+<div id="seccion2">
+    <div>
+        <h1>Encuentra tu negocio favorito en Toluca</h1>
+        <div><span>¡Búscalo ahora!</span></div>
+    </div>
+    <div>
+        <img src="../../assets/imagenes/imagenUnoNosotros.PNG" />
+    </div>
+</div>
+<hr />
+<div id="seccion1">
+    <div class="categoriasDiv">
+        <h4>Tiendas</h4>
+        <h4>Restaurantes</h4>
+        <h4>Cuidado Personal</h4>
+    </div>
+    <div class="categoriasDiv">
+        <h4>Bienestar</h4>
+        <h4>Entretenimiento</h4>
+        <h4>Educación</h4>
+    </div>
+    <div class="categoriasDiv">
+        <h4>Tecnología y Comunicación</h4>
+        <h4>Automotríz</h4>
+        <h4>Turismo</h4>
+    </div>
+</div>
+
+<div id="seccion3">
+    <p id="filtrosP"><span><i class="fas fa-filter"></i></span>Filtros</p>
+    <div>
+        <nav class="navbar">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Ingresa tu búsqueda"
+                    aria-label="Ingresa tu búsqueda">
+                <button class="btn btn-dark my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </nav>
+    </div>
+    <h1 id="subcategoriaH1">Cines</h1>
+    <p id="metaP">Encuentra los mejores cines en Toluca la Bella. Disfruta de las últimas películas en modernas salas con excelente calidad de sonido e imagen.</p>
+    <p id="migaP">Entretenimiento/Cines/Cinemex Plaza Toluca</p>
+</div>
+
+<!--<div id="seccion4">
+    <div>
+        <h1>(Nombre) Subcategoría</h1>
+        <p>META DESCRIPCIÓN DE LA SUBCATEGORÍA TAMAÑO DE LETRA 8</p>
+        <p>Entretenimiento/Cines/Cinemex Plaza Toluca</p>
+    </div>
+</div>-->
 
 <div class="contentContainer">
-
-    <h4 class="nombreCategoria">{{categoria}}</h4>
+    <!--<h4 class="nombreCategoria">{{categoria}}</h4>-->
 
     <div class="negocioRow">
 
         <div class="negocio" *ngFor="let negocio of negociosInfo">
-            <div class="negocioInfo" [routerLink]="['/socios-comerciales', negocio.idNegocio]">
-                <img *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} class="negocioImage" />
-                <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg" class="negocioImage" />
+            <div class="negocioInfo" [routerLink]="['/directorio-de-negocios', negocio.idNegocio]">
+                <img *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}}
+                    class="negocioImage" />
+                <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg"
+                    class="negocioImage" />
                 <div class="detailInfo">
-                    <p class="negocioTitle">{{negocio.nombrEmpresa}}</p>
+                    <h3 class="negocioTitle">{{negocio.nombrEmpresa}}</h3>
                     <div class="detailInfoCard">
                         <p>{{negocio.telefono}}</p>
                         <p>{{negocio.descripcion}}</p>
@@ -38,7 +90,40 @@
             </div>
         </div>
     </div>
-    
+
 </div>
+
+<div id="seccion5">
+    <h2>Encuentra <strong>TODO LO QUE NECESITAS </strong>en Toluca con un solo clic</h2>
+</div>
+<div id="seccion6">
+    <h2 id="favoritosLabel">Favoritos</h2>
+    <div class="contentContainer">
+        <div class="negocioRow">
+            <div class="negocio" *ngFor="let negocio of negociosInfo">
+                <div class="negocioInfo" [routerLink]="['/directorio-de-negocios', negocio.idNegocio]">
+                    <span><i class="far fa-star"></i></span>
+                    <img *ngIf="negocio.imagenes.length > 0"
+                        src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} class="negocioImage" />
+                    <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg"
+                        class="negocioImage" />
+                    <div class="detailInfo">
+                        <h3 class="negocioTitle">{{negocio.nombrEmpresa}}</h3>
+                        <div class="detailInfoCard">
+                            <p>{{negocio.telefono}}</p>
+                            <p>{{negocio.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <span><strong>Únete</strong> a Toluca la Bella y <strong>descubre</strong> cómo podemos ayudarte a <strong>crecer en el mundo digital</strong></span>
+    <button id="botonFooter">Botón</button>
+</div>
+
+<app-footer></app-footer>
 
 <app-ventana-modal-info [tituloModal]="tituloModal" [mensajeModal]="mensajeModal"></app-ventana-modal-info>

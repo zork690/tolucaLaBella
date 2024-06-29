@@ -7,6 +7,7 @@ import { fromEvent, Subscription } from 'rxjs';
 //import { negociosInfo } from '../../assets/mockDemoNegociosInfo';
 import {AppConfig} from '../../app/servicios/config/app.config';
 import { NegociosService } from '../servicios/negocios/negocios.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-socios-comerciales',
@@ -29,7 +30,9 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
   tituloModal:string;
   mensajeModal: string;
 
-  constructor(private config: AppConfig, private negocioService: NegociosService) {
+  constructor(private config: AppConfig
+    , private negocioService: NegociosService
+    , private meta: Meta) {
     this.apiEndPoint = this.config.getConfig('apiEndPoint');
     //this.apiEndPoint = "https://backend.zorktech.com.mx";
     this.imagenesBasePath = this.config.getConfig('pathImages');
@@ -37,7 +40,16 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
 
   ngOnInit(): void {
     //this.categoria = "Peluquerias";
-    this.categoria = "Socios Comerciales";
+    this.categoria = "Entretenimiento";
+    this.meta.updateTag( 
+      { name: "title", content: "Directorio Toluca la Bella" }, 
+      "name=title");
+    this.meta.updateTag( 
+      { name: "description", content: "Conecta con empresas locales de confianza y descubre todo lo que Toluca tiene que ofrecer." }, 
+      "name=description");
+    this.meta.updateTag( 
+      { name: "keywords", content: "Directorio, Negocios Toluca, Productos, Servicios" }, 
+      "name=keywords");
     this.fetchNegocios();
   }
 
@@ -106,6 +118,15 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
       SI DESEAS LEVANTAR TU QUEJA.`;
     });
   }
+
+  // PARA PROBAR EN LOCAL
+  /*private fetchNegocios(){
+    this.tituloModal = "CARGANDO NEGOCIOS";
+    this.mensajeModal = "CARGANDO NEGOCIOS POR FAVOR ESPERE...";
+    setTimeout(()=>{
+      this.mensajeModal = "ok";
+    }, 1000);
+  }*/
 
   private setColorAboutCategory(): void{
     let linksArr = this.gettingLinksArr();

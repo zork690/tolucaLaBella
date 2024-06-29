@@ -1,3 +1,78 @@
+#seccion1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F0;
+
+}
+
+#seccion2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#seccion2 > div{
+    width: 50%;
+}
+
+#seccion3{
+    margin: 30px 30px 0px 30px;
+    padding: 25px 25px 0px 25px;
+    border: 0px solid red;
+}
+
+#subcategoriaH1{
+    margin: 0px;
+}
+
+#metaP{
+    margin: 0px;
+    font-size: 12px;
+}
+
+#migaP{
+    border: 0px solid black;
+    margin: 0px;
+}
+
+#filtrosP{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+#favoritosLabel{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+#seccion5{
+    padding: 5px 20px;
+    text-align: center;
+    background-color: #F0F0F0;
+}
+
+#seccion6{
+    margin: 0px 30px 0px 30px;
+    padding: 0px 25px 0px 25px;
+    border: 0px solid red;
+}
+
+#footer {
+    background-color: #F0F0F0;
+    padding: 50px;
+    text-align: center;
+}
+
+#botonFooter{
+    margin-left: 90px;
+}
+
+.categoriasDiv{
+    margin: 0px 15px;
+}
+
 #navegationBar {
     display: block;
     text-align: left;
@@ -56,7 +131,7 @@
 .contentContainer {
     border: 1px solid none;
     width: 100%;
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -65,21 +140,23 @@
 }
 
 .nombreCategoria {
-    border: 1px solid none;
-    margin: 10px 0;
-    padding: 15px;
+    border: 0px solid red;
+    margin: 0px;
+    padding: 0px 15px;
 }
 
 .negocioRow {
+    border: 0px solid black;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 0px;
 }
 
 .negocio {
-    border: 1px solid saddlebrown;
-    margin: 20px;
+    border: 1px solid none;
+    margin: 0px 20px 20px 20px;
     width: 20%;
 }
 
