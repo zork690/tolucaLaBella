@@ -1,0 +1,33 @@
+#principalContainer{
+    text-align: center;
+    margin-top: 40px;
+}
+
+#principalContainer_{
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+}
+
+#principalContainer_ > div{
+    max-width: 33%;
+    padding: 20px;
+}
+
+img{
+    max-width: 100%;
+}
+
+#footer{
+    background-color: #F0F0F0;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#botonFooter{
+    margin-left: 90px;
+}
