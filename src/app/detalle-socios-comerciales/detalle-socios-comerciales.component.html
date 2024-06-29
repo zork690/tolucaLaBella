@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-    <div id="contactoInfo">
+    <div id="contactoInfo" *ngIf="negocioObj">
         <h4>{{negocioObj.ubicacion.municipio}}</h4>
         <h4>{{negocioObj.ubicacion.colonia}}</h4>
         <h4>Código Postal: {{negocioObj.ubicacion.codigoPostal}}</h4>
