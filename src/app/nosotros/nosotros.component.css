@@ -1,14 +1,12 @@
-#tolucaBellaDiv{
+#seccion1{
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 40px 0;
+    text-align: center;
 }
 
-#tolucaBellaDiv_{
-    display: flex;
-    align-items: end;
-    margin-right: 35px;
-
+#seccion1 > div{
+    width: 50%;
 }
 
 #tolucaBellaDiv_ div{
@@ -119,19 +117,12 @@
 
 #posibilidadesDivSub {
     display: flex;
-}
-
-li {
-    margin: 25px 10px;
+    align-items: stretch;
     text-align: justify;
 }
 
-#posibilidadesDivSub h3 {
-    display: inline;
-}
-
-#imagePosibilidades {
-    margin: 0px 25px;
+#imagePosibilidadesDiv{
+    margin: 0px 20px;
 }
 
 #registraNegocioDiv {
