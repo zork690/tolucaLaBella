@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 import { ClienteService } from '../../app/servicios/clientes/cliente.service';
+import { Meta } from '@angular/platform-browser';
 declare let $ : any;
 
 @Component({
@@ -20,10 +21,21 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy 
   mensaje:string = "";
   isHappy: boolean = true;
 
-  constructor(private clienteService: ClienteService) { }
+  constructor(private clienteService: ClienteService
+    , private meta: Meta
+  ) { }
 
   ngOnInit(): void {
     this.categoria = "Peluquerias";
+    this.meta.updateTag( 
+      { name: "title", content: "Directorio Toluca la Bella | Encuentra tu negocio favorito" }, 
+      "name=title");
+    this.meta.updateTag( 
+      { name: "description", content: "Encuentra los mejores negocio en Toluca con nuestro directorio completo. Desde restaurantes y tiendas hasta servicios locales, explora y conecta con lo mejor que Toluca tiene que ofrecer. ¡Tu guía definitiva para descubrir negocios en Toluca!" }, 
+      "name=description");
+    this.meta.updateTag( 
+      { name: "keywords", content: "Tiendas en Toluca, Negocios en Toluca, Productos, Servicios" }, 
+      "name=keywords");
   }
 
   ngAfterViewInit():void{
