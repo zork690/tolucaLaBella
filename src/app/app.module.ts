@@ -31,6 +31,11 @@ import { VentanaModalInfoComponent } from './ventana-modal-info/ventana-modal-in
 import { DetalleSociosComercialesComponent } from './detalle-socios-comerciales/detalle-socios-comerciales.component';
 import { PanelComponent } from './panel/panel.component';
 import { PanelContentComponent } from './panel-content/panel-content.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+import { MarketingDigitalComponent } from './marketing-digital/marketing-digital.component';
+import { FooterComponent } from './footer/footer.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -54,7 +59,12 @@ export function initConfig(config: AppConfig) {
     VentanaModalInfoComponent,
     DetalleSociosComercialesComponent,
     PanelComponent,
-    PanelContentComponent
+    PanelContentComponent,
+    NosotrosComponent,
+    MarketingDigitalComponent,
+    FooterComponent,
+    NoticiasComponent,
+    NoticiasDetalleComponent
   ],
   imports: [
     BrowserModule,
