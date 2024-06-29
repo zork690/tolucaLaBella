@@ -1,3 +1,137 @@
+#tolucaLogoDiv{
+  text-align: center;
+}
+
+#categoriasTitle{
+  text-align: center;
+}
+
+.categoriasSpan{
+  display: block;
+  text-align: center;
+}
+
+.categoriasDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#destinosPopularesDiv{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#destinosPopularesDiv_{
+  display: flex;
+}
+
+.destinosPopularesDiv_Sec{
+  margin: 0px 15px;
+}
+
+#recomendacionesDiv{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#recomendacionesDiv_{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recomendacionesDiv_sec{
+  margin: 0px 15px;
+}
+
+#sobreTolucaLaBella{
+  display: flex;
+  margin: 30px;
+}
+
+#sobreTolucaInfo{
+  text-align: justify;
+  padding: 0px 100px;
+}
+
+#tolucaBellaInfoH2{
+  text-align: center;
+}
+
+#botonTolucaInfo{
+  text-align: center;
+}
+
+#nuevosNegociosDiv{
+  text-align: center;
+}
+
+#testimoniosDiv{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#testimoniosDiv_{
+  display: flex;
+  padding: 0px 20px;
+}
+
+.usuarioP{
+  font-weight: bolder;
+  font-size: 3vw;
+}
+
+.testimoniosDiv_sec{
+  padding: 15px;
+}
+
+#articulosDiv{
+  text-align: center;
+}
+
+.articulosDiv_{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.articulosDiv_sec{
+  border: 2px solid black;
+  margin: 15px 20px;
+  padding: 15px 40px;
+  border-radius: 25px;
+}
+
+.btnArticulos{
+  text-align: center;
+}
+
+.btnArticulos button{
+  margin: 15px 0px;
+}
+
+#preguntasFrecuentesDiv{
+  margin-top: 30px;
+}
+
+#preguntasFrecuentesH3{
+  text-align: center;
+}
+
+#footer{
+  background-color: #F0F0F0;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#botonFooter{
+  margin-left: 90px;
+}
+
 .mainContainer{
   border: 1px solid none;
   display: flex;
@@ -80,9 +214,63 @@
 }
 
 #tolucaLaBellaImg{
-    max-width:100%;
-    height: 50vh;
+    width:100%;
     border: 1px solid none;
+}
+
+
+.col-md-3{
+  display: inline-block;
+  margin-left:-4px;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 20px;
+  width: 20px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 0px solid #a55233;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 35px;
+  font-weight: bolder;
+  color: #a55233;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 35px;
+  font-weight: bolder;
+  color: #a55233;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(218, 183, 143);    ;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.carousel-indicators .active {
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    background-color: #a55233;
 }
 
 
@@ -127,9 +315,6 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  p{
-    color: blue;
-  }
   .footer{
      background-color: #cccccc;
   }
@@ -142,9 +327,6 @@
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  p{
-    color: green;
-  }
   .footer{
      background-color: #cccccc;
   }
@@ -157,9 +339,6 @@
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  p{
-    color: pink;
-  }
   .footer{
      background-color: #cccccc;
   }
@@ -171,9 +350,6 @@
 
 /*  X-Large devices (large desktops, less than 1400px) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  p{
-    color: purple;
-  }
   .footer{
      background-color: #cccccc;
   }
@@ -185,9 +361,6 @@
 
 /* XX-Large devices (larger desktops) */
 @media (min-width: 1400px) {
-  p{
-    color: orange;
-  }
   .footer{
      background-color: #cccccc;
   }
@@ -199,7 +372,5 @@
 
 
 @media (max-width: 360px){
-  h3{
-    font-size: 5vw;
-  }
+
 }
