@@ -16,6 +16,10 @@ import { DetalleSociosComercialesComponent } from
 './detalle-socios-comerciales/detalle-socios-comerciales.component';
 import { PanelComponent } from 
 './panel/panel.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+import { MarketingDigitalComponent } from './marketing-digital/marketing-digital.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
 
 const routes: Routes = [
   {
@@ -32,10 +36,14 @@ const routes: Routes = [
       { path: 'registro', component: RegistroComponent },
       { path: 'login', component: LoginComponent },
       { path: 'formato-pago', component: FormatoPagoComponent },
-      { path: 'formulario-negocios', component: FormularioNegociosComponent },
-      { path: 'socios-comerciales', component: SociosComercialesComponent },
-      { path: 'socios-comerciales/:idNegocio', component: DetalleSociosComercialesComponent },
-      { path: 'panel-socios', component: PanelComponent }
+      { path: 'registrate', component: FormularioNegociosComponent },
+      { path: 'directorio-de-negocios', component: SociosComercialesComponent },
+      { path: 'directorio-de-negocios/:idNegocio', component: DetalleSociosComercialesComponent },
+      { path: 'panel-socios', component: PanelComponent },
+      { path: 'sobre-nosotros', component: NosotrosComponent },
+      { path: 'marketing-digital', component: MarketingDigitalComponent },
+      { path: 'noticias-de-toluca', component: NoticiasComponent },
+      { path: 'noticias-de-toluca/:idNoticia', component: NoticiasDetalleComponent }
     ]
   }
 ];
