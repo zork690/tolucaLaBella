@@ -3,6 +3,7 @@ import locations from '../../assets/locations.json';
 import { NgbModal, NgbModalOptions, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap'; 
 import { Router } from '@angular/router';
 import { NegociosService } from '../servicios/negocios/negocios.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-formulario-negocios',
@@ -62,7 +63,8 @@ export class FormularioNegociosComponent implements OnInit {
 
   constructor(private modalService: NgbModal
     ,private router: Router
-    ,private negocioService: NegociosService) {
+    ,private negocioService: NegociosService
+    ,private meta: Meta) {
 
     this.modalOptions = {
       backdrop: 'static',
@@ -71,7 +73,16 @@ export class FormularioNegociosComponent implements OnInit {
 
    }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
+    this.meta.updateTag( 
+      { name: "title", content: "Registrate" }, 
+      "name=title");
+    this.meta.updateTag( 
+      { name: "description", content: "Registra tu negocio en nuestro directorio de Toluca y aumenta tu visibilidad. Únete a una red de comercios locales y atrae nuevos clientes." }, 
+      "name=description");
+    this.meta.updateTag( 
+      { name: "keywords", content: "Registro Negocio, Aumenta Visibilidad, Atrae Nuevos Clientes, Negocios Toluca, Productos, Servicios" }, 
+      "name=keywords");
     this.gettingMunicipios();
     this.municipioSelected = "CALIMAYA";
     this.municipioHasChanged(this.municipioSelected);    
