@@ -275,7 +275,7 @@
 
 
 /* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media (max-width:815px) {
   .mainContainer{
     flex-direction: column;
   }
@@ -309,7 +309,28 @@
     width: 100%;
     margin: 10px;
   }
+
+  .categoriasDiv{
+    flex-direction: column;
+  }
   
+  #destinosPopularesDiv_{
+    flex-direction: column;
+  }
+
+  #recomendacionesDiv_{
+    flex-direction: column;
+  }
+
+  #sobreTolucaLaBella{
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .articulosDiv_{
+    flex-direction: column;
+  }
+
 }
 
 

@@ -31,3 +31,25 @@ img{
 #botonFooter{
     margin-left: 90px;
 }
+
+@media (max-width:815px) {
+
+    #principalContainer_{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #principalContainer_ > div{
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #footer{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #botonFooter{
+        margin-left: 0px;
+    }
+}

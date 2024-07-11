@@ -173,3 +173,49 @@ form {
 img{
     max-width: 100%;
 }
+
+@media (max-width:815px) {
+    #seccion1{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #tolucaBellaMainTitle{
+        font-size: 15vw;
+    }
+
+    #quienesSomosDiv{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #masQueUnDirectorioDiv_{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #descubreConectaDiv{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #apasionaDiv{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #posibilidadesDivSub{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #historiasExitoDiv{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #contactoDiv{
+        flex-direction: column;
+        text-align: center;
+    }
+}

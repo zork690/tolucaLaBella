@@ -35,3 +35,9 @@
 #phoneSpan{
     margin-left: 10px;
 }
+
+@media (max-width:815px) {
+    #Div2Container{
+        flex-direction: column;
+    }
+}

@@ -146,3 +146,56 @@
 #botonFooter{
     margin-left: 90px;
 }
+
+@media (max-width:815px) {
+    #seccion1{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #categorias{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    .categoria{
+        margin: 0px;
+    }
+
+    .noticias1{
+        flex-direction: column;
+        text-align:center;
+        margin: 0px;
+    }
+
+    #seccion6_{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    .carousel-indicators .active {
+        margin: 0px;
+    }
+
+    .carousel-indicators li{
+        margin: 0px;
+    }
+
+    .dCategorias{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #footer{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #botonFooter{
+        margin-left: 0px;
+    }
+
+    img{
+        max-width: 100%;
+    }
+}
