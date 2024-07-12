@@ -1,13 +1,13 @@
-.mainContainer{
+.mainContainer {
     text-align: center;
 }
 
-.whats a{
+.whats a {
     color: #174F17;
     font-weight: bolder;
 }
 
-.whats a:hover{
+.whats a:hover {
     text-decoration: none;
 }
 
@@ -18,42 +18,80 @@
     border: 1px solid gray;
 }
 
-#seccion2{
+#seccion2 {
     display: flex;
 }
 
-#seccion2_A{
+#seccion2_A {
     display: flex;
 }
 
-#contactoInfo{
+#contactoInfo {
     background-color: antiquewhite;
     padding: 15px;
 }
 
-.col-md-3{
+.col-md-3 {
     display: inline-block;
-    margin-left:-4px;
-  }
-  .col-md-3 img{
-    width:100%;
-    height:auto;
-  }
-  body .carousel-indicators li{
-    background-color:red;
-  }
-  body .carousel-control-prev-icon,
-  body .carousel-control-next-icon{
-    background-color:red;
-  }
+    margin-left: -4px;
+}
+
+.col-md-3 img {
+    width: 100%;
+    height: auto;
+}
+
+body .carousel-indicators li {
+    background-color: red;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon {
+    background-color: red;
+}
 
 
-  #footer{
+#footer {
     background-color: #F0F0F0;
     padding: 50px;
     text-align: center;
 }
 
-#botonFooter{
+#botonFooter {
     margin-left: 90px;
+}
+
+@media (max-width:815px) {
+
+    img {
+        max-width: 100%;
+    }
+
+    #seccion2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #seccion2_A {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    #footer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #seccion3 p{
+        text-align: justify;
+        padding: 0 8px;
+    }
+
+    #botonFooter{
+        margin-left: 0px;
+    }
 }

@@ -183,6 +183,44 @@
     text-align: center;
 }
 
+@media (max-width:815px) {
+    #seccion2{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    #seccion2 > div{
+        width: 100%;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    #seccion1{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #botonFooter{
+        margin-left: 0px;
+    }
+
+    #filtrosP{
+        display: none;
+    }
+
+    .btn-dark{
+        display: none;
+    }
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .divCategories {
