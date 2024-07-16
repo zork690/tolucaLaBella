@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #F0F0F0;
 }
 
 .categoria{
@@ -24,7 +25,6 @@
 
 #categorias{
     display: flex;
-    background-color: #F0F0F0;
     padding: 30px;
 }
 
@@ -153,9 +153,14 @@
         text-align:center;
     }
 
+    #seccion1 > div{
+        width: 100%;
+    }
+
     #categorias{
         flex-direction: column;
         text-align:center;
+        padding: 0px;
     }
 
     .categoria{
@@ -166,6 +171,14 @@
         flex-direction: column;
         text-align:center;
         margin: 0px;
+    }
+
+    .noticias1 div h3{
+        text-align: justify;
+    }
+
+    #seccion5 h2{
+        text-align: center;
     }
 
     #seccion6_{
@@ -184,6 +197,10 @@
     .dCategorias{
         flex-direction: column;
         text-align:center;
+    }
+
+    .dCategorias h3{
+        text-align: justify;
     }
 
     #footer{

@@ -179,6 +179,15 @@ img{
         flex-direction: column;
         text-align:center;
     }
+    
+    #seccion1 > div{
+        width: 100%;
+    }
+
+    #quienesSomosDiv_ p{
+        padding: 8px;
+        margin: 0px;
+    }
 
     #tolucaBellaMainTitle{
         font-size: 15vw;
@@ -187,11 +196,17 @@ img{
     #quienesSomosDiv{
         flex-direction: column;
         text-align: center;
+        margin: 0px;
+    }
+
+    #masQueUnDirectorioDiv{
+        margin: 0px;
     }
 
     #masQueUnDirectorioDiv_{
         flex-direction: column;
         text-align: center;
+        margin: 0px;
     }
 
     #descubreConectaDiv{
@@ -202,6 +217,12 @@ img{
     #apasionaDiv{
         flex-direction: column;
         text-align: center;
+        margin: 0px;
+    }
+
+    #apasionaDiv p{
+        margin: 0px;
+        padding: 8px;
     }
 
     #posibilidadesDivSub{
@@ -214,8 +235,28 @@ img{
         text-align: center;
     }
 
+    #historiasExitoDiv div{
+        max-width: 100%;
+        margin: 0px;
+        padding: 8px;
+    }
+
+    #historiasExitoDiv > div > h5{
+        text-align: justify;
+    }
+
     #contactoDiv{
         flex-direction: column;
         text-align: center;
     }
+
+    #footerNosotros {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #botonFooterNosotros {
+        margin-left: 0px;
+    }
+
 }

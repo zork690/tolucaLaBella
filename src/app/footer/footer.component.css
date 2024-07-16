@@ -40,4 +40,32 @@
     #Div2Container{
         flex-direction: column;
     }
+
+    #logo{
+        text-align: center;
+        padding: 0px;
+    }
+
+    #Div2Container > div:first-of-type{
+        max-width: 100%;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    #phoneDiv{
+        margin-top: 10px;
+    }
+
+    #Div2Container > div:nth-child(2), #Div2Container > div:nth-child(3){
+        text-align: left;
+        padding: 0px;
+    }
+
+    #Div2Container > div:nth-child(2) > h3, #Div2Container > div:nth-child(3) > h3{
+        text-align: center;
+    }
+
+    ul{
+        padding: 0px 30px;
+    }
 }
