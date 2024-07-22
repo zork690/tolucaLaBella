@@ -36,6 +36,7 @@ import { MarketingDigitalComponent } from './marketing-digital/marketing-digital
 import { FooterComponent } from './footer/footer.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -64,7 +65,8 @@ export function initConfig(config: AppConfig) {
     MarketingDigitalComponent,
     FooterComponent,
     NoticiasComponent,
-    NoticiasDetalleComponent
+    NoticiasDetalleComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
