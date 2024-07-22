@@ -22,7 +22,8 @@ export class NegociosService {
   createBusiness(data: any): Observable<any>  {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
-    ,'Authorization': 'Bearer elVal0RQu3MeD3M1R3g@LaD@G@n@'});
+    //,'Authorization': 'Bearer elVal0RQu3MeD3M1R3g@LaD@G@n@'
+  });
     let url = this.negocioUrl+'/negocios/insertarNegocio';
     //let url = this.baseUrl+'/negocios/insertarNegocio';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
