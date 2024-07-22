@@ -20,6 +20,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { MarketingDigitalComponent } from './marketing-digital/marketing-digital.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,8 @@ const routes: Routes = [
       { path: 'sobre-nosotros', component: NosotrosComponent },
       { path: 'marketing-digital', component: MarketingDigitalComponent },
       { path: 'noticias-de-toluca', component: NoticiasComponent },
-      { path: 'noticias-de-toluca/:idNoticia', component: NoticiasDetalleComponent }
+      { path: 'noticias-de-toluca/:idNoticia', component: NoticiasDetalleComponent },
+      { path: 'reset-password', component: ResetPasswordComponent}
     ]
   }
 ];
