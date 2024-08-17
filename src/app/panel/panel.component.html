@@ -25,7 +25,29 @@
             </div>
         </nav>
     </div>
-    <div id="mainScreenPanel">
-        <app-panel-content></app-panel-content>
+
+    <div>
+        <div class="card mb-4 shadow-sm">
+
+            <nav class="navbar navbar-expand-lg navbar-light header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSeccionesPanel"
+                    aria-controls="navbarSeccionesPanel" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSeccionesPanel">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link whiteColor" routerLink="mis-negocios">Mis negocios</a>
+                        <a class="nav-item nav-link whiteColor" href="#">Mis categorias</a>
+                    </div>
+                </div>
+            </nav>
+
+            <ngx-spinner>
+                <p style="font-size: 20px; color: white">Loading...</p>
+            </ngx-spinner>
+        </div>
     </div>
+
+    <router-outlet></router-outlet>
+
 </div>
