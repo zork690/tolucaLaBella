@@ -19,3 +19,13 @@
     text-decoration: none;
     color: darkgrey;
 }
+
+.whiteColor{
+    color:white !important;
+    font-weight: bolder;
+}
+
+.header{
+    background-color: #c5b39e;
+    color: white;
+}
