@@ -1,0 +1,32 @@
+a:hover{
+    cursor: pointer;
+}
+
+.required{
+    color: red;
+    font-weight: bold;
+}
+
+.mensajes{
+    color: red;
+}
+
+#tablestore2{
+    margin: 15px 0px;
+}
+
+.imagenFluid{
+	width: 100%;
+	height: 100%;
+}
+
+.conteoCaracteres{
+    color: #3b2002;
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 767px){
+    .headerTable{
+        display: none;
+    }
+}
