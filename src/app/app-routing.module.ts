@@ -12,15 +12,16 @@ import { AuthSecureService } from './secure/auth-secure.service';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
 import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
-import { DetalleSociosComercialesComponent } from 
-'./detalle-socios-comerciales/detalle-socios-comerciales.component';
-import { PanelComponent } from 
-'./panel/panel.component';
+import { DetalleSociosComercialesComponent } from
+  './detalle-socios-comerciales/detalle-socios-comerciales.component';
+import { PanelComponent } from
+  './panel/panel.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { MarketingDigitalComponent } from './marketing-digital/marketing-digital.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { MisNegociosComponent } from './mis-negocios/mis-negocios.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,7 @@ const routes: Routes = [
     component: LayoutsComponent,
     //canActivate: [AuthGuard],
     children: [
-      { path: '',  redirectTo: 'inicio', pathMatch: 'full' },
+      { path: '', redirectTo: 'inicio', pathMatch: 'full' },
       { path: 'inicio', component: PaginaInicialComponent },
       { path: 'fonts', component: FontsIconosComponent },
       { path: 'modales', component: VentanasModalesComponent },
@@ -40,12 +41,18 @@ const routes: Routes = [
       { path: 'registrate', component: FormularioNegociosComponent },
       { path: 'directorio-de-negocios', component: SociosComercialesComponent },
       { path: 'directorio-de-negocios/:idNegocio', component: DetalleSociosComercialesComponent },
-      { path: 'panel-socios', component: PanelComponent },
+      {
+        path: 'panel-socios', component: PanelComponent,
+        children: [
+          { path: 'mis-negocios', component: MisNegociosComponent }
+        ]
+      },
       { path: 'sobre-nosotros', component: NosotrosComponent },
       { path: 'marketing-digital', component: MarketingDigitalComponent },
       { path: 'noticias-de-toluca', component: NoticiasComponent },
       { path: 'noticias-de-toluca/:idNoticia', component: NoticiasDetalleComponent },
-      { path: 'reset-password', component: ResetPasswordComponent}
+      { path: 'reset-password', component: ResetPasswordComponent }
+
     ]
   }
 ];
