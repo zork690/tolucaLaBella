@@ -29,3 +29,10 @@
     background-color: #c5b39e;
     color: white;
 }
+
+
+a:hover{
+    color: black !important;
+}
+
+.active{ color: black !important; }
