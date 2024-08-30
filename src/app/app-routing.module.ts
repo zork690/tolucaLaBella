@@ -22,6 +22,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { MisNegociosComponent } from './mis-negocios/mis-negocios.component';
+import { MisCategoriasComponent } from './mis-categorias/mis-categorias.component';
 
 const routes: Routes = [
   {
@@ -44,7 +45,9 @@ const routes: Routes = [
       {
         path: 'panel-socios', component: PanelComponent,
         children: [
-          { path: 'mis-negocios', component: MisNegociosComponent }
+          { path: '', redirectTo: 'mis-categorias', pathMatch: 'full' },
+          { path: 'mis-negocios', component: MisNegociosComponent },
+          { path: 'mis-categorias', component: MisCategoriasComponent }
         ]
       },
       { path: 'sobre-nosotros', component: NosotrosComponent },
