@@ -37,6 +37,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { MisNegociosComponent } from './mis-negocios/mis-negocios.component';
+import { MisCategoriasComponent } from './mis-categorias/mis-categorias.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -66,7 +67,8 @@ export function initConfig(config: AppConfig) {
     NoticiasComponent,
     NoticiasDetalleComponent,
     ResetPasswordComponent,
-    MisNegociosComponent
+    MisNegociosComponent,
+    MisCategoriasComponent
   ],
   imports: [
     BrowserModule,
