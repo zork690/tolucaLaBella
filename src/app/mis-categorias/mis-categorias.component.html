@@ -1,0 +1,139 @@
+<button type="button" class="btn btn-success" (click)="addCategory(modalAddCategory)">Agregar</button>
+
+<div class="card-body" id="tablestore">
+    <table class="table table-striped table-hover ">
+        <caption>Listado de Categorías</caption>
+        <thead>
+            <tr class="row">
+                <th scope="col" class="headerTable col-md-2"><strong>Id</strong></th>
+                <th scope="col" class="headerTable col-md-4"><strong>Categoría</strong></th>
+                <th scope="col" class="headerTable col-md-2"><strong>Imagen</strong></th>
+                <th scope="col" class="headerTable col-md-2"><strong>Activa</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row" *ngFor="let item of collection.data | paginate: config; index as i">
+                <td class="col-md-2">
+                    {{item.id}}
+                </td>
+                <td class="col-md-4">{{item.nombre}}</td>
+                <td class="col-md-2"><img class="categoryImage" src="{{'data:image/jpg;base64,' + item.imagen}}" /></td>
+                <td class="col-md-1">{{item.valid}}</td>
+
+                <td class="col-md-1">
+                    <!--*ngIf="userAuth.varDto.editTda"-->
+                    <a class="icon-s" data-toggle="tooltip" title="Editar" (click)="openUpdate(modalEditCategory, item)">
+                        <em class="fa fa-edit fa-2x"></em></a>
+                    <!--<a class="icon-s" data-toggle="tooltip" title="Imágenes" (click)="openUpdate(modalshowImage, item)">
+                        <em class="fas fa-images fa-2x"></em></a>-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr><br>
+    <div class="row">
+        <div class=" col-md-2 text-left">
+            <div class="form-inline">
+                <label for="comboFiltro">Ver por Página&nbsp;</label>
+                <select name="optionSelect" id="comboFiltro" class="form-control pagination-show"
+                    [(ngModel)]="config.itemsPerPage">
+                    <option [ngValue]="item" *ngFor="let item of optionSelect">{{item}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-8 text-center">
+            <pagination-controls [responsive]="true" [nextLabel]="labels.nextLabel"
+                [previousLabel]="labels.previousLabel" [maxSize]="maxSize" [directionLinks]="true" [autoHide]="false"
+                (pageChange)="onPageChange($event)">
+            </pagination-controls>
+        </div>
+        <div class="col-md-2 text-right">
+            Total:&nbsp;{{collection.count}}
+        </div>
+    </div>
+</div>
+
+
+<ng-template #modalAddCategory let-modal>
+    <div class="modal-header text-center">
+        <h4 class="modal-title" [hidden]="form">Agregar categoría</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class=" col-md-12 col-lg-12">
+                    <p><span class="mandatoryPoint">*</span>Campo Obligatorio</p>
+                </div>
+                <div class="form-group col-md-12">
+                    <form>
+                        <label for="nombreCategoria"><span class="mandatoryPoint">*</span>Nombre</label>
+                        <input class="form-control" id="nombreCategoria" name="nombreCategoria" type="text"
+                            placeholder="nombre categoria" [(ngModel)]="categoria.nombre" (input)="countChars($event)"
+                            maxlength="{{maxNombre}}">
+                        <p class="conteoCaracteres">{{conteoNombre}}/{{maxNombre}}</p>
+                        <p id="nombreCategoriaValidacion" class="mensajes"></p>
+
+                        <label for="imagen1"><span class="mandatoryPoint">*</span>Selecciona una imágen</label>
+                        <input type="file" id="imagen1" name="imagen1" (change)="convertir($event)" />
+                        <p id="imagen1Validacion" class="mensajes"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="col-md-12 text-center">
+            <div id="mensajes" class="mensajes"></div>
+            <button type="button" class="btn btn-warning btn-sm" (click)="addCategoryAction()">Agregar</button>&nbsp;
+            <button type="button" class="btn btn-info btn-sm" (click)="cancelModal()">Cancelar</button>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #modalEditCategory let-modal>
+    <div class="modal-header text-center">
+        <h4 class="modal-title" [hidden]="form">Editar categoría</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class=" col-md-12 col-lg-12">
+                    <p><span class="mandatoryPoint">*</span>Campo Obligatorio</p>
+                </div>
+                <div class="form-group col-md-12">
+                    <form>
+                        <label for="nombreCategoria"><span class="mandatoryPoint">*</span>Nombre</label>
+                        <input class="form-control" id="nombreCategoria" name="nombreCategoria" type="text"
+                            placeholder="nombre categoria" [(ngModel)]="categoria.nombre" (input)="countChars($event)"
+                            maxlength="{{maxNombre}}">
+                        <p class="conteoCaracteres">{{conteoNombre}}/{{maxNombre}}</p>
+                        <p id="nombreCategoriaValidacion" class="mensajes"></p>
+
+                        <img class="categoryImage" src="{{'data:image/jpg;base64,' + categoria.imagen}}" />
+
+                        <label for="imagen1"><span class="mandatoryPoint">*</span>Selecciona una imágen</label>
+                        <input type="file" id="imagen1" name="imagen1" (change)="convertir($event)" />
+                        <p id="imagen1Validacion" class="mensajes"></p>
+
+                        <label for="checkValid"><a class="mandatoryPoint">*</a>Categoría válida?</label>
+                        <input type="checkbox" class="form-control" name="checkValid" id="checkValid" [(ngModel)]="categoria.valid" />    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="col-md-12 text-center">
+            <div id="mensajes" class="mensajes"></div>
+            <button type="button" class="btn btn-warning btn-sm" (click)="addCategoryAction()">Editar</button>&nbsp;
+            <button type="button" class="btn btn-info btn-sm" (click)="cancelModal()">Cancelar</button>
+        </div>
+    </div>
+</ng-template>
