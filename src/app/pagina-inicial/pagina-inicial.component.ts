@@ -20,13 +20,14 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy 
   conteo: number = 0;
   mensaje:string = "";
   isHappy: boolean = true;
+  categoriasObj: any[] = [{}];
 
   constructor(private clienteService: ClienteService
     , private meta: Meta
   ) { }
 
   ngOnInit(): void {
-    this.categoria = "Peluquerias";
+    this.getCategorias();
     this.meta.updateTag( 
       { name: "title", content: "Directorio Toluca la Bella | Encuentra tu negocio favorito" }, 
       "name=title");
@@ -97,6 +98,19 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy 
     });
   }
 
+  private getCategorias(): void{
+    this.categoria = "Peluquerias";
+    this.categoriasObj = [
+      {
+        categoria: "Restaurantes",
+        imagen: "dfdfdfdsfdsf"
+      },
+      {
+        categoria: "Tiendas",
+        imagen: "dfdfdfdsfdsf"
+      }
+  ];
+  }
 
   ngOnDestroy(){
     //For performance reasons
