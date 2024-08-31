@@ -266,7 +266,7 @@ export class MisCategoriasComponent implements OnInit {
       id: (this.categoria.id) ? this.categoria.id : null,
       categoria: this.categoria.nombre,
       imagen: (imagenes.length > 0) ? imagenes[0].baseContent : this.categoria.imagen,
-      valid: (this.categoria.valid) ? this.categoria.valid : true
+      valid: (this.categoria.valid !== undefined) ? this.categoria.valid : true
     }
     console.log("PAYLOAD: ", payload);
     return JSON.stringify(payload);
