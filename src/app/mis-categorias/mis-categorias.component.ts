@@ -249,7 +249,7 @@ export class MisCategoriasComponent implements OnInit {
   }
 
   private validaSoloAlfabeticos(inputStr: string): boolean {
-    let regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]*$/;
+    let regex = /^[a-zA-Z ]*$/;
     return regex.test(inputStr);
   }
 
