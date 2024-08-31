@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { UsuariosService } from '../../app/servicios/usuarios/usuarios.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../servicios/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +17,14 @@ export class LoginComponent implements OnInit {
   usuarioValidacion: string = "";
   passwordValidacion: string = "";
 
-  constructor(private formBuilder: FormBuilder
-    , private usuarioService: UsuariosService) {
+  constructor(
+    private formBuilder: FormBuilder
+    , private usuarioService: UsuariosService
+    , private SpinnerService: NgxSpinnerService
+    , private toastr: ToastrService
+    , private authService: AuthService
+    , private router: Router
+  ) {
 
     this.formGroup = this.formBuilder.group({
       usuario: ["", [Validators.required, this.validateUser()]],
@@ -26,15 +36,22 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   onSubmit(form: FormGroup) {
     this.validaciones();
     if (this.formGroup.valid) {
-      console.log("Enviando info...");
-      return;
-      this.usuarioService.login(form).subscribe((result: any) => {
+      this.SpinnerService.show();
+      this.usuarioService.login(this.payload()).subscribe((result: any) => {
+        this.SpinnerService.hide();
         console.log("El resultado de inicio de sesión es ", result);
+        localStorage.setItem('token', result.accessToken);
+        if(this.authService.isAuthenticated()){
+          this.router.navigate(['/panel-socios']);
+        }
       }, (responseError) => {
+        this.SpinnerService.hide();
         console.log("ocurrio un error iniciando sesión ", responseError);
+        this.toastr.error("Error al loguear al usuario: ", responseError.error.m)
       });
     }
   }
@@ -82,6 +99,15 @@ export class LoginComponent implements OnInit {
       this.passwordValidacion = "Contraseña es requerida";
       return;
     }
+  }
+
+  private payload() {
+    let payload = {
+      email: this.formGroup.controls.usuario.value,
+      password: this.formGroup.controls.password.value
+    }
+    console.log("PAYLOAD: ", payload);
+    return JSON.stringify(payload);
   }
 
 }
