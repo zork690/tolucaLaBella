@@ -38,6 +38,9 @@ import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.co
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { MisNegociosComponent } from './mis-negocios/mis-negocios.component';
 import { MisCategoriasComponent } from './mis-categorias/mis-categorias.component';
+import { CategoriasSociosComercialesComponent } from './categorias-socios-comerciales/categorias-socios-comerciales.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MisSubcategoriasComponent } from './mis-subcategorias/mis-subcategorias.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -68,7 +71,10 @@ export function initConfig(config: AppConfig) {
     NoticiasDetalleComponent,
     ResetPasswordComponent,
     MisNegociosComponent,
-    MisCategoriasComponent
+    MisCategoriasComponent,
+    CategoriasSociosComercialesComponent,
+    NotFoundComponent,
+    MisSubcategoriasComponent
   ],
   imports: [
     BrowserModule,
