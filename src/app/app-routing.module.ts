@@ -23,6 +23,10 @@ import { NoticiasDetalleComponent } from './noticias-detalle/noticias-detalle.co
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { MisNegociosComponent } from './mis-negocios/mis-negocios.component';
 import { MisCategoriasComponent } from './mis-categorias/mis-categorias.component';
+import { CategoriasSociosComercialesComponent } from './categorias-socios-comerciales/categorias-socios-comerciales.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MisSubcategoriasComponent } from './mis-subcategorias/mis-subcategorias.component';
+import { AuthGuardService } from './servicios/auth-guard/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -40,21 +44,27 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'formato-pago', component: FormatoPagoComponent },
       { path: 'registrate', component: FormularioNegociosComponent },
-      { path: 'directorio-de-negocios', component: SociosComercialesComponent },
+      { path: 'directorio-de-negocios', component: SociosComercialesComponent}, 
+      { path: 'directorio-de-negocios/:categoria', component: CategoriasSociosComercialesComponent },
+      { path: 'directorio-de-negocios/:categoria/:subcategoria', component: CategoriasSociosComercialesComponent},
       { path: 'directorio-de-negocios/:idNegocio', component: DetalleSociosComercialesComponent },
       {
         path: 'panel-socios', component: PanelComponent,
+        canActivate: [AuthGuardService],
         children: [
           { path: '', redirectTo: 'mis-categorias', pathMatch: 'full' },
           { path: 'mis-negocios', component: MisNegociosComponent },
-          { path: 'mis-categorias', component: MisCategoriasComponent }
+          { path: 'mis-categorias', component: MisCategoriasComponent },
+          { path: 'mis-subcategorias', component: MisSubcategoriasComponent }
         ]
       },
       { path: 'sobre-nosotros', component: NosotrosComponent },
       { path: 'marketing-digital', component: MarketingDigitalComponent },
       { path: 'noticias-de-toluca', component: NoticiasComponent },
       { path: 'noticias-de-toluca/:idNoticia', component: NoticiasDetalleComponent },
-      { path: 'reset-password', component: ResetPasswordComponent }
+      { path: 'reset-password', component: ResetPasswordComponent },
+      {path: 'pagina-no-encontrada', component: NotFoundComponent},
+      {path: '**', redirectTo: '/pagina-no-encontrada'}
 
     ]
   }
