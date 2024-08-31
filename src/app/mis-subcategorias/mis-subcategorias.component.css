@@ -1,0 +1,13 @@
+.mandatoryPoint, .mensajes{
+    color: red;
+    font-weight: bold;
+}
+
+.conteoCaracteres{
+    color: #3b2002;
+    margin-bottom: 0px;
+}
+
+a:hover{
+    cursor: pointer;
+}
