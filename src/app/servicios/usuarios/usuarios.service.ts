@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AppConfig } from '../config/app.config';
 import { environment } from '../../../environments/environment';
@@ -14,20 +14,24 @@ export class UsuariosService {
   usuarioUrl: string;
   permisoUrl: string;
 
+  headers= new HttpHeaders({
+    'Content-Type': 'application/json'
+  });
+
   constructor(private http: HttpClient
     , private config: AppConfig
   ) {
 
     this.baseUrl = this.config.getConfig('apiEndPoint');
-    this.usuarioUrl = this.baseUrl + environment.api+ environment.usuario;
-    this.permisoUrl = this.baseUrl + environment.api+ environment.permiso;
+    this.usuarioUrl = `${this.baseUrl}/${environment.api}`;
+    this.permisoUrl = `${this.baseUrl}/${environment.api}`;
    }
 
 
   login(usuarioLogin: any): Observable<any>  {
-    let url = this.usuarioUrl+'/validarUsuario';
-
-    return this.http.post(url, usuarioLogin).pipe(map(loginJson => {
+    //let url = this.baseUrl+'/usuarios/login';
+    let url = this.usuarioUrl+'/usuarios/login';
+    return this.http.post(url, usuarioLogin, {headers: this.headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
         throw new Error(loginJson['m']);
       }
