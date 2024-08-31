@@ -24,12 +24,14 @@
   <hr />
   <h3 id="categoriasTitle">Categorías</h3>
   <div>
-    <div class="categoriasDiv">
+    <div class="categoriasDiv" *ngFor="let categoria of categoriasObj">
       <div>
-        <img src="../../assets/imagenes/categorias.PNG" id="" alt="tiendas" />
-        <span class="categoriasSpan">Tiendas</span>
+        <a [routerLink]="['/directorio-de-negocios', categoria.categoria]">
+          <img src="../../assets/imagenes/categorias.PNG" alt="{{categoria.categoria}}" />
+          <span class="categoriasSpan">{{categoria.categoria}}</span>
+        </a>
       </div>
-      <div>
+      <!--<div>
         <img src="../../assets/imagenes/categorias.PNG" id="" alt="restaurantes" />
         <span class="categoriasSpan">Restaurantes</span>
       </div>
@@ -40,9 +42,9 @@
       <div>
         <img src="../../assets/imagenes/categorias.PNG" id="" alt="bienestar" />
         <span class="categoriasSpan">Bienestar</span>
-      </div>
+      </div>-->
     </div>
-    <div class="categoriasDiv">
+    <!--<div class="categoriasDiv">
       <div>
         <img src="../../assets/imagenes/categorias.PNG" id="" alt="entretenimiento" />
         <span class="categoriasSpan">Entretenimiento</span>
@@ -63,7 +65,7 @@
         <img src="../../assets/imagenes/categorias.PNG" id="" alt="turismo" />
         <span class="categoriasSpan">Turismo</span>
       </div>
-    </div>
+    </div>-->
   </div>
 
   <div id="destinosPopularesDiv">
