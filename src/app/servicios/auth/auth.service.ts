@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { AppConfig } from '../config/app.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(
+    private config: AppConfig
+  ) { }
 
   //STORE SESSION TOKEN AT LOCAL STORAGE IS THE BEST PRACTICE RATHER THAN COOKIES
 
   isAuthenticated(): boolean {
     if(this.isTokenExpired()) this.logout();
-    return localStorage.getItem('token') != null && !this.isTokenExpired();
+    return this.config.getConfig('apiToken') != null && !this.isTokenExpired();
   }
 
   isTokenExpired(): boolean {
     const helper = new JwtHelperService();
-    const isExpired = helper.isTokenExpired(localStorage.getItem('token'));
-    console.log("is Expired: ", isExpired);
+    const isExpired = helper.isTokenExpired(this.config.getConfig('apiToken'));
     return isExpired;
   }
 
