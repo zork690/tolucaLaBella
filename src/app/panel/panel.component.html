@@ -12,12 +12,12 @@
                         <span><i class="fas fa-user"></i></span>
                         <a class="actions dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            NombreUsuarioInicioSesion
+                            {{tokenDecoded.email}}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesión</a>
+                            <!--<a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>-->
                         </div>
                     </li>
                 </ul>
