@@ -1,4 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { AppConfig } from '../servicios/config/app.config';
+import { AuthService } from '../servicios/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panel',
@@ -7,14 +11,29 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class PanelComponent implements OnInit, AfterViewInit  {
 
-  constructor() { }
+  public tokenDecoded: any = {};
+  private helper: JwtHelperService;
+
+  constructor(
+    private config: AppConfig
+    , private authService: AuthService
+    , private router: Router
+  ) {
+    this.helper = new JwtHelperService();
+   }
 
   ngOnInit(): void {
-
+    this.getTokenDecoded();
   }
 
   ngAfterViewInit(): void{
-    this.activingLinks();
+    this.activingLinks();    
+  }
+
+  public cerrarSesion(){
+    this.authService.logout();
+    this.router.navigate(['/login']);
+
   }
 
 
@@ -28,6 +47,11 @@ export class PanelComponent implements OnInit, AfterViewInit  {
         this.className += " active";
       });
     }
+  }
+
+  private getTokenDecoded(){
+    this.tokenDecoded = this.helper.decodeToken(this.config.getConfig('apiToken'));
+    console.log("token Decoded: ", this.tokenDecoded);
   }
 
 }
