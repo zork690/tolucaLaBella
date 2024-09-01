@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {AppConfig} from '../config/app.config';
+import { AuthGuardService } from '../auth-guard/auth-guard.service';
 
 @Injectable({
     providedIn: 'root'
@@ -13,11 +14,13 @@ export class Interceptor implements HttpInterceptor{
 
 	constructor( 
 		private config: AppConfig
+    , private authGuard: AuthGuardService
 	) {
       }
 
 
  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  this.authGuard.canActivate();
  	this.token = this.config.getConfig('apiToken');
  	if (this.token == null) {
  	  console.log("MI PETICION: ",req);
