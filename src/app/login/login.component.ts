@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../servicios/auth/auth.service';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
     , private toastr: ToastrService
     , private authService: AuthService
     , private router: Router
+    , private modalService: NgbModal
   ) {
 
     this.formGroup = this.formBuilder.group({
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.cancelModal();
   }
 
 
@@ -45,9 +48,7 @@ export class LoginComponent implements OnInit {
         this.SpinnerService.hide();
         console.log("El resultado de inicio de sesión es ", result);
         localStorage.setItem('token', result.accessToken);
-        if(this.authService.isAuthenticated()){
-          this.router.navigate(['/panel-socios']);
-        }
+        this.router.navigate(['/panel-socios']);
       }, (responseError) => {
         this.SpinnerService.hide();
         console.log("ocurrio un error iniciando sesión ", responseError);
@@ -108,6 +109,10 @@ export class LoginComponent implements OnInit {
     }
     console.log("PAYLOAD: ", payload);
     return JSON.stringify(payload);
+  }
+
+  private cancelModal() {
+    this.modalService.dismissAll();
   }
 
 }
