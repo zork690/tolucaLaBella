@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { AppConfig } from '../config/app.config';
+import { AuthGuardService } from '../auth-guard/auth-guard.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +17,14 @@ export class SubcategoriasService {
   constructor(
     private http: HttpClient,
     private config: AppConfig
+    , private authguard:AuthGuardService
   ) { 
     this.baseUrl = this.config.getConfig('apiEndPoint');
     this.subCategoriaUrl = `${this.baseUrl}/${environment.api}`;
   }
 
   createSubCategory(data: any): Observable<any>  {
+    this.authguard.canActivate();
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
   });
@@ -37,6 +40,7 @@ export class SubcategoriasService {
   }
 
   getSubCategorias():Observable<any>{
+    this.authguard.canActivate();
     let url = this.subCategoriaUrl+'/subcategorias/listar';
     //let url = this.baseUrl+'/subcategorias/listar';
     return this.http.get(url).pipe(map(response => {
