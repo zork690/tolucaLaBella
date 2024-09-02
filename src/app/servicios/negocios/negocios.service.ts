@@ -4,6 +4,7 @@ import {AppConfig} from '../config/app.config';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AuthGuardService } from '../auth-guard/auth-guard.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,15 +15,17 @@ export class NegociosService {
   negocioUrl: string;
 
   constructor(private http: HttpClient
-    , private config: AppConfig) {
+    , private config: AppConfig
+    , private authguard:AuthGuardService
+  ) {
       this.baseUrl = this.config.getConfig('apiEndPoint');
       this.negocioUrl = `${this.baseUrl}/${environment.api}`;
   }
 
   createBusiness(data: any): Observable<any>  {
+    this.authguard.canActivate();
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
-    //,'Authorization': 'Bearer elVal0RQu3MeD3M1R3g@LaD@G@n@'
   });
     let url = this.negocioUrl+'/negocios/insertarNegocio';
     //let url = this.baseUrl+'/negocios/insertarNegocio';
@@ -36,9 +39,10 @@ export class NegociosService {
   }
 
   updateBusiness(data: any): Observable<any>  {
+    this.authguard.canActivate();
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
-    ,'Authorization': 'Bearer elVal0RQu3MeD3M1R3g@LaD@G@n@'});
+    });
     let url = this.negocioUrl+'/negocios/actualizarNegocio';
     //let url = this.baseUrl+'/negocios/actualizarNegocio';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
@@ -51,9 +55,10 @@ export class NegociosService {
   }
 
   updateImages(data: any): Observable<any>  {
+    this.authguard.canActivate();
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
-    ,'Authorization': 'Bearer elVal0RQu3MeD3M1R3g@LaD@G@n@'});
+    });
     let url = this.negocioUrl+'/negocios/actualizarImagenes';
     //let url = this.baseUrl+'/negocios/actualizarNegocio';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
@@ -66,6 +71,7 @@ export class NegociosService {
   }
 
   getNegocios():Observable<any>{
+    this.authguard.canActivate();
     let url = this.negocioUrl+'/negocios/listarNegocios';
     //let url = this.baseUrl+'/negocios/listarNegocios';
     return this.http.get(url).pipe(map(response => {
@@ -78,6 +84,7 @@ export class NegociosService {
   }
 
   getNegociosTodos():Observable<any>{
+    this.authguard.canActivate();
     let url = this.negocioUrl+'/negocios/listarNegociosTodos';
     //let url = this.baseUrl+'/negocios/listarNegociosTodos';
     return this.http.get(url).pipe(map(response => {
@@ -90,6 +97,7 @@ export class NegociosService {
   }
 
   getNegocio(idNegocio:string):Observable<any>{
+    this.authguard.canActivate();
     let url = this.negocioUrl+'/negocios/listarNegocios/';
     //let url = this.baseUrl+'/negocios/listarNegocios/';
     return this.http.get(url+idNegocio).pipe(map(response => {
