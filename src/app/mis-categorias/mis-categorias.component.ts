@@ -60,6 +60,7 @@ export class MisCategoriasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.imagenes.clear();
     this.getCategorias();
   }
 
@@ -72,7 +73,7 @@ export class MisCategoriasComponent implements OnInit {
   public countChars(event: any): void {
     switch (event.target.id) {
       case "nombreCategoria":
-        this.conteoNombre = this.categoria.nombre.length;
+        this.conteoNombre = this.categoria.categoria.length;
         break;
     }
   }
@@ -107,7 +108,6 @@ export class MisCategoriasComponent implements OnInit {
         (!this.isFromOpenUpdate) ? 
         console.log("Error al crear la categoría: ", jsonError)
         : console.log("Error al editar la categoría: ", jsonError);
-        this.imagenes.clear();
       });
   }
 
@@ -144,7 +144,7 @@ export class MisCategoriasComponent implements OnInit {
   }
 
   private settingDefaultConteos(): void {
-    this.conteoNombre = this.categoria.nombre.length;
+    this.conteoNombre = this.categoria.categoria.length;
   }
 
   private handleInputChange(file, elements) {
@@ -162,9 +162,12 @@ export class MisCategoriasComponent implements OnInit {
     } else {
       this.isValidImage = true;
       elements.imagenCategoriaValidacion.innerText = "";
-      if (this.categoria.nombre.trim()) {
-        elements.mensajesValidacion.innerHTML = "";
+      if(this.categoria.categoria){
+        if (this.categoria.categoria.trim()) {
+          elements.mensajesValidacion.innerHTML = "";
+        }
       }
+
       reader.onloadend = this._handleReaderLoaded.bind(this);
       reader.readAsDataURL(file);
     }
@@ -184,12 +187,12 @@ export class MisCategoriasComponent implements OnInit {
   private isValid(): boolean {
     const paragraphsObj = this.fetchingIdsValidacionParagraph();
     this.cleanValidations(paragraphsObj);
-    if (!this.categoria.nombre) {
+    if (!this.categoria.categoria) {
       paragraphsObj.nombreCategoriaValidacion.innerText
         = this.fieldRequerido;
       return false;
     }
-    if (!this.categoria.nombre.trim()) {
+    if (!this.categoria.categoria.trim()) {
       paragraphsObj.nombreCategoriaValidacion.innerText
         = this.fieldRequerido;
       return false;
@@ -208,7 +211,7 @@ export class MisCategoriasComponent implements OnInit {
       return false;
     }
     /* PARA VALIDAR */
-    if (!this.validaSoloAlfabeticos(this.categoria.nombre)) {
+    if (!this.validaSoloAlfabeticos(this.categoria.categoria)) {
       paragraphsObj.nombreCategoriaValidacion.innerText
         = this.fieldSoloAlfabeticos;
       return false;
@@ -264,7 +267,7 @@ export class MisCategoriasComponent implements OnInit {
     let imagenes = this.fromSetToArrayImages();
     let payload = {
       id: (this.categoria.id) ? this.categoria.id : null,
-      categoria: this.categoria.nombre,
+      categoria: this.categoria.categoria,
       imagen: (imagenes.length > 0) ? imagenes[0].baseContent : this.categoria.imagen,
       valid: (this.categoria.valid !== undefined) ? this.categoria.valid : true
     }
@@ -280,7 +283,7 @@ export class MisCategoriasComponent implements OnInit {
   }
 
   /******** PARA PROBAR CATEGORÍAS LOCALMENTE *********/
-  private getCategorias(): void {
+  /*private getCategorias(): void {
     //this.negocioService.getNegocios().subscribe((result: any[]) => {
     //console.log("Negocios: ",result);
     //this.imgFromServer = result;
@@ -300,11 +303,11 @@ export class MisCategoriasComponent implements OnInit {
     //  this.SpinnerService.hide();
     //  this.toastr.error("Error obteniendo los negocios", responseError);
     //});
-  }
+  }*/
 
 
   /* PARA PROBAR EN EL BACK */
-  /*private getCategorias(): void {
+  private getCategorias(): void {
     this.SpinnerService.show();
     this.categoriasService.getCategorias().subscribe((result: any[]) => {
       console.log("Categorias: ", result);
@@ -319,7 +322,7 @@ export class MisCategoriasComponent implements OnInit {
         this.toastr.error("Error obteniendo las categorias");
         console.log("Error obteniendo las categorias: ", responseError);
       });
-  }*/
+  }
 
 
 }
