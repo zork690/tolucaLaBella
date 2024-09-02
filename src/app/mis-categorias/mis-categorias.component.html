@@ -16,7 +16,7 @@
                 <td class="col-md-2">
                     {{item.id}}
                 </td>
-                <td class="col-md-4">{{item.nombre}}</td>
+                <td class="col-md-4">{{item.categoria}}</td>
                 <td class="col-md-2"><img class="categoryImage" src="{{'data:image/jpg;base64,' + item.imagen}}" /></td>
                 <td class="col-md-1">{{item.valid}}</td>
 
@@ -71,7 +71,7 @@
                     <form>
                         <label for="nombreCategoria"><span class="mandatoryPoint">*</span>Nombre</label>
                         <input class="form-control" id="nombreCategoria" name="nombreCategoria" type="text"
-                            placeholder="nombre categoria" [(ngModel)]="categoria.nombre" (input)="countChars($event)"
+                            placeholder="nombre categoria" [(ngModel)]="categoria.categoria" (input)="countChars($event)"
                             maxlength="{{maxNombre}}">
                         <p class="conteoCaracteres">{{conteoNombre}}/{{maxNombre}}</p>
                         <p id="nombreCategoriaValidacion" class="mensajes"></p>
@@ -111,7 +111,7 @@
                     <form>
                         <label for="nombreCategoria"><span class="mandatoryPoint">*</span>Nombre</label>
                         <input class="form-control" id="nombreCategoria" name="nombreCategoria" type="text"
-                            placeholder="nombre categoria" [(ngModel)]="categoria.nombre" (input)="countChars($event)"
+                            placeholder="nombre categoria" [(ngModel)]="categoria.categoria" (input)="countChars($event)"
                             maxlength="{{maxNombre}}">
                         <p class="conteoCaracteres">{{conteoNombre}}/{{maxNombre}}</p>
                         <p id="nombreCategoriaValidacion" class="mensajes"></p>
