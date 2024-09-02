@@ -22,6 +22,30 @@ export class NegociosService {
       this.negocioUrl = `${this.baseUrl}/${environment.api}`;
   }
 
+  getNegocio(idNegocio:string):Observable<any>{
+    let url = this.negocioUrl+'/negocios/listarNegocios/';
+    //let url = this.baseUrl+'/negocios/listarNegocios/';
+    return this.http.get(url+idNegocio).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
+  getNegocios():Observable<any>{
+    let url = this.negocioUrl+'/negocios/listarNegocios';
+    //let url = this.baseUrl+'/negocios/listarNegocios';
+    return this.http.get(url).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
   createBusiness(data: any): Observable<any>  {
     this.authguard.canActivate();
     const headers= new HttpHeaders({
@@ -70,37 +94,11 @@ export class NegociosService {
     })); 
   }
 
-  getNegocios():Observable<any>{
-    this.authguard.canActivate();
-    let url = this.negocioUrl+'/negocios/listarNegocios';
-    //let url = this.baseUrl+'/negocios/listarNegocios';
-    return this.http.get(url).pipe(map(response => {
-      if (response['s'] === 0) {
-        throw new Error(response['m']);
-      }
-      const result = response["r"]
-      return result as any;
-    })); 
-  }
-
   getNegociosTodos():Observable<any>{
     this.authguard.canActivate();
     let url = this.negocioUrl+'/negocios/listarNegociosTodos';
     //let url = this.baseUrl+'/negocios/listarNegociosTodos';
     return this.http.get(url).pipe(map(response => {
-      if (response['s'] === 0) {
-        throw new Error(response['m']);
-      }
-      const result = response["r"]
-      return result as any;
-    })); 
-  }
-
-  getNegocio(idNegocio:string):Observable<any>{
-    this.authguard.canActivate();
-    let url = this.negocioUrl+'/negocios/listarNegocios/';
-    //let url = this.baseUrl+'/negocios/listarNegocios/';
-    return this.http.get(url+idNegocio).pipe(map(response => {
       if (response['s'] === 0) {
         throw new Error(response['m']);
       }
