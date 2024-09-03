@@ -22,14 +22,12 @@
               </div>
               <br>
 
-              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="celular"
+              <!--<input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="celular"
                 placeholder="Celular" class="form-control" [ngClass]="{ 'is-invalid': enviado && f.celular.errors }" />
               <div *ngIf="enviado && f.celular.errors" class="invalid-feedback">
                 <div *ngIf="f.celular.errors.required">Campo requerido</div>
                 <div *ngIf="f.celular.errors.invalidCell">Celular invalido.</div>
-              </div>
-              <br>
-
+              </div>-->
               <div class="form-group">
                 <input type="password" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="password"
                   placeholder="Contraseña" class="form-control"
@@ -38,6 +36,17 @@
                   <div *ngIf="f.password.errors.required">Campo requerido</div>
                 </div>
               </div>
+              <br>
+
+              <div class="form-group">
+                <input type="password" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="confirmPassword"
+                  placeholder="Confirmar Contraseña" class="form-control"
+                  [ngClass]="{ 'is-invalid': enviado && f.password.errors }" />
+                <div *ngIf="enviado && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Campo requerido</div>
+                </div>
+              </div>
+              <p id="passwordValidacion" class="mensajes">{{passwordValidacion}}</p>
               <button class="btn btn-login btn-block m-b-30 m-t-30">Registrar</button>
             </div>
           </form>
@@ -45,5 +54,8 @@
       </div>
     </div>
   </div>
-
 </div>
+
+<ngx-spinner>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
