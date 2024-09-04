@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { RegistroService } from '../../app/servicios/registro/registro.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-registro',
@@ -16,11 +18,16 @@ export class RegistroComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private registroService: RegistroService
+    , private SpinnerService: NgxSpinnerService
 
   ) { }
 
   ngOnInit(): void {
     this.formularioRegistro = this.formBuilder.group({
+      nombre: ['', [Validators.required]],
+      apellido: ['', [Validators.required]],
+      telefono: ['', [Validators.required]],
+      usuario: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]]
@@ -30,6 +37,7 @@ export class RegistroComponent implements OnInit {
   get f() { return this.formularioRegistro.controls; }
 
   onSubmit() {
+    this.SpinnerService.show();
     if (!this.validaciones()) return;
     this.enviado = true;
     // stop here if form is invalid
