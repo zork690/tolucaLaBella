@@ -25,8 +25,8 @@ export class RegistroService {
 
 
   registrarUsuario(registro: RegistroDTO): Observable<RegistroDTO> {
-    let url = this.baseUrl + "/usuarios/registrar";
-    //let url = this.registroUrl + "/usuarios/registrar";
+    //let url = this.baseUrl + "/usuarios/registrar";
+    let url = this.registroUrl + "/usuarios/registrar";
     return this.http.post(url, registro, this.httpOptions).pipe(map(response => {
       if (response['s'] === 0) {
         throw new Error(response['m']);
@@ -36,10 +36,15 @@ export class RegistroService {
     }));
   }
 
-  sendEmailVerification(email:string): Observable<RegistroDTO> {
-    let url = this.baseUrl + "/usuarios/enviarEmailConfirmacion/";
-    //let url = this.registroUrl + "/usuarios/registrar";
-    return this.http.get(url + email).pipe(map(response => {
+  sendEmailVerification(correo:string): Observable<RegistroDTO> {
+    let parametros = {
+      params: {
+        email: correo
+      }
+    };
+    //let url = this.baseUrl + "/usuarios/enviarEmailConfirmacion";
+    let url = this.registroUrl + "/usuarios/enviarEmailConfirmacion";
+    return this.http.get(url , parametros).pipe(map(response => {
       if (response['s'] === 0) {
         throw new Error(response['m']);
       }
