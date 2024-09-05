@@ -14,39 +14,63 @@
           <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
 
             <div class="form-group">
-              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="email"
-                placeholder="Email" class="form-control" [ngClass]="{ 'is-invalid': enviado && f.email.errors }" />
-              <div *ngIf="enviado && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Campo requerido</div>
-                <div *ngIf="f.email.errors.email">Email invalido.</div>
+              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="nombre"
+                placeholder="Nombre" class="form-control" [ngClass]="{ 'is-invalid': enviado && f.nombre.errors }" />
+              <div *ngIf="enviado && f.nombre.errors" class="invalid-feedback">
+                <div *ngIf="f.nombre.errors.required">Campo requerido</div>
+                <div *ngIf="f.nombre.errors.invalidNameForm">{{nombreValidacion}}</div>
               </div>
               <br>
-
-              <!--<input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="celular"
-                placeholder="Celular" class="form-control" [ngClass]="{ 'is-invalid': enviado && f.celular.errors }" />
-              <div *ngIf="enviado && f.celular.errors" class="invalid-feedback">
-                <div *ngIf="f.celular.errors.required">Campo requerido</div>
-                <div *ngIf="f.celular.errors.invalidCell">Celular invalido.</div>
-              </div>-->
+              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="apellido"
+                placeholder="Apellido" class="form-control"
+                [ngClass]="{ 'is-invalid': enviado && f.apellido.errors }" />
+              <div *ngIf="enviado && f.apellido.errors" class="invalid-feedback">
+                <div *ngIf="f.apellido.errors.required">Campo requerido</div>
+                <div *ngIf="f.apellido.errors.invalidApellidoForm">{{apellidoValidacion}}</div>
+              </div>
+              <br>
+              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="telefono"
+                placeholder="Teléfono" class="form-control"
+                [ngClass]="{ 'is-invalid': enviado && f.telefono.errors }" />
+              <div *ngIf="enviado && f.telefono.errors" class="invalid-feedback">
+                <div *ngIf="f.telefono.errors.required">Campo requerido</div>
+                <div *ngIf="!f.telefono.errors.required && f.telefono.errors.invalidPhoneForm">{{phoneValidacion}}</div>
+              </div>
+              <br>
+              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="usuario"
+                placeholder="Usuario" class="form-control" [ngClass]="{ 'is-invalid': enviado && f.usuario.errors }" />
+              <div *ngIf="enviado && f.usuario.errors" class="invalid-feedback">
+                <div *ngIf="f.usuario.errors.required">Campo requerido</div>
+                <div *ngIf="f.usuario.errors.invalidUserForm">{{usuarioValidacion}}</div>
+              </div>
+              <br>
+              <input type="text" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="correo"
+                placeholder="Email" class="form-control" [ngClass]="{ 'is-invalid': enviado && f.correo.errors }" />
+              <div *ngIf="enviado && f.correo.errors" class="invalid-feedback">
+                <div *ngIf="f.correo.errors.required">Campo requerido</div>
+                <div *ngIf="f.correo.errors.email">Email invalido.</div>
+              </div>
+              <br>
               <div class="form-group">
                 <input type="password" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="password"
                   placeholder="Contraseña" class="form-control"
                   [ngClass]="{ 'is-invalid': enviado && f.password.errors }" />
                 <div *ngIf="enviado && f.password.errors" class="invalid-feedback">
                   <div *ngIf="f.password.errors.required">Campo requerido</div>
+                  <div *ngIf="!f.password.errors.required && f.password.errors.invalidPasswordForm">{{passwordValidacion}}</div>
                 </div>
               </div>
               <br>
 
               <div class="form-group">
-                <input type="password" style="border-radius: 0px; background-color: #f2f2f2;" formControlName="confirmPassword"
-                  placeholder="Confirmar Contraseña" class="form-control"
-                  [ngClass]="{ 'is-invalid': enviado && f.password.errors }" />
-                <div *ngIf="enviado && f.password.errors" class="invalid-feedback">
-                  <div *ngIf="f.password.errors.required">Campo requerido</div>
+                <input type="password" style="border-radius: 0px; background-color: #f2f2f2;"
+                  formControlName="confirmPassword" placeholder="Confirmar Contraseña" class="form-control"
+                  [ngClass]="{ 'is-invalid': enviado && f.confirmPassword.errors }" />
+                <div *ngIf="enviado && f.confirmPassword.errors" class="invalid-feedback">
+                  <div *ngIf="f.confirmPassword.errors.required">Campo requerido</div>
+                  <div *ngIf="!f.confirmPassword.errors.required && f.confirmPassword.errors.invalidConfirmPasswordForm">{{confirmPasswordValidacion}}</div>
                 </div>
               </div>
-              <p id="passwordValidacion" class="mensajes">{{passwordValidacion}}</p>
               <button class="btn btn-login btn-block m-b-30 m-t-30">Registrar</button>
             </div>
           </form>
