@@ -41,6 +41,11 @@ import { MisCategoriasComponent } from './mis-categorias/mis-categorias.componen
 import { CategoriasSociosComercialesComponent } from './categorias-socios-comerciales/categorias-socios-comerciales.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MisSubcategoriasComponent } from './mis-subcategorias/mis-subcategorias.component';
+import { MisDestinosPopularesComponent } from './mis-destinos-populares/mis-destinos-populares.component';
+import { MisRecomendacionesComponent } from './mis-recomendaciones/mis-recomendaciones.component';
+import { MisArticulosComponent } from './mis-articulos/mis-articulos.component';
+import { MisHistoriasDeExitoComponent } from './mis-historias-de-exito/mis-historias-de-exito.component';
+import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -74,7 +79,12 @@ export function initConfig(config: AppConfig) {
     MisCategoriasComponent,
     CategoriasSociosComercialesComponent,
     NotFoundComponent,
-    MisSubcategoriasComponent
+    MisSubcategoriasComponent,
+    MisDestinosPopularesComponent,
+    MisRecomendacionesComponent,
+    MisArticulosComponent,
+    MisHistoriasDeExitoComponent,
+    MisNoticiasComponent
   ],
   imports: [
     BrowserModule,
