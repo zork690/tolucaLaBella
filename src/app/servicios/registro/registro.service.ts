@@ -53,4 +53,21 @@ export class RegistroService {
     }));
   }
 
+  sendEmailPasswordReset(correo:string): Observable<RegistroDTO> {
+    let parametros = {
+      params: {
+        email: correo
+      }
+    };
+    //let url = this.baseUrl + "/usuarios/resetPassword";
+    let url = this.registroUrl + "/usuarios/resetPassword";
+    return this.http.get(url , parametros).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    }));
+  }
+
 }
