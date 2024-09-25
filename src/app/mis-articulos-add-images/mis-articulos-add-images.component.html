@@ -1,0 +1,19 @@
+<form [formGroup]="imagesFormGroup" method="post" (ngSubmit)="onSubmitImages()">
+    <div formArrayName="imagenesArray" *ngFor="let formGroup of keyValueArrayImagesControls; let i = index">
+        <div [formGroup]="formGroup">
+            <div>
+                <div>
+                    <input class="col-md-6" type="file" formControlName="key" (change)="imageSelect($event, i)">
+                    <button type="button" class="btn btn-danger" (click)="removeImage(i)">Remover</button>
+                </div>
+                <p id="imagen{{i}}Validacion" class="mensajes"></p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success" (click)="addNewImage()">+</button>
+    </div>
+    <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-warning btn-sm">Agregar</button>
+    </div>
+</form>
