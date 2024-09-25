@@ -46,6 +46,8 @@ import { MisRecomendacionesComponent } from './mis-recomendaciones/mis-recomenda
 import { MisArticulosComponent } from './mis-articulos/mis-articulos.component';
 import { MisHistoriasDeExitoComponent } from './mis-historias-de-exito/mis-historias-de-exito.component';
 import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
+import { MisArticulosAddImagesComponent } from './mis-articulos-add-images/mis-articulos-add-images.component';
+import { MisArticulosEditImagesComponent } from './mis-articulos-edit-images/mis-articulos-edit-images.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -84,7 +86,9 @@ export function initConfig(config: AppConfig) {
     MisRecomendacionesComponent,
     MisArticulosComponent,
     MisHistoriasDeExitoComponent,
-    MisNoticiasComponent
+    MisNoticiasComponent,
+    MisArticulosAddImagesComponent,
+    MisArticulosEditImagesComponent
   ],
   imports: [
     BrowserModule,
