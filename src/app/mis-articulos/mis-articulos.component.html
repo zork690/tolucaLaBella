@@ -1,0 +1,143 @@
+<button type="button" class="btn btn-success" (click)="add(modalAdd)">Agregar</button>
+
+
+<div class="card-body" id="tablestore">
+    <table class="table table-striped table-hover ">
+        <caption>Listado de Artículos</caption>
+        <thead>
+            <tr class="row">
+                <th scope="col" class="headerTable col-md-2"><strong>Id</strong></th>
+                <th scope="col" class="headerTable col-md-4"><strong>Artículo</strong></th>
+                <th scope="col" class="headerTable col-md-1"><strong>Activo</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row" *ngFor="let item of collection.data | paginate: config; index as i">
+                <td class="col-md-2">
+                    {{item.id}}
+                </td>
+                <td class="col-md-4">{{item.nombre}}</td>
+                <td class="col-md-1">{{item.valid}}</td>
+
+                <td class="col-md-1">
+                    <!--*ngIf="userAuth.varDto.editTda"-->
+                    <a class="icon-s" data-toggle="tooltip" title="Editar" (click)="openUpdate(modalAdd, item)">
+                        <em class="fa fa-edit fa-2x"></em></a>
+                    <a class="icon-s" data-toggle="tooltip" title="Imágenes" (click)="openUpdate(modalshowImage, item)">
+                        <em class="fas fa-images fa-2x"></em></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr><br>
+    <div class="row">
+        <div class=" col-md-2 text-left">
+            <div class="form-inline">
+                <label for="comboFiltro">Ver por Página&nbsp;</label>
+                <select name="optionSelect" id="comboFiltro" class="form-control pagination-show"
+                    [(ngModel)]="config.itemsPerPage">
+                    <option [ngValue]="item" *ngFor="let item of optionSelect">{{item}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-8 text-center">
+            <pagination-controls [responsive]="true" [nextLabel]="labels.nextLabel"
+                [previousLabel]="labels.previousLabel" [maxSize]="maxSize" [directionLinks]="true" [autoHide]="false"
+                (pageChange)="onPageChange($event)">
+            </pagination-controls>
+        </div>
+        <div class="col-md-2 text-right">
+            Total:&nbsp;{{collection.count}}
+        </div>
+    </div>
+</div>
+
+
+<ng-template #modalAdd let-modal>
+    <div class="modal-header text-center">
+        <h4 class="modal-title" [hidden]="form">{{tituloModal}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class=" col-md-12 col-lg-12">
+                    <p><span class="mandatoryPoint">*</span>Campo Obligatorio</p>
+                </div>
+                <div class="form-group col-md-12">
+                    <form formGroup [formGroup]="formGroup" action="" method="post" (ngSubmit)="onSubmit()">
+
+                        <label for="nombreArticulo"><span class="mandatoryPoint">*</span>Artículo</label>
+                        <input class="form-control" [ngClass]="{ 'is-invalid': enviado && f.nombreArticulo.errors }"
+                            id="nombreArticulo" name="nombreArticulo" type="text" placeholder="Nombre artículo"
+                            formControlName="nombreArticulo" (input)="countChars($event)"
+                            maxlength="{{maxNombreArticulo}}">
+                        <p class="conteoCaracteres">{{conteoNombreArticulo}}/{{maxNombreArticulo}}</p>
+                        <div *ngIf="enviado && f.nombreArticulo.errors" class="invalid-feedback">
+                            <div class="mensajes" *ngIf="f.nombreArticulo.errors.required">Campo requerido</div>
+                            <div class="mensajes" *ngIf="f.nombreArticulo.errors.invalidNameForm">
+                                {{validacionesNombreArticulo}}</div>
+                        </div>
+
+                        <label for="descripcionArticulo"><span class="mandatoryPoint">*</span>Descripción</label>
+                        <textarea class="form-control"
+                            [ngClass]="{ 'is-invalid': enviado && f.descripcionArticulo.errors }" rows="3"
+                            id="descripcionArticulo" name="descripcionArticulo" type="text"
+                            placeholder="Descripción del artículo" formControlName="descripcionArticulo"
+                            (input)="countChars($event)" maxlength="{{maxDescripcionArticulo}}"></textarea>
+                        <p class="conteoCaracteres">{{conteoDescripcionArticulo}}/{{maxDescripcionArticulo}}</p>
+                        <div *ngIf="enviado && f.descripcionArticulo.errors" class="invalid-feedback">
+                            <div class="mensajes" *ngIf="f.descripcionArticulo.errors.required">Campo requerido</div>
+                            <div class="mensajes" *ngIf="f.descripcionArticulo.errors.invalidDescriptionForm">
+                                {{validacionesDescripcionArticulo}}</div>
+                        </div>
+
+                        <div *ngIf="isFromOpenUpdate">
+                            <label for="isValidArticulo">¿Es válido?</label>
+                            <input class="form-control" type="checkbox" formControlName="isValidArticulo"
+                                id="isValidArticulo" />
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="col-md-12 text-center">
+                                <div id="mensajes" class="mensajes"></div>
+                                <button type="submit" class="btn btn-warning btn-sm">{{tituloBtn}}</button>&nbsp;
+                                <button type="button" class="btn btn-info btn-sm"
+                                    (click)="cancelModal()">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #modalshowImage let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" [hidden]="form">Listado Imágenes</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" container-fluid">
+
+            <app-mis-articulos-add-images></app-mis-articulos-add-images>
+
+            <div class="modal-header">
+            </div>
+
+            <app-mis-articulos-edit-images [childImages]="imagenes"></app-mis-articulos-edit-images>
+
+            <div class="modal-header">
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-info btn-sm" (click)="cancelModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
