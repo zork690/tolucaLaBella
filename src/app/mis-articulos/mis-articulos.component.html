@@ -126,12 +126,14 @@
     <div class="modal-body">
         <div class=" container-fluid">
 
-            <app-mis-articulos-add-images></app-mis-articulos-add-images>
+            <app-mis-articulos-add-images (messageFromChild) = "receiveFromChild($event)"
+             [articulo]="articulo"></app-mis-articulos-add-images>
 
             <div class="modal-header">
             </div>
 
-            <app-mis-articulos-edit-images [childImages]="imagenes"></app-mis-articulos-edit-images>
+            <app-mis-articulos-edit-images (messageFromChild) = "receiveFromChild($event)"
+             [childImages]="imagenes"></app-mis-articulos-edit-images>
 
             <div class="modal-header">
             </div>
