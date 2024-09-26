@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { MisArticulosService } from '../servicios/mis-articulos/mis-articulos.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-mis-articulos-add-images',
@@ -8,23 +11,30 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class MisArticulosAddImagesComponent implements OnInit {
 
+  @Input() articulo: any = {};
+  @Output() messageFromChild = new EventEmitter<string>();
+
   imagenesFormArray = new FormArray([this.newImagenForm]);
   imagesFormGroup = new FormGroup({
     imagenesArray: this.imagenesFormArray
   });
 
-  private imagenesAdd:Set<any> = new Set();
-  private imagen:string;
+  private imagenesAdd: Set<any> = new Set();
+  private imagen: string;
   private imagenRequerida: string = "Seleccione una imagen";
-  private onlyImagesMessage:string = "Solo imágenes son permitidas";
-  private sizeOfImageMessage:string = "La imágen esta muy pesada selecciona una mas ligera";
+  private onlyImagesMessage: string = "Solo imágenes son permitidas";
+  private sizeOfImageMessage: string = "La imágen esta muy pesada selecciona una mas ligera";
 
-  constructor() { }
+  constructor(
+    private SpinnerService: NgxSpinnerService
+    , private misArticulosService: MisArticulosService
+    , private toastr: ToastrService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  public imageSelect(evento, index: number){
+  public imageSelect(evento, index: number) {
     //console.log("Evento: ", evento);
     let fileList: FileList = evento.target.files;
     let pattern = /image-*/;
@@ -34,10 +44,10 @@ export class MisArticulosAddImagesComponent implements OnInit {
     if (!file.type.match(pattern)) {
       document.getElementById(`imagen${index}Validacion`).innerText = this.onlyImagesMessage;
       this.imagesFormGroup.controls.imagenesArray.setErrors(Validators.required);
-    }else if(file.size > 300000){
+    } else if (file.size > 300000) {
       document.getElementById(`imagen${index}Validacion`).innerText = this.sizeOfImageMessage;
       this.imagesFormGroup.controls.imagenesArray.setErrors(Validators.required);
-    }else{
+    } else {
       document.getElementById(`imagen${index}Validacion`).innerText = "";
       reader.onloadend = this._handleReaderLoaded.bind(this);
       reader.readAsDataURL(file);
@@ -48,14 +58,14 @@ export class MisArticulosAddImagesComponent implements OnInit {
     return this.imagenesFormArray.controls as FormGroup[];
   }
 
-  public removeImage(index: number): void{
+  public removeImage(index: number): void {
     this.imagenesFormArray.removeAt(index);
-    if(this.imagenesFormArray.length == 0){
+    if (this.imagenesFormArray.length == 0) {
       this.addNewImage();
     }
   }
 
-  public addNewImage(): void{
+  public addNewImage(): void {
     this.imagenesFormArray.push(this.newImagenForm);
   }
 
@@ -65,24 +75,27 @@ export class MisArticulosAddImagesComponent implements OnInit {
 
     if (this.imagesFormGroup.valid) {
       console.log("Enviando imagenes: ", this.payloadForAddingImages());
-      /*this.SpinnerService.show();
-      this.misArticulosService.createArticle(this.payload()).subscribe((result: any) => {
-        this.SpinnerService.hide();
-        console.log("Creando o editando articulo: ", result);
-      }, (responseError) => {
-        this.SpinnerService.hide();
-        console.log("ocurrio un error creando o editando artículo ", responseError);
-        this.toastr.error("Error al crear o editar artículo: ", responseError.error.m)
-      });*/
+      this.SpinnerService.show();
+      this.misArticulosService.createImages(this.payloadForAddingImages())
+        .subscribe((result: any) => {
+          this.SpinnerService.hide();
+          console.log("Enviando imagenes: ", result);
+          this.toastr.success("Imagenes enviadas exitosamente.");
+          this.messageFromChild.emit("1");
+        }, (responseError) => {
+          this.SpinnerService.hide();
+          console.log("ocurrio un error enviando las imágenes ", responseError);
+          this.toastr.error("Error al enviar las imágenes: ", responseError.error.m)
+        });
     }
   }
 
 
-  private validacionesImagenes(){
-    this.imagenesFormArray.controls.forEach((imagenFile, index)=>{
-      if(imagenFile.get("key").value == null){
+  private validacionesImagenes() {
+    this.imagenesFormArray.controls.forEach((imagenFile, index) => {
+      if (imagenFile.get("key").value == null) {
         document.getElementById(`imagen${index}Validacion`).innerText = this.imagenRequerida;
-      this.imagesFormGroup.controls.imagenesArray.setErrors(Validators.required);
+        this.imagesFormGroup.controls.imagenesArray.setErrors(Validators.required);
       }
     });
   }
@@ -93,16 +106,17 @@ export class MisArticulosAddImagesComponent implements OnInit {
     });
   }
 
-  private payloadForAddingImages(){
+  private payloadForAddingImages() {
     let payload = {
+      idArticulo: this.articulo.id,
       imagenes: this.fromSetToArrayImages()
     };
     return JSON.stringify(payload);
   }
 
-  
 
-  private fromSetToArrayImages():Array<any>{
+
+  private fromSetToArrayImages(): Array<any> {
     let imagesArray = Array.from(this.imagenesAdd);
     return imagesArray;
   }
@@ -111,8 +125,10 @@ export class MisArticulosAddImagesComponent implements OnInit {
     let reader = e.target;
     let base64result = reader.result.substr(reader.result.indexOf(',') + 1);
     //console.log("BASE64: ", base64result);
-    this.imagenesAdd.add({nombre: this.imagen,
-      baseContent: base64result});
+    this.imagenesAdd.add({
+      nombre: this.imagen,
+      baseContent: base64result
+    });
   }
 
 }
