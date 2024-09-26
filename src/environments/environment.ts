@@ -10,7 +10,8 @@ export const environment = {
   imagen: "imagenes",
   usuario: 'usuarios',
   permiso: 'permisosPerfiles',
-  cliente: ""
+  cliente: "",
+  pathImages: "imagesNegociosTolucaLaBella"
 };
 
 /*
