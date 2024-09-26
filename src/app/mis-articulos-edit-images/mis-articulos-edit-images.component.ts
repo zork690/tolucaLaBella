@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { MisArticulosService } from '../servicios/mis-articulos/mis-articulos.service';
+import { ImagenService } from '../servicios/imagenes/imagen.service';
 
 @Component({
   selector: 'app-mis-articulos-edit-images',
@@ -12,12 +13,16 @@ export class MisArticulosEditImagesComponent implements OnInit {
 
   @Input() childImages: any[] = [];
   @Output() messageFromChild = new EventEmitter<string>();
+  public urlImages: string;
 
   constructor(
     private SpinnerService: NgxSpinnerService
     , private toastr: ToastrService
     , private misArticulosService: MisArticulosService
-  ) { }
+    , private imagenService: ImagenService
+  ) { 
+    this.urlImages = this.imagenService.getUrlFromImages() + '/';
+  }
 
   ngOnInit(): void {
   }
