@@ -100,6 +100,13 @@ export class MisArticulosComponent implements OnInit {
 
   }
 
+  public receiveFromChild(event: string){
+    if(event === "1"){
+      this.cancelModal();
+      this.ngOnInit();
+    }
+  }
+
   public onSubmit() {
     this.enviado = true;
     this.validaciones();
@@ -108,7 +115,11 @@ export class MisArticulosComponent implements OnInit {
       this.SpinnerService.show();
       this.misArticulosService.createArticle(this.payload()).subscribe((result: any) => {
         this.SpinnerService.hide();
+        this.toastr.success("Articulo creado o modificado correctamente.");
         console.log("Creando o editando articulo: ", result);
+        this.cancelModal();
+        this.ngOnInit();
+        
       }, (responseError) => {
         this.SpinnerService.hide();
         console.log("ocurrio un error creando o editando artículo ", responseError);
