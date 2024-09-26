@@ -28,8 +28,8 @@ export class MisArticulosService {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
   });
-    //let url = this.articuloUrl+'/panel-socios/articulos/insertar';
-    let url = this.baseUrl+'/panel-socios/articulos/insertar';
+    let url = this.articuloUrl+'/panel-socios/articulos/insertar';
+    //let url = this.baseUrl+'/panel-socios/articulos/insertar';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
         throw new Error(loginJson['m']);
@@ -39,10 +39,42 @@ export class MisArticulosService {
     })); 
   }
 
+  createImages(data: any): Observable<any>{
+    this.authguard.canActivate();
+    const headers= new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+      let url = this.articuloUrl+'/panel-socios/articulos/imagenes/insertar';
+      //let url = this.baseUrl+'/panel-socios/articulos/imagenes/insertar';
+      return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
+        if (loginJson['s'] === 0) {
+          throw new Error(loginJson['m']);
+        }
+        const result = loginJson["r"]
+        return result as any;
+      }));
+  }
+
+  updateImages(data: any): Observable<any>{
+    this.authguard.canActivate();
+    const headers= new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+      let url = this.articuloUrl+'/panel-socios/articulos/imagenes/editar';
+      //let url = this.baseUrl+'/panel-socios/articulos/imagenes/editar';
+      return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
+        if (loginJson['s'] === 0) {
+          throw new Error(loginJson['m']);
+        }
+        const result = loginJson["r"]
+        return result as any;
+      }));
+  }
+
   getArticulos():Observable<any>{
     this.authguard.canActivate();
-    //let url = this.articuloUrl+'/panel-socios/articulos/listar';
-    let url = this.baseUrl+'/panel-socios/articulos/listar';
+    let url = this.articuloUrl+'/panel-socios/articulos/listar';
+    //let url = this.baseUrl+'/panel-socios/articulos/listar';
     return this.http.get(url).pipe(map(response => {
       if (response['s'] === 0) {
         throw new Error(response['m']);
