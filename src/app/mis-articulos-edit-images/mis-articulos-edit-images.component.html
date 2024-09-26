@@ -1,6 +1,6 @@
 <div class="" *ngFor="let imagen of childImages">
     <div class="col-md-12">
-        <img src={{apiEndPoint+imagenesBasePath+imagen.nombre}} class="imagenFluid" />
+        <img src={{urlImages+imagen.nombre}} class="imagenFluid" />
         <label for="checkValid"><a class="required">*</a>¿Es válida?</label>
         <input type="checkbox" class="" id="checkValid" [(ngModel)]="imagen.valid" />
     </div>
