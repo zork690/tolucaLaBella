@@ -72,20 +72,6 @@
   margin-top: 30px;
 }
 
-#testimoniosDiv_{
-  display: flex;
-  padding: 0px 20px;
-}
-
-.usuarioP{
-  font-weight: bolder;
-  font-size: 3vw;
-}
-
-.testimoniosDiv_sec{
-  padding: 15px;
-}
-
 #articulosDiv{
   text-align: center;
 }
