@@ -22,6 +22,31 @@
       id="tolucaLaBellaImg" />
   </div>
   <hr />
+
+  <div id="sobreTolucaLaBella">
+    <div>
+      <h2 id="tolucaBellaInfoH2">SOBRE TOLUCA LA BELLA</h2>
+      <p id="sobreTolucaInfo"><strong>Toluca la Bella</strong> es un <strong>directorio</strong> de negocios ubicado en
+        el corazón de Toluca.
+        Nos especializamos en conectar a la comunidad con los mejores <strong>negocios</strong> locales, ofreciendo a
+        nuestros usuarios información detallada y actualizada sobre una amplia gama de <strong>servicios</strong> y
+        <strong>productos</strong>. Nuestro horario de atención es las 24 horas del día, los 7 días de la semana y
+        puedes encontrarnos en nuestra plataforma en línea.
+      </p>
+      <div id="botonTolucaInfo"><button>Botón</button></div>
+    </div>
+    <div>
+      <img src="../../assets/imagenes/imagenCincoNosotros.PNG" alt="sobreTolucaBella" />
+    </div>
+  </div>
+
+  <div id="testimoniosDiv">
+    <h2>Historias de Éxito</h2>
+    <app-historias-de-exito></app-historias-de-exito>
+  </div>
+
+  <app-nosotros></app-nosotros>
+
   <h3 id="categoriasTitle">Categorías</h3>
   <div>
     <div class="categoriasDiv" *ngFor="let categoria of categoriasObj">
@@ -134,23 +159,6 @@
     </div>
   </div>
 
-  <div id="sobreTolucaLaBella">
-    <div>
-      <h2 id="tolucaBellaInfoH2">SOBRE TOLUCA LA BELLA</h2>
-      <p id="sobreTolucaInfo"><strong>Toluca la Bella</strong> es un <strong>directorio</strong> de negocios ubicado en
-        el corazón de Toluca.
-        Nos especializamos en conectar a la comunidad con los mejores <strong>negocios</strong> locales, ofreciendo a
-        nuestros usuarios información detallada y actualizada sobre una amplia gama de <strong>servicios</strong> y
-        <strong>productos</strong>. Nuestro horario de atención es las 24 horas del día, los 7 días de la semana y
-        puedes encontrarnos en nuestra plataforma en línea.
-      </p>
-      <div id="botonTolucaInfo"><button>Botón</button></div>
-    </div>
-    <div>
-      <img src="../../assets/imagenes/imagenCincoNosotros.PNG" alt="sobreTolucaBella" />
-    </div>
-  </div>
-
   <div id="nuevosNegociosDiv">
     <h2>Nuevos Negocios</h2>
     <div id="nuevosNegocios" class="carousel slide" data-ride="carousel">
@@ -252,71 +260,6 @@
         <h3>Negocio</h3>
       </div>
     </div> -->
-  </div>
-
-  <div id="testimoniosDiv">
-    <h2>Testimonios</h2>
-    <div id="testimoniosDiv_">
-      <div>
-        <div class="testimoniosDiv_sec">
-          <p class="usuarioP">Ana</p>
-          <span>Encantada</span>
-          <p>"Gracias a Toluca la Bella, mi búsqueda de un restaurante para celebrar mi aniversario fue todo un éxito.
-            La
-            variedad de opciones y las reseñas detalladas hicieron que nuestra elección fuera sencilla y satisfactoria.
-            Encontrar un lugar perfecto para una ocasión especial nunca fue tan fácil. Definitivamente, recomendaría
-            Toluca la Bella a cualquiera que busque experiencias memorables en Toluca."</p>
-        </div>
-        <div class="testimoniosDiv_sec">
-          <p class="usuarioP">María</p>
-          <span>Encantada</span>
-          <p>"Como residente de Toluca, siempre recurro a Toluca la Bella cuando necesito encontrar servicios locales de
-            calidad. La interfaz fácil de usar y las actualizaciones constantes hacen que sea mi primera opción para
-            descubrir nuevos lugares y servicios en la ciudad. Gracias a Toluca la Bella, he descubierto joyas ocultas
-            en
-            Toluca que de otra manera no habría encontrado. ¡No puedo imaginar vivir en Toluca sin este directorio!"</p>
-        </div>
-        <div class="testimoniosDiv_sec">
-          <p class="usuarioP">Laura</p>
-          <span>Feliz</span>
-          <p>"Toluca la Bella ha sido mi compañero confiable cuando necesito encontrar servicios locales en Toluca. La
-            información detallada y las reseñas auténticas de otros usuarios me han ayudado a tomar decisiones
-            informadas.
-            La plataforma es fácil de navegar y siempre me proporciona resultados precisos y relevantes.
-            ¡Definitivamente
-            lo recomiendo a cualquiera que busque lo mejor de Toluca!"</p>
-        </div>
-      </div>
-      <div>
-        <div class="testimoniosDiv_sec">
-          <p class="usuarioP">Juan</p>
-          <span>Satisfecho</span>
-          <p>"Nuestra experiencia con Toluca la Bella ha sido excepcional. Desde que nos inscribimos, hemos visto un
-            aumento significativo en el tráfico a nuestro negocio. Gracias a la visibilidad que nos brinda esta
-            plataforma, hemos logrado conectarnos de manera efectiva con clientes locales interesados en nuestros
-            servicios. Estar listados en Toluca la Bella ha sido una inversión valiosa para el crecimiento de nuestro
-            negocio."</p>
-        </div>
-        <div class="testimoniosDiv_sec">
-          <p class="usuarioP">José</p>
-          <span>Agradecido</span>
-          <p>"Desde que nos unimos a Toluca la Bella, hemos experimentado un aumento notable en la visibilidad de
-            nuestro
-            negocio. La plataforma nos ha ayudado a llegar a un público más amplio y atraer a clientes potenciales que
-            de
-            otra manera no nos habrían encontrado. Estamos muy agradecidos por la oportunidad que Toluca la Bella nos ha
-            brindado para destacar entre la competencia local."</p>
-        </div>
-        <div class="testimoniosDiv_sec">
-          <p class="usuarioP">Carlos</p>
-          <span>Agradecido</span>
-          <p>"Estamos encantados con los resultados que hemos visto desde que nos registramos en Toluca la Bella. La
-            plataforma nos ha brindado una exposición significativa a una audiencia local interesada en nuestros
-            servicios. La facil accesibilidad y la interfaz intuitiva hacen que sea una herramienta invaluable para
-            cualquier negocio local en Toluca que busque aumentar su presencia en línea ¡Gracias, Toluca la Bella!"</p>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div id="articulosDiv">
