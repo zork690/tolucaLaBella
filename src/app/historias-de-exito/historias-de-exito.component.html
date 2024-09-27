@@ -1,0 +1,17 @@
+<div id="nuevasHistorias" class="carousel slide" data-ride="carousel">
+    <div id="testimoniosDiv_" class="container carousel-inner no-padding">
+        <div class="carousel-item" *ngFor="let historia of historiasExito.historiasExito">
+            <div class="testimoniosDiv_sec">
+                <p class="usuarioP">{{historia.usuario}}</p>
+                <span>{{historia.sentimiento}}</span>
+                <p>"{{historia.historia}}"</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#nuevasHistorias" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#nuevasHistorias" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>

@@ -1,0 +1,33 @@
+.testimoniosDiv_sec {
+    padding: 15px;
+}
+
+.usuarioP {
+    font-weight: bolder;
+    font-size: 3vw;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 20px;
+    width: 20px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 0px solid #a55233;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 35px;
+    font-weight: bolder;
+    color: #a55233;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 35px;
+    font-weight: bolder;
+    color: #a55233;
+}
