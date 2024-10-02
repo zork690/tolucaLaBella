@@ -1,5 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { ClienteService } from '../../app/servicios/clientes/cliente.service';
 import { Meta } from '@angular/platform-browser';
 declare let $ : any;
@@ -11,12 +10,6 @@ declare let $ : any;
 })
 export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  @ViewChild('categoriesButton') categoriesButton: ElementRef;
-  @ViewChild('categoriesContainer') categoriesContainer: ElementRef;
-
-  categoriesButtonClicked: Subscription = new Subscription();
-  isShowing:boolean = false;
-  categoria: string;
   conteo: number = 0;
   mensaje:string = "";
   isHappy: boolean = true;
@@ -38,35 +31,14 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   ngAfterViewInit():void{
-      //this.getWhenCategoriesButtonIsClicked();
       this.getConteoClientes();
       this.whatsAppChat();
       
   }
 
-  public changeCategoryName(category: string): void{
-    this.categoria = category;
-    this.isShowing = false;
-    this.categoriesContainer.nativeElement.classList.add("divCategories");
-  }
-
-  private getWhenCategoriesButtonIsClicked(): void{
-    this.categoriesButtonClicked = fromEvent(this.categoriesButton.nativeElement, "click")
-    .subscribe(()=>{
-      if(!this.isShowing){ 
-        this.categoriesContainer.nativeElement.classList.remove("divCategories");
-        this.isShowing = true;
-      }else{
-        this.categoriesContainer.nativeElement.classList.add("divCategories");
-        this.isShowing = false;
-      }
-    });
-  }
-
   private getConteoClientes(){
     this.clienteService.getConteoClientes().subscribe((result: any) => {
       console.log("Result: ",result);
-
       this.conteo = 100 - result.conteo;
       if(this.conteo >= 50){
         this.mensaje = `¡Vamos menos de la mitad, lanzaremos en unos días más!`;
@@ -98,7 +70,6 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy 
 
   ngOnDestroy(){
     //For performance reasons
-    this.categoriesButtonClicked.unsubscribe();
   }
 
 }
