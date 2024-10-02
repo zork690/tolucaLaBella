@@ -2,49 +2,6 @@
   text-align: center;
 }
 
-#categoriasTitle{
-  text-align: center;
-}
-
-.categoriasSpan{
-  display: block;
-  text-align: center;
-}
-
-.categoriasDiv{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#destinosPopularesDiv{
-  text-align: center;
-  margin-top: 30px;
-}
-
-#destinosPopularesDiv_{
-  display: flex;
-}
-
-.destinosPopularesDiv_Sec{
-  margin: 0px 15px;
-}
-
-#recomendacionesDiv{
-  text-align: center;
-  margin-top: 30px;
-}
-
-#recomendacionesDiv_{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.recomendacionesDiv_sec{
-  margin: 0px 15px;
-}
-
 #sobreTolucaLaBella{
   display: flex;
   margin: 30px;
@@ -59,42 +16,9 @@
   text-align: center;
 }
 
-#botonTolucaInfo{
-  text-align: center;
-}
-
-#nuevosNegociosDiv{
-  text-align: center;
-}
-
 #testimoniosDiv{
   text-align: center;
   margin-top: 30px;
-}
-
-#articulosDiv{
-  text-align: center;
-}
-
-.articulosDiv_{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.articulosDiv_sec{
-  border: 2px solid black;
-  margin: 15px 20px;
-  padding: 15px 40px;
-  border-radius: 25px;
-}
-
-.btnArticulos{
-  text-align: center;
-}
-
-.btnArticulos button{
-  margin: 15px 0px;
 }
 
 #preguntasFrecuentesDiv{
@@ -118,232 +42,25 @@
   margin-left: 90px;
 }
 
-.mainContainer{
-  border: 1px solid none;
-  display: flex;
-  height: 85vh;
-}
-
-.categoriesContainer{
-  border: 1px solid none;
-  width: 10%;
-  padding: 0;
-  margin: 0;
-}
-
-.navColor{
-  background-color: #cef5d9;
-}
-
-.categoriesContainer a{
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-  border: 1px solid none;
-  display: block;
-  margin: 15px;
-}
-
-.categoriesContainer a:hover{
-  background-color: #FFF7CC;
-}
-
-#navegationBar{
-  display: none;
-}
-
-#categoriesButton{
-  display: none;
-}
-
-.divCategories{
-  display: block;
-}
-
-.contentContainer{
-  border: 1px solid none;
-  width: 90%;
-  background-color: antiquewhite ;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.nombreCategoria{
-  border: 1px solid none;
-  margin: 10px 0;
-  padding: 15px;
-}
-
-.negocioRow{
-  display: flex;
-  flex-direction: row;
-}
-
-.negocio{
-  border: 1px solid saddlebrown;
-  margin: 20px;
-  width: 20%;
-}
-
-.negocioInfo img{
-  max-width: 100%;
-  height: auto;
-  
-}
-
-.negocioImage{
-  width: 100%;
-  height: 100px;
-}
-
 #tolucaLaBellaImg{
     width:100%;
     border: 1px solid none;
 }
 
-
-.col-md-3{
-  display: inline-block;
-  margin-left:-4px;
-}
-.col-md-3 img{
-  width:100%;
-  height:auto;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 20px;
-  width: 20px;
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 0px solid #a55233;
-  background-image: none;
-}
-
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 35px;
-  font-weight: bolder;
-  color: #a55233;
-}
-
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 35px;
-  font-weight: bolder;
-  color: #a55233;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin: 10px;
-    text-indent: 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    background-color: rgb(218, 183, 143);    ;
-    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
-}
-.carousel-indicators .active {
-    width: 8px;
-    height: 8px;
-    margin: 10px;
-    background-color: #a55233;
-}
-
-
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width:815px) {
-  .mainContainer{
-    flex-direction: column;
-  }
-
-  #navegationBar{
-    display: block;
-  }
-
-  .categoriesContainer{
-    width: 100%;
-  }
-
-  #categoriesButton{
-    display: block;
-  }
-
-  .divCategories{
-    display: none;
-  }
-
-  .contentContainer{
-    width: 100%;
-  }
-
-  .negocioRow{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .negocio{
-    width: 100%;
-    margin: 10px;
-  }
-
-  .categoriasDiv{
-    flex-direction: column;
-  }
-  
-  #destinosPopularesDiv_{
-    flex-direction: column;
-  }
-
-  #recomendacionesDiv_{
-    flex-direction: column;
-  }
-
   #sobreTolucaLaBella{
     flex-direction: column;
     margin: 0px;
-  }
-
-  .articulosDiv_{
-    flex-direction: column;
-  }
-
-  #testimoniosDiv_{
-    flex-direction: column;
-    text-align: center;
+    padding-top: 20px;
   }
 
   img{
     max-width: 100%;
   }
 
-  h4{
-    text-align: justify;
-  }
-
-  #sobreTolucaLaBella{
-    padding-top: 20px;
-  }
-
   #sobreTolucaInfo{
     padding: 20px 8px;
-  }
-
-  .testimoniosDiv_sec {
-    text-align: justify;
-  }
-
-  .usuarioP{
-    text-align: center;
   }
 
   #footer{
