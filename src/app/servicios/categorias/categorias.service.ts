@@ -41,7 +41,6 @@ export class CategoriasService {
   }
 
   getCategorias():Observable<any>{
-    this.authguard.canActivate();
     let url = this.categoriaUrl+'/categorias/listarCategorias';
     //let url = this.baseUrl+'/categorias/listarCategorias';
     return this.http.get(url).pipe(map(response => {
