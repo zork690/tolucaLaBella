@@ -39,11 +39,11 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
 
   // PARA PROBAR EN EL BACK
   private getCategorias():void{
-    this.SpinnerService.show();
+    this.SpinnerService.show("spinnerCategorias");
     this.categoriaService.getCategorias().subscribe((result)=>{
       console.log("Categorias: ",result);
       this.categoriasObj = result;
-      this.SpinnerService.hide();
+      this.SpinnerService.hide("spinnerCategorias");
     }, (error)=>{
       console.log("Ocurrio un error obteniendo las categorias: ", error);
     });
@@ -51,7 +51,7 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
 
   // PARA PROBAR EN LOCAL
   /*private getCategorias(): void {
-    this.SpinnerService.show();
+    this.SpinnerService.show("spinnerCategorias");
     this.categoriasObj = [
       {
         categoria: "1",
@@ -67,7 +67,7 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
       }
     ];
     setTimeout(() => {
-      this.SpinnerService.hide();
+      this.SpinnerService.hide("spinnerCategorias");
     }, 4000);
   }*/
 
