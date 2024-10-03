@@ -46,6 +46,18 @@ export class NegociosService {
     })); 
   }
 
+  getNegociosFavoritos():Observable<any>{
+    let url = this.negocioUrl+'/negocios/listarNegociosFavoritos';
+    //let url = this.baseUrl+'/negocios/listarNegociosFavoritos';
+    return this.http.get(url).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
   createBusiness(data: any): Observable<any>  {
     this.authguard.canActivate();
     const headers= new HttpHeaders({
