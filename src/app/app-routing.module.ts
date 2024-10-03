@@ -32,6 +32,7 @@ import { MisRecomendacionesComponent } from './mis-recomendaciones/mis-recomenda
 import { MisArticulosComponent } from './mis-articulos/mis-articulos.component';
 import { MisHistoriasDeExitoComponent } from './mis-historias-de-exito/mis-historias-de-exito.component';
 import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
+import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
 
 const routes: Routes = [
   {
@@ -52,7 +53,7 @@ const routes: Routes = [
       { path: 'directorio-de-negocios', component: SociosComercialesComponent}, 
       { path: 'directorio-de-negocios/:categoria', component: CategoriasSociosComercialesComponent },
       { path: 'directorio-de-negocios/:categoria/:subcategoria', component: CategoriasSociosComercialesComponent},
-      { path: 'directorio-de-negocios/:idNegocio', component: DetalleSociosComercialesComponent },
+      { path: 'directorio-de-negocios/:categoria/:subcategoria/:negocio', component: DetalleSociosComercialesComponent },
       {
         path: 'panel-socios', component: PanelComponent,
         canActivate: [AuthGuardService],
@@ -70,8 +71,13 @@ const routes: Routes = [
       },
       { path: 'sobre-nosotros', component: NosotrosComponent },
       { path: 'marketing-digital', component: MarketingDigitalComponent },
-      { path: 'noticias-de-toluca', component: NoticiasComponent },
-      { path: 'noticias-de-toluca/:idNoticia', component: NoticiasDetalleComponent },
+      { 
+        path: 'noticias-de-toluca', component: NoticiasComponent,
+        children: [
+          { path: 'noticias/:categoria', component: NoticiasDetalleComponent }
+        ]
+      },
+      { path: 'noticias-de-toluca/noticias/:categoria/:articulo', component: NoticiasArticulosComponent },
       { path: 'reset-password', component: ResetPasswordComponent },
       {path: 'pagina-no-encontrada', component: NotFoundComponent},
       {path: '**', redirectTo: '/pagina-no-encontrada'}
