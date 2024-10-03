@@ -51,6 +51,7 @@ import { MisArticulosEditImagesComponent } from './mis-articulos-edit-images/mis
 import { HistoriasDeExitoComponent } from './historias-de-exito/historias-de-exito.component';
 import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
 import { NegociosNuevosComponent } from './negocios-nuevos/negocios-nuevos.component';
+import { NegociosFavoritosComponent } from './negocios-favoritos/negocios-favoritos.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -94,7 +95,8 @@ export function initConfig(config: AppConfig) {
     MisArticulosEditImagesComponent,
     HistoriasDeExitoComponent,
     NoticiasArticulosComponent,
-    NegociosNuevosComponent
+    NegociosNuevosComponent,
+    NegociosFavoritosComponent
   ],
   imports: [
     BrowserModule,
