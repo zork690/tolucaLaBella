@@ -1,0 +1,21 @@
+<h2 id="favoritosLabel">Favoritos</h2>
+<div class="negocioRow">
+
+    <ngx-spinner name="spinnerFavoritos" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin"
+        [fullScreen]="false">
+    </ngx-spinner>
+
+    <div class="negocio" *ngFor="let negocio of negociosInfo">
+        <div class="negocioInfo"
+            [routerLink]="['/directorio-de-negocios', negocio.categoria, negocio.subcategoria, negocio.idNegocio]">
+            <span><i class="far fa-star"></i></span>
+            <img *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}}
+                class="negocioImage" />
+            <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg"
+                class="negocioImage" />
+            <div class="detailInfo">
+                <h3 class="negocioTitle">{{negocio.nombrEmpresa}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
