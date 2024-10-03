@@ -14,7 +14,7 @@
 </div>
 <div id="seccion1">
     <div class="categoriasDiv">
-        <ngx-spinner bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin" [fullScreen]="false">
+        <ngx-spinner name="spinnerCategorias" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin" [fullScreen]="false">
         </ngx-spinner>
         <div *ngFor="let categoria of categoriasObj">
             <div *ngIf="categoria.valid" class="categoryCard" [routerLink]="['/directorio-de-negocios', categoria.categoria]">
