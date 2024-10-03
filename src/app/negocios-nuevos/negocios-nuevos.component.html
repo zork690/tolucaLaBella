@@ -1,0 +1,39 @@
+<div id="nuevosNegociosDiv">
+    <h2>Negocios Nuevos</h2>
+    <div id="nuevosNegocios" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!--<ul class="carousel-indicators">
+            <li data-target="#nuevosNegocios" data-slide-to="0" class="active"></li>
+            <li data-target="#nuevosNegocios" data-slide-to="1"></li>
+            <li data-target="#nuevosNegocios" data-slide-to="2"></li>
+        </ul>-->
+        <!-- The slideshow -->
+
+        <ngx-spinner name="spinnerNuevos" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin"
+            [fullScreen]="false">
+        </ngx-spinner>
+
+        <div *ngIf="chunks" class="container carousel-inner no-padding">
+            <div class="carousel-item" *ngFor="let _ of [].constructor(chunks.length); index as i">
+                <div class="containerNegocios">
+                    <div *ngFor="let negocio of chunks[i]">
+                        <div class="negocioCard" [routerLink]="['/directorio-de-negocios'
+                        , negocio.categoria
+                        , negocio.subcategoria
+                        , negocio.nombre]">
+                            <img [ngStyle]="gettingWithOfImage(chunks[i])" src="{{negocio.imagen}}">
+                            <div>{{negocio.nombre}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#nuevosNegocios" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#nuevosNegocios" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
