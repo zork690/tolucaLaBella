@@ -52,6 +52,7 @@ import { HistoriasDeExitoComponent } from './historias-de-exito/historias-de-exi
 import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
 import { NegociosNuevosComponent } from './negocios-nuevos/negocios-nuevos.component';
 import { NegociosFavoritosComponent } from './negocios-favoritos/negocios-favoritos.component';
+import { NoticiasInstanteComponent } from './noticias-instante/noticias-instante.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -96,7 +97,8 @@ export function initConfig(config: AppConfig) {
     HistoriasDeExitoComponent,
     NoticiasArticulosComponent,
     NegociosNuevosComponent,
-    NegociosFavoritosComponent
+    NegociosFavoritosComponent,
+    NoticiasInstanteComponent
   ],
   imports: [
     BrowserModule,
