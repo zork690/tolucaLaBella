@@ -74,10 +74,10 @@ const routes: Routes = [
       { 
         path: 'noticias-de-toluca', component: NoticiasComponent,
         children: [
-          { path: 'noticias/:categoria', component: NoticiasDetalleComponent }
+          { path: 'noticias/:categoria', component: NoticiasArticulosComponent}
         ]
       },
-      { path: 'noticias-de-toluca/noticias/:categoria/:articulo', component: NoticiasArticulosComponent },
+      { path: 'noticias-de-toluca/noticias/:categoria/:articulo', component: NoticiasDetalleComponent },
       { path: 'reset-password', component: ResetPasswordComponent },
       {path: 'pagina-no-encontrada', component: NotFoundComponent},
       {path: '**', redirectTo: '/pagina-no-encontrada'}
