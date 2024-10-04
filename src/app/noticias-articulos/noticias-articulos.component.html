@@ -1,0 +1,19 @@
+<div id="mainContainer">
+    <h1>{{categoria}}</h1>
+    <div id="categoriaPrev" *ngIf="categoria != ''">
+
+        <ngx-spinner name="spinnerArticuloSecciones" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
+            type="ball-spin" [fullScreen]="false">
+        </ngx-spinner>
+
+        <div id="categoriaPrev_" *ngIf="seccionesNoticias">
+            <div class="categoriaPrev_Sec" [routerLink]="['/noticias-de-toluca/noticias/', categoria, seccion.titulo]"
+                *ngFor="let seccion of seccionesNoticias.secciones">
+                <img src="{{seccion.imagen}}" alt="{{seccion.titulo}}" />
+                <h4>
+                    {{seccion.titulo}}
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+#mainContainer {
+    text-align: center;
+}
+
+#categoriaPrev{
+    position: relative;
+}
+
+#categoriaPrev_ {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoriaPrev_Sec:hover {
+    cursor: pointer;
+}
