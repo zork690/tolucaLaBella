@@ -33,6 +33,7 @@ import { MisArticulosComponent } from './mis-articulos/mis-articulos.component';
 import { MisHistoriasDeExitoComponent } from './mis-historias-de-exito/mis-historias-de-exito.component';
 import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
 import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
+import { SubcategoriasSociosComercialesComponent } from './subcategorias-socios-comerciales/subcategorias-socios-comerciales.component';
 
 const routes: Routes = [
   {
@@ -52,7 +53,7 @@ const routes: Routes = [
       { path: 'registrate', component: FormularioNegociosComponent },
       { path: 'directorio-de-negocios', component: SociosComercialesComponent}, 
       { path: 'directorio-de-negocios/:categoria', component: CategoriasSociosComercialesComponent },
-      { path: 'directorio-de-negocios/:categoria/:subcategoria', component: CategoriasSociosComercialesComponent},
+      { path: 'directorio-de-negocios/:categoria/:subcategoria', component: SubcategoriasSociosComercialesComponent},
       { path: 'directorio-de-negocios/:categoria/:subcategoria/:negocio', component: DetalleSociosComercialesComponent },
       {
         path: 'panel-socios', component: PanelComponent,
