@@ -34,6 +34,18 @@ export class NegociosService {
     })); 
   }
 
+  getNegociosBySubCategoria(subcategoria:string):Observable<any>{
+    let url = this.negocioUrl+'/negocios/listarNegocios/';
+    //let url = this.baseUrl+'/negocios/listarNegocios/';
+    return this.http.get(url+subcategoria).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
   getNegocios():Observable<any>{
     let url = this.negocioUrl+'/negocios/listarNegocios';
     //let url = this.baseUrl+'/negocios/listarNegocios';
