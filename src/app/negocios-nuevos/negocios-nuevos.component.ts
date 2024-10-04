@@ -76,7 +76,7 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   }
 
   // PARA PROBAR EN EL BACK
-  private getNegociosNuevos():void{
+  /*private getNegociosNuevos():void{
     this.SpinnerServices.show("spinnerNuevos");
     this.negocioService.getNegociosNuevos().subscribe((result) => {
       console.log("Negocios nuevos list: ", result);
@@ -86,10 +86,10 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
     }, (error) => {
       console.log("Ocurrió un error obteniendo los negocios nuevos: ", error);
     });
-  }
+  }*/
 
   // PARA PROBAR EN LOCAL
-  /*private getNegociosNuevos(): void {
+  private getNegociosNuevos(): void {
     this.SpinnerServices.show("spinnerNuevos");
     this.negociosNuevos = {
       negocios: [
@@ -139,6 +139,6 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.SpinnerServices.hide("spinnerNuevos");
     }, 5000);
-  }*/
+  }
 
 }
