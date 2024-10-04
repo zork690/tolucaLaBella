@@ -1,56 +1,111 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { NegociosService } from '../servicios/negocios/negocios.service';
-import {AppConfig} from '../../app/servicios/config/app.config';
+import { AppConfig } from '../../app/servicios/config/app.config';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-detalle-socios-comerciales',
   templateUrl: './detalle-socios-comerciales.component.html',
   styleUrls: ['./detalle-socios-comerciales.component.css']
 })
-export class DetalleSociosComercialesComponent implements OnInit {
+export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit {
 
-  idNegocio:string;
-  tituloModal:string;
-  mensajeModal: string;
+  idNegocio: string;
   negocioObj: any;
   imagenesBasePath: string;
   apiEndPoint: string;
+  categoria: string;
+  subcategoria: string;
 
-  constructor(private route: ActivatedRoute
+  public getScreenWidth: any;
+  public getScreenHeight: any;
+
+  public chunks: Array<any>;
+  private imagesByRow: number;
+
+  constructor(
+    private route: ActivatedRoute
     , private negocioService: NegociosService
     , private config: AppConfig
+    , private renderer: Renderer2
+    , private elem: ElementRef
+    , private SpinnerServices: NgxSpinnerService
   ) {
-    this.apiEndPoint = this.config.getConfig('apiEndPoint');
-    //this.apiEndPoint = "https://backend.zorktech.com.mx";
+    //this.apiEndPoint = this.config.getConfig('apiEndPoint');
+    this.apiEndPoint = "https://backend.zorktech.com.mx";
     this.imagenesBasePath = this.config.getConfig('pathImages');
-   }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+    this.settingChunks();
+  }
 
   ngOnInit(): void {
-    this.idNegocio = this.route.snapshot.paramMap.get('idNegocio');
+    this.categoria = this.route.snapshot.paramMap.get('categoria');
+    this.subcategoria = this.route.snapshot.paramMap.get('subcategoria');
+    this.idNegocio = this.route.snapshot.paramMap.get('negocio');
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
     this.getDetails(this.idNegocio);
   }
 
-  private getDetails(idNegocio:string):void{
-    this.tituloModal = "CARGANDO NEGOCIO";
-    this.mensajeModal = "CARGANDO NEGOCIO POR FAVOR ESPERE...";
+  ngAfterViewInit(): void {
+    if (this.chunks) {
+      const items = this.elem.nativeElement.querySelectorAll(".carousel-item");
+      this.renderer.addClass(items[0], "active");
+    }
+  }
+
+  public gettingWithOfImage(chunks: any): any {
+    let width = (chunks.length * 100) / this.imagesByRow;
+    return {
+      "max-width": `${width}%`
+    };
+  }
+
+  private getChunks(): Array<any> {
+    if (this.negocioObj) {
+      let numberOfImagesByRow = this.imagesByRow;
+      let numberOfNewNegocios = this.negocioObj.imagenes.length;
+      let numberOfTotalRows = Math.ceil(numberOfNewNegocios / numberOfImagesByRow);
+      let chunks = Array.from({ length: numberOfTotalRows }, (_, i) => this.negocioObj.imagenes.slice(i * numberOfImagesByRow, (i + 1) * numberOfImagesByRow));
+      return chunks;
+    } else {
+      return undefined;
+    }
+  }
+
+  private settingChunks(): void {
+    if (this.getScreenWidth > 575) {
+      this.imagesByRow = 4;
+      this.chunks = this.getChunks();
+    } else {
+      this.imagesByRow = 1;
+      this.chunks = this.getChunks();
+    }
+  }
+
+  // PRUEBAS EN EL BACK
+  /*private getDetails(idNegocio:string):void{
+  this.SpinnerServices.show("spinnerDetalleNegocio");
     this.negocioService.getNegocio(idNegocio).subscribe((result)=>{
       console.log("Negocio: ",result);
       this.negocioObj = result;
-      this.mensajeModal = "ok";
+      this.SpinnerServices.hide("spinnerDetalleNegocio");
+      this.settingChunks();
     }
     , (error)=>{
-      console.log("An error occured fetching data: ",error);
-      this.mensajeModal = `EL NEGOCIO NO SE HAN PODIDO CARGAR DEBIDO A UN PROBLEMA TÉCNICO
-      QUE EN BREVE SOLUCIONAREMOS, POR FAVOR MÁNDENOS UN MENSAJE A LOS TELÉFONOS DE CONTACTO
-      SI DESEA LEVANTAR SU QUEJA.`;
+      console.log("Ocurrio un error obteniendo el detalle del negocio: ",error);
     });
-  }
+  }*/
 
   //PARA PRUEBAS EN LOCAL
-  /*private getDetails(idNegocio:string):void{
-    this.tituloModal = "CARGANDO NEGOCIO";
-    this.mensajeModal = "CARGANDO NEGOCIO POR FAVOR ESPERE...";
+  private getDetails(idNegocio: string): void {
+    this.SpinnerServices.show("spinnerDetalleNegocio");
     this.negocioObj = {
       "id": 1,
       "idNegocio": "1714097862223",
@@ -75,24 +130,37 @@ export class DetalleSociosComercialesComponent implements OnInit {
           "nombre": "WhatsApp Image 2023-08-13 at 10.39.35 PM (1).jpeg",
           "idNegocio": "1714097862223",
           "valid": false
+        },
+        {
+          "id": 2,
+          "nombre": "WhatsApp Image 2023-08-13 at 10.39.35 PM (1).jpeg",
+          "idNegocio": "1714097862223",
+          "valid": false
+        },
+        {
+          "id": 2,
+          "nombre": "WhatsApp Image 2023-08-13 at 10.39.35 PM (1).jpeg",
+          "idNegocio": "1714097862223",
+          "valid": false
+        },
+        {
+          "id": 2,
+          "nombre": "WhatsApp Image 2023-08-13 at 10.39.35 PM (1).jpeg",
+          "idNegocio": "1714097862223",
+          "valid": false
+        },
+        {
+          "id": 2,
+          "nombre": "WhatsApp Image 2023-08-13 at 10.39.35 PM (1).jpeg",
+          "idNegocio": "1714097862223",
+          "valid": false
         }
       ]
     };
-    setTimeout(()=>{
-      this.mensajeModal = "ok";
-    }, 1000); */
-
-    /*this.negocioService.getNegocio(idNegocio).subscribe((result)=>{
-      console.log("Negocio: ",result);
-      this.negocioObj = result;
-      this.mensajeModal = "ok";
-    }
-    , (error)=>{
-      console.log("An error occured fetching data: ",error);
-      this.mensajeModal = `EL NEGOCIO NO SE HAN PODIDO CARGAR DEBIDO A UN PROBLEMA TÉCNICO
-      QUE EN BREVE SOLUCIONAREMOS, POR FAVOR MÁNDENOS UN MENSAJE A LOS TELÉFONOS DE CONTACTO
-      SI DESEA LEVANTAR SU QUEJA.`;
-    }); */
-  //}
+    this.settingChunks();
+    setTimeout(() => {
+      this.SpinnerServices.hide("spinnerDetalleNegocio");
+    }, 5000);
+  }
 
 }
