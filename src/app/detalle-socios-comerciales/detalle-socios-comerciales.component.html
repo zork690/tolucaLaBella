@@ -1,21 +1,27 @@
 <div id="seccion1">
     <div>
-        <p>Entretenimiento/Cines/Cinemex Plaza Toluca</p>
+        <p>{{categoria}}/{{subcategoria}}/{{idNegocio}}</p>
     </div>
 </div>
-<div id="seccion2">
+<div *ngIf="negocioObj" id="seccion2">
+
+    <ngx-spinner name="spinnerDetalleNegocio" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
+        type="ball-spin" [fullScreen]="false">
+    </ngx-spinner>
+
     <div>
         <div id="seccion2_B">
             <div id="seccion2_A">
-                <div>
-                    <img src="../../assets/imagenes/imagenCincoNosotros.PNG" />
+                <div *ngIf="negocioObj.imagenes.length > 0">
+                    <img src={{apiEndPoint+imagenesBasePath+negocioObj.imagenes[0].nombre}} class="imagenFluid" />
+                </div>
+                <div *ngIf="negocioObj.imagenes.length == 0">
+                    <img src="../../assets/imagenes/unavailable.jpg" class="imagenFluid" />
                 </div>
                 <div>
-                    <h1>Nombre del Negocio</h1>
-                    <h2>Categoría</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nostrum a voluptatem! Adipisci
-                        sint, dolor ad tempore sunt magni earum nulla tempora modi odio? Quos eos modi eligendi est
-                        corporis.</p>
+                    <h1>{{negocioObj.nombrEmpresa}}</h1>
+                    <h2>{{negocioObj.categoria}}</h2>
+                    <p>{{negocioObj.descripcion}}</p>
                 </div>
             </div>
             <div>
@@ -24,64 +30,17 @@
                 <div id="demo" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#demo"
+                            data-slide-to="i" [ngClass]="{'active': i === 0}"></li>
                     </ul>
                     <!-- The slideshow -->
-                    <div class="container carousel-inner no-padding">
-                        <div class="carousel-item active">
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                <img
-                                    src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                    <div *ngIf="chunks" class="container carousel-inner no-padding">
+                        <div class="carousel-item" *ngFor="let _ of [].constructor(chunks.length); index as i">
+                            <div class="containerGaleria">
+                                <div *ngFor="let imagen of chunks[i]">
+                                    <img [ngStyle]="gettingWithOfImage(chunks[i])"
+                                        src={{apiEndPoint+imagenesBasePath+imagen.nombre}}>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -102,129 +61,21 @@
         <h4>{{negocioObj.ubicacion.colonia}}</h4>
         <h4>Código Postal: {{negocioObj.ubicacion.codigoPostal}}</h4>
         <h4>{{negocioObj.telefono}}</h4>
+        <h2 class="whats">
+            <a href="https://api.whatsapp.com/send?phone={{negocioObj.telefono}}">WhatsApp</a>
+        </h2>
     </div>
 </div>
 <div id="seccion3">
-    <div>
-        <h4>Reseñas</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eaque laudantium at asperiores. Cupiditate,
-            eum ullam consequatur, ratione voluptatum excepturi saepe magni numquam ea aliquid enim alias deserunt
-            accusantium. Rem?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eaque laudantium at asperiores. Cupiditate,
-            eum ullam consequatur, ratione voluptatum excepturi saepe magni numquam ea aliquid enim alias deserunt
-            accusantium. Rem?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eaque laudantium at asperiores. Cupiditate,
-            eum ullam consequatur, ratione voluptatum excepturi saepe magni numquam ea aliquid enim alias deserunt
-            accusantium. Rem?</p>
-    </div>
-    <div>
-        <h4>Otros Negocios Relacionados</h4>
 
-        <div id="negociosRelacionados" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#negociosRelacionados" data-slide-to="0" class="active"></li>
-                <li data-target="#negociosRelacionados" data-slide-to="1"></li>
-                <li data-target="#negociosRelacionados" data-slide-to="2"></li>
-            </ul>
-            <!-- The slideshow -->
-            <div class="container carousel-inner no-padding">
-                <div class="carousel-item active">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <img
-                            src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
-                    </div>
-                </div>
-            </div>
+    <app-comentarios-socios-comerciales></app-comentarios-socios-comerciales>
+    <app-negocios-relacionados></app-negocios-relacionados>
 
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#negociosRelacionados" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#negociosRelacionados" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-
-    </div>
 </div>
 <div id="footer">
-    <span>ENCUENTRA, DESCUBRE Y<strong> CONECTA</strong> CON LOS <strong>NEGOCIOS</strong> DE <strong> TOLUCA</strong></span>
+    <span>ENCUENTRA, DESCUBRE Y<strong> CONECTA</strong> CON LOS <strong>NEGOCIOS</strong> DE <strong>
+            TOLUCA</strong></span>
     <button id="botonFooter">Botón</button>
 </div>
 <app-footer></app-footer>
-
-<!--<div class="mainContainer" *ngIf="negocioObj">
-    <h1>{{negocioObj.nombrEmpresa}}</h1>
-    <p>{{negocioObj.descripcion}}</p>
-    <div *ngIf="negocioObj.imagenes.length > 0">
-        <div *ngFor="let imagen of negocioObj.imagenes">
-            <img src={{apiEndPoint+imagenesBasePath+imagen.nombre}} class="negocioImage" />
-        </div>
-    </div>
-    <div *ngIf="negocioObj.imagenes.length == 0">
-        <img src="../../assets/imagenes/unavailable.jpg" class="negocioImage" />
-    </div>
-    <h2>{{negocioObj.telefono}}</h2>
-    <h2 class="whats">
-        <a href="https://api.whatsapp.com/send?phone={{negocioObj.telefono}}">WhatsApp</a>
-    </h2>
-    <h2>{{negocioObj.ubicacion.municipio}}</h2>
-    <h2>{{negocioObj.ubicacion.colonia}}</h2>
-    <h2>Código Postal: {{negocioObj.ubicacion.codigoPostal}}</h2>
-    <h2>Dirección:
-        <span class="dirNegocio">
-            {{negocioObj.calle}} {{negocioObj.numeroExterior}}
-        </span>
-    </h2>
-</div>-->
-
-<app-ventana-modal-info [tituloModal]="tituloModal" [mensajeModal]="mensajeModal"></app-ventana-modal-info>
+<!--<app-ventana-modal-info [tituloModal]="tituloModal" [mensajeModal]="mensajeModal"></app-ventana-modal-info>-->
