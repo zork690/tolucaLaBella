@@ -53,6 +53,7 @@ import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articu
 import { NegociosNuevosComponent } from './negocios-nuevos/negocios-nuevos.component';
 import { NegociosFavoritosComponent } from './negocios-favoritos/negocios-favoritos.component';
 import { NoticiasInstanteComponent } from './noticias-instante/noticias-instante.component';
+import { SubcategoriasSociosComercialesComponent } from './subcategorias-socios-comerciales/subcategorias-socios-comerciales.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -98,7 +99,8 @@ export function initConfig(config: AppConfig) {
     NoticiasArticulosComponent,
     NegociosNuevosComponent,
     NegociosFavoritosComponent,
-    NoticiasInstanteComponent
+    NoticiasInstanteComponent,
+    SubcategoriasSociosComercialesComponent
   ],
   imports: [
     BrowserModule,
