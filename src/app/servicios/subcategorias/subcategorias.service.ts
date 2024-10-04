@@ -52,4 +52,16 @@ export class SubcategoriasService {
     })); 
   }
 
+  getSubCategoriasByCategoria(categoria:string):Observable<any>{
+    let url = this.subCategoriaUrl+'/subcategorias/listar/';
+    //let url = this.baseUrl+'/subcategorias/listar/';
+    return this.http.get(url+categoria).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
 }
