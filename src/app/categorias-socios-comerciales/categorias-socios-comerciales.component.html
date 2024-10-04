@@ -1,5 +1,13 @@
-<p>{{categoria}}/{{subcategoria}}</p>
 <h1>{{categoria}}</h1>
-<h3>{{subcategoria}}</h3>
+<div id="infoSubDiv">
+    <ngx-spinner name="spinnerSubCategorias" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin"
+        [fullScreen]="false">
+    </ngx-spinner>
 
-<a [routerLink]="['/directorio-de-negocios', 'tiendas', 'supermercados']">Supermercados</a>
+    <div *ngFor="let subcategoria of subcategorias">
+        <div class="subcategoriaDiv"
+        [routerLink]="['/directorio-de-negocios', categoria, subcategoria.subcategoria]">
+            {{subcategoria.subcategoria}}
+        </div>
+    </div>
+</div>
