@@ -38,7 +38,7 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
   }
 
   // PARA PROBAR EN EL BACK
-  private getCategorias():void{
+  /*private getCategorias():void{
     this.SpinnerService.show("spinnerCategorias");
     this.categoriaService.getCategorias().subscribe((result)=>{
       console.log("Categorias: ",result);
@@ -47,29 +47,32 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
     }, (error)=>{
       console.log("Ocurrio un error obteniendo las categorias: ", error);
     });
-  }
+  }*/
 
   // PARA PROBAR EN LOCAL
-  /*private getCategorias(): void {
+  private getCategorias(): void {
     this.SpinnerService.show("spinnerCategorias");
     this.categoriasObj = [
       {
         categoria: "1",
-        imagen: "dfdfdfdsfdsf"
+        imagen: "dfdfdfdsfdsf",
+        valid: true
       }
       , {
         categoria: "2",
-        imagen: "dfdfdfdsfdsf"
+        imagen: "dfdfdfdsfdsf",
+        valid: true
       }
       , {
         categoria: "3",
-        imagen: "dfdfdfdsfdsf"
+        imagen: "dfdfdfdsfdsf",
+        valid: true
       }
     ];
     setTimeout(() => {
       this.SpinnerService.hide("spinnerCategorias");
     }, 4000);
-  }*/
+  }
 
   ngOnDestroy() {
     //For performance reasons
