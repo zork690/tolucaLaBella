@@ -1,0 +1,38 @@
+<h4>Otros Negocios Relacionados</h4>
+<div id="mainContent">
+
+    <ngx-spinner name="spinnerNegociosRelacionados" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
+        type="ball-spin" [fullScreen]="false">
+    </ngx-spinner>
+
+    <div id="negociosRelacionados" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#negociosRelacionados"
+                data-slide-to="i" [ngClass]="{'active': i === 0}"></li>
+        </ul>
+        <!-- The slideshow -->
+        <div *ngIf="chunks" class="container carousel-inner no-padding">
+            <div class="carousel-item" *ngFor="let _ of [].constructor(chunks.length); index as i">
+                <div class="containerGaleriaNegociosRelacionados">
+                    <div *ngFor="let negocio of chunks[i]">
+                        <div class="negocioCard"
+                        (click)="getNegocioNuevo(negocio)">
+                            <p class="negocioNombre">{{negocio.nombre}}</p>
+                            <img [ngStyle]="gettingWithOfImage(chunks[i])"
+                                src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#negociosRelacionados" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#negociosRelacionados" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
