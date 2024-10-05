@@ -50,13 +50,18 @@ export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit 
     this.idNegocio = this.route.snapshot.paramMap.get('negocio');
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
-    this.getDetails(this.idNegocio);
+    this.getDetails();
   }
 
   ngAfterViewInit(): void {
     if (this.chunks) {
       const items = this.elem.nativeElement.querySelectorAll(".carousel-item");
       this.renderer.addClass(items[0], "active");
+    }
+    let top = document.getElementById('seccion1');
+    if (top !== null) {
+      top.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+      top = null;
     }
   }
 
@@ -90,7 +95,7 @@ export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit 
   }
 
   // PRUEBAS EN EL BACK
-  /*private getDetails(idNegocio:string):void{
+  /*private getDetails():void{
   this.SpinnerServices.show("spinnerDetalleNegocio");
     this.negocioService.getNegocio(idNegocio).subscribe((result)=>{
       console.log("Negocio: ",result);
@@ -104,7 +109,8 @@ export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit 
   }*/
 
   //PARA PRUEBAS EN LOCAL
-  private getDetails(idNegocio: string): void {
+  private getDetails(): void {
+    console.log("Getting negocio: ", this.idNegocio);
     this.SpinnerServices.show("spinnerDetalleNegocio");
     this.negocioObj = {
       "id": 1,
