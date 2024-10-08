@@ -55,6 +55,10 @@
     display: block;
 }
 
+img {
+    max-width: 100%;
+}
+
 @media (max-width:815px) {
     #seccion2 {
         flex-direction: column;
@@ -63,10 +67,6 @@
 
     #seccion2>div {
         width: 100%;
-    }
-
-    img {
-        max-width: 100%;
     }
 
     #seccion1 {
