@@ -27,13 +27,12 @@ import { CategoriasSociosComercialesComponent } from './categorias-socios-comerc
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MisSubcategoriasComponent } from './mis-subcategorias/mis-subcategorias.component';
 import { AuthGuardService } from './servicios/auth-guard/auth-guard.service';
-import { MisDestinosPopularesComponent } from './mis-destinos-populares/mis-destinos-populares.component';
-import { MisRecomendacionesComponent } from './mis-recomendaciones/mis-recomendaciones.component';
 import { MisArticulosComponent } from './mis-articulos/mis-articulos.component';
 import { MisHistoriasDeExitoComponent } from './mis-historias-de-exito/mis-historias-de-exito.component';
 import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
 import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
 import { SubcategoriasSociosComercialesComponent } from './subcategorias-socios-comerciales/subcategorias-socios-comerciales.component';
+import { MisNoticiasSeccionesComponent } from './mis-noticias-secciones/mis-noticias-secciones.component';
 
 const routes: Routes = [
   {
@@ -62,12 +61,11 @@ const routes: Routes = [
           { path: '', redirectTo: 'mis-categorias', pathMatch: 'full' },
           { path: 'mis-categorias', component: MisCategoriasComponent },
           { path: 'mis-subcategorias', component: MisSubcategoriasComponent },
-          { path: 'mis-destinos-populares', component: MisDestinosPopularesComponent },
-          { path: 'mis-recomendaciones', component: MisRecomendacionesComponent },
           { path: 'mis-articulos', component: MisArticulosComponent },
           { path: 'mis-negocios', component: MisNegociosComponent },
           { path: 'mis-historias-de-exito', component: MisHistoriasDeExitoComponent },
-          { path: 'mis-noticias', component: MisNoticiasComponent }
+          { path: 'mis-noticias', component: MisNoticiasComponent },
+          { path: 'mis-noticias-secciones', component: MisNoticiasSeccionesComponent }
         ]
       },
       { path: 'sobre-nosotros', component: NosotrosComponent },
