@@ -53,6 +53,10 @@
     margin-left: 90px;
 }
 
+img {
+    max-width: 100%;
+}
+
 @media (max-width:815px) {
     #seccion1 {
         flex-direction: column;
@@ -80,9 +84,5 @@
 
     #botonFooter {
         margin-left: 0px;
-    }
-
-    img {
-        max-width: 100%;
     }
 }

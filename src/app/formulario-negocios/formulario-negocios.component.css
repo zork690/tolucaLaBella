@@ -95,6 +95,10 @@ button{
     font-weight: bold;
 }
 
+img{
+    max-width: 100%;
+}
+
 @media (max-width:815px) {
     #seccion1{
         flex-direction: column;
@@ -111,10 +115,6 @@ button{
 
     h3{
         font-size: 7vw;
-    }
-
-    img{
-        max-width: 100%;
     }
 
     #seccion2DivB{
