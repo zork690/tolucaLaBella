@@ -351,7 +351,7 @@ export class MisNoticiasSeccionesComponent implements OnInit {
   /* PARA PROBAR EN EL BACK */
   private getNoticias(): void {
     this.SpinnerService.show();
-    this.misNoticiasService.getArticulosNoticias().subscribe((result: any[]) => {
+    this.misNoticiasService.getNoticias().subscribe((result: any[]) => {
       console.log("Noticias: ", result);
       this.noticias = result;
       this.SpinnerService.hide();
