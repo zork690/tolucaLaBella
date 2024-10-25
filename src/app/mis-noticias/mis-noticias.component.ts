@@ -263,7 +263,7 @@ export class MisNoticiasComponent implements OnInit {
   /* PARA PROBAR EN EL BACK */
   private getNoticias(): void {
     this.SpinnerService.show();
-    this.misNoticiasService.getArticulosNoticias().subscribe((result: any[]) => {
+    this.misNoticiasService.getNoticias().subscribe((result: any[]) => {
       console.log("Noticias: ", result);
       this.config.totalItems = result.length;
       this.collection.count = result.length;
