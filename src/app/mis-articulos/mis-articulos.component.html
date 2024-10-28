@@ -94,6 +94,23 @@
                                 {{validacionesDescripcionArticulo}}</div>
                         </div>
 
+                        <ng-container *ngIf="isFromOpenUpdate">
+                            <label>Noticia actual</label>
+                            <p>{{articulo.noticia.nombre}}</p>
+                        </ng-container>
+
+                        <label for="noticia"><a class="mandatoryPoint">*</a>Noticia</label>
+                        <select name="noticia" [ngClass]="{ 'is-invalid': enviado && f.noticiaArticulo.errors }"
+                            id="noticia" class="form-control" formControlName="noticiaArticulo">
+                            <ng-container *ngFor="let noticia of noticias">
+                                <option *ngIf="noticia.valid" [ngValue]="noticia">{{noticia.noticia}}</option>
+                            </ng-container>
+                        </select>
+                        <div *ngIf="enviado && f.noticiaArticulo.errors" class="invalid-feedback">
+                            <div class="mensajes" *ngIf="f.noticiaArticulo.errors.invalidNoticiaForm">
+                                {{validacionesNoticiaArticulo}}</div>
+                        </div>
+
                         <div *ngIf="isFromOpenUpdate">
                             <label for="isValidArticulo">¿Es válido?</label>
                             <input class="form-control" type="checkbox" formControlName="isValidArticulo"
@@ -126,14 +143,14 @@
     <div class="modal-body">
         <div class=" container-fluid">
 
-            <app-mis-articulos-add-images (messageFromChild) = "receiveFromChild($event)"
-             [articulo]="articulo"></app-mis-articulos-add-images>
+            <app-mis-articulos-add-images (messageFromChild)="receiveFromChild($event)"
+                [articulo]="articulo"></app-mis-articulos-add-images>
 
             <div class="modal-header">
             </div>
 
-            <app-mis-articulos-edit-images (messageFromChild) = "receiveFromChild($event)"
-             [childImages]="imagenes"></app-mis-articulos-edit-images>
+            <app-mis-articulos-edit-images (messageFromChild)="receiveFromChild($event)"
+                [childImages]="imagenes"></app-mis-articulos-edit-images>
 
             <div class="modal-header">
             </div>
