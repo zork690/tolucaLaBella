@@ -72,9 +72,8 @@ export class MisArticulosService {
   }
 
   getArticulos():Observable<any>{
-    this.authguard.canActivate();
-    let url = this.articuloUrl+'/panel-socios/articulos/listar';
-    //let url = this.baseUrl+'/panel-socios/articulos/listar';
+    let url = this.articuloUrl+'/articulos/listar';
+    //let url = this.baseUrl+'/articulos/listar';
     return this.http.get(url).pipe(map(response => {
       if (response['s'] === 0) {
         throw new Error(response['m']);
