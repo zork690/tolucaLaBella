@@ -61,6 +61,7 @@ export class MisNoticiasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.imagenes.clear();
     this.getNoticias();
   }
 
