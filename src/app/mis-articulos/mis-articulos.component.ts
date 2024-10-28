@@ -5,6 +5,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { articulosInfo } from '../../assets/mockDemoArticulosInfo';
+import { noticiasInfo } from 'src/assets/mockDemoNoticiasInfo';
+import { MisNoticiasService } from '../servicios/mis-noticias/mis-noticias.service';
 
 @Component({
   selector: 'app-mis-articulos',
@@ -41,6 +43,9 @@ export class MisArticulosComponent implements OnInit {
   maxDescripcionArticulo: number = 2024;
   validacionesDescripcionArticulo: string = "";
 
+  validacionesNoticiaArticulo: string = "";
+
+  public noticias: any[] = [];
 
   imagenes: any[] = [];
 
@@ -50,6 +55,7 @@ export class MisArticulosComponent implements OnInit {
     , private SpinnerService: NgxSpinnerService
     , private toastr: ToastrService
     , private formBuilder: FormBuilder
+    , private misNoticiasService: MisNoticiasService
   ) {
 
     this.modalOptions = {
@@ -66,6 +72,9 @@ export class MisArticulosComponent implements OnInit {
         , this.validateDescripcionArticulo()
       ]
       ],
+      noticiaArticulo: [null, [this.validateNoticiaArticulo()
+      ]
+      ],
       isValidArticulo: [true]
     });
 
@@ -73,6 +82,7 @@ export class MisArticulosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getArticulos();
+    this.getNoticias();
   }
 
   public get f() { return this.formGroup.controls; }
@@ -136,6 +146,7 @@ export class MisArticulosComponent implements OnInit {
     this.isFromOpenUpdate = true;
     this.articulo = { ...item };
     this.imagenes = this.articulo.imagenes.map(object => ({ ...object }));
+    //this.getNoticias();
     console.log("IMAGENES: ", this.imagenes);
     this.open(content);
   }
@@ -214,6 +225,41 @@ export class MisArticulosComponent implements OnInit {
       });
   }
 
+  /******** PARA PROBAR NOTICIAS LOCALMENTE *********/
+  /*private getNoticias(): void {
+    //this.negocioService.getNegocios().subscribe((result: any[]) => {
+    //console.log("Negocios: ",result);
+    //this.imgFromServer = result;
+    //this.config.totalItems = result.length;
+    //this.collection.count = result.length;
+    this.noticias = noticiasInfo;
+    this.SpinnerService.hide();
+
+    //this.setImgString();
+    //console.log("IMAGENES STRING: ", this.arregloStrings);
+
+    //},
+    //(responseError) => {
+    //  this.SpinnerService.hide();
+    //  this.toastr.error("Error obteniendo los negocios", responseError);
+    //});
+  }*/
+
+  /* PARA PROBAR EN EL BACK */
+  private getNoticias(): void {
+    this.SpinnerService.show();
+    this.misNoticiasService.getNoticias().subscribe((result: any[]) => {
+      console.log("Noticias: ", result);
+      this.noticias = result;
+      this.SpinnerService.hide();
+    },
+      (responseError) => {
+        this.SpinnerService.hide();
+        this.toastr.error("Error obteniendo las noticias");
+        console.log("Error obteniendo las noticias: ", responseError);
+      });
+  }
+
 
   private setValues(item: any): void {
     this.tituloModal = "Editar artículo";
@@ -235,7 +281,8 @@ export class MisArticulosComponent implements OnInit {
       id: (this.articulo.id) ? this.articulo.id : null,
       nombre: this.formGroup.controls.nombreArticulo.value,
       descripcion: this.formGroup.controls.descripcionArticulo.value,
-      valid: (this.formGroup.controls.isValidArticulo.value != null) ? this.formGroup.controls.isValidArticulo.value : true
+      valid: (this.formGroup.controls.isValidArticulo.value != null) ? this.formGroup.controls.isValidArticulo.value : true,
+      idNoticia: (this.formGroup.controls.noticiaArticulo.value != null) ? this.formGroup.controls.noticiaArticulo.value.id : this.articulo.noticia.id
     }
     console.log("PAYLOAD: ", payload);
     return JSON.stringify(payload);
@@ -251,6 +298,11 @@ export class MisArticulosComponent implements OnInit {
       this.validacionesDescripcionArticulo = "Descripción parece que contiene carácteres no permitidos";
     } else {
       this.validacionesDescripcionArticulo = "";
+    }
+    if(this.formGroup.controls.noticiaArticulo.errors?.invalidNoticiaForm){
+      this.validacionesNoticiaArticulo = "Campo requerido";
+    }else{
+      this.validacionesNoticiaArticulo = "";
     }
   }
 
@@ -270,6 +322,20 @@ export class MisArticulosComponent implements OnInit {
         return null;
       } else {
         return { invalidDescriptionForm: true };
+      }
+    }
+  }
+
+  private validateNoticiaArticulo(): ValidatorFn{
+    return (control: AbstractControl) => {
+      if(control.value != null){
+        return null;
+      }else{
+        if(this.isFromOpenUpdate){
+          return null;
+        }else{
+          return { invalidNoticiaForm: true };
+        }
       }
     }
   }
