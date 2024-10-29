@@ -7,7 +7,7 @@
     <div *ngFor="let subcategoria of subcategorias">
         <div class="subcategoriaDiv"
         [routerLink]="['/directorio-de-negocios', categoria, subcategoria.subcategoria]">
-            {{subcategoria.subcategoria}}
+            {{subcategoria.nombre}}
         </div>
     </div>
 </div>
