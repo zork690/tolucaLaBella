@@ -28,7 +28,7 @@ export class CategoriasSociosComercialesComponent implements OnInit {
   }
 
   // PARA PROBAR EN LOCAL
-  private gettingSubCategorias():void{
+  /*private gettingSubCategorias():void{
     console.log("Obteniendo subcategorias de: ", this.categoria);
     this.SpinnerServices.show("spinnerSubCategorias");
     this.subcategorias = [
@@ -48,10 +48,10 @@ export class CategoriasSociosComercialesComponent implements OnInit {
     setTimeout(() => {
       this.SpinnerServices.hide("spinnerSubCategorias");
     }, 5000);
-  }
+  }*/
 
   // PARA PROBAR EN EL BACK
-  /*private gettingSubCategorias(): void {
+  private gettingSubCategorias(): void {
     this.SpinnerServices.show("spinnerSubCategorias");
     console.log("Obteniendo subcategorias de: ", this.categoria);
     this.subCategoriaService.getSubCategoriasByCategoria(this.categoria).subscribe((result) => {
@@ -62,6 +62,6 @@ export class CategoriasSociosComercialesComponent implements OnInit {
       , (error) => {
         console.log("Ocurrio un error obteniendo las subcategorias: ", error);
       });
-  }*/
+  }
 
 }
