@@ -5,8 +5,7 @@
     </ngx-spinner>
 
     <div *ngFor="let subcategoria of subcategorias">
-        <div class="subcategoriaDiv"
-        [routerLink]="['/directorio-de-negocios', categoria, subcategoria.subcategoria]">
+        <div class="subcategoriaDiv" (click)="sendSubcategoria(subcategoria)">
             {{subcategoria.nombre}}
         </div>
     </div>
