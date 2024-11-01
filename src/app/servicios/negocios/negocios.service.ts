@@ -34,9 +34,21 @@ export class NegociosService {
     })); 
   }
 
+  getNegociosById(id:string):Observable<any>{
+    //let url = this.negocioUrl+'/negocios/listarNegocios/';
+    let url = this.baseUrl+'/negocios/listarNegocios/';
+    return this.http.get(url+id).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
   getNegociosBySubCategoria(subcategoria:string):Observable<any>{
-    let url = this.negocioUrl+'/negocios/listarNegocios/';
-    //let url = this.baseUrl+'/negocios/listarNegocios/';
+    //let url = this.negocioUrl+'/negocios/listar/';
+    let url = this.baseUrl+'/negocios/listar/';
     return this.http.get(url+subcategoria).pipe(map(response => {
       if (response['s'] === 0) {
         throw new Error(response['m']);
