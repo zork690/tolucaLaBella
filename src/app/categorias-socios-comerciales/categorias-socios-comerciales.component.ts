@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SubcategoriasService } from '../servicios/subcategorias/subcategorias.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorias-socios-comerciales',
@@ -19,12 +20,18 @@ export class CategoriasSociosComercialesComponent implements OnInit {
     private route: ActivatedRoute
     , private SpinnerServices: NgxSpinnerService
     , private subCategoriaService: SubcategoriasService
+    , private router: Router
   ) { }
 
   ngOnInit(): void {
     this.categoria = this.route.snapshot.paramMap.get('categoria');
     this.gettingSubCategorias();
 
+  }
+
+  public sendSubcategoria(subcategoria: any):void{
+    this.subCategoriaService.setSubcategoria(subcategoria);
+    this.router.navigate(["directorio-de-negocios",this.categoria, subcategoria.nombre]);
   }
 
   // PARA PROBAR EN LOCAL
