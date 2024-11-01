@@ -91,6 +91,10 @@
     margin-left: 90px;
 }
 
+#infoSubDiv{
+    position: relative;
+}
+
 @media (max-width:815px) {
 
     img {
