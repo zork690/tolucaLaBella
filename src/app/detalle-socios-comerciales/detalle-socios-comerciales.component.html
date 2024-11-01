@@ -1,13 +1,18 @@
-<div id="seccion1">
+<h2>{{categoria}} - {{subcategoria}}</h2>
+<hr />
+<div *ngIf="negocioObj" id="seccion1">
     <div>
-        <p>{{categoria}}/{{subcategoria}}/{{idNegocio}}</p>
+        <p>{{categoria}}/{{subcategoria}}/{{negocioObj.nombrEmpresa}}</p>
     </div>
 </div>
-<div *ngIf="negocioObj" id="seccion2">
 
+<div id="infoSubDiv">
     <ngx-spinner name="spinnerDetalleNegocio" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
         type="ball-spin" [fullScreen]="false">
     </ngx-spinner>
+</div>
+
+<div *ngIf="negocioObj" id="seccion2">
 
     <div>
         <div id="seccion2_B">
@@ -24,17 +29,17 @@
                     <p>{{negocioObj.descripcion}}</p>
                 </div>
             </div>
-            <div>
+            <div *ngIf="negocioObj.imagenes.length > 1">
                 <h4>Galeria</h4>
 
                 <div id="demo" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
+
                     <ul class="carousel-indicators">
                         <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#demo"
                             data-slide-to="i" [ngClass]="{'active': i === 0}"></li>
                     </ul>
-                    <!-- The slideshow -->
-                    <div *ngIf="chunks" class="container carousel-inner no-padding">
+
+                    <div class="container carousel-inner no-padding">
                         <div class="carousel-item" *ngFor="let _ of [].constructor(chunks.length); index as i">
                             <div class="containerGaleria">
                                 <div *ngFor="let imagen of chunks[i]">
@@ -44,8 +49,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Left and right controls -->
                     <a class="carousel-control-prev" href="#demo" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
