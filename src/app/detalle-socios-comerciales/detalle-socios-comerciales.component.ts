@@ -95,21 +95,22 @@ export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit 
   }
 
   // PRUEBAS EN EL BACK
-  /*private getDetails():void{
+  private getDetails():void{
   this.SpinnerServices.show("spinnerDetalleNegocio");
-    this.negocioService.getNegocio(idNegocio).subscribe((result)=>{
+    this.negocioService.getNegocio(this.idNegocio).subscribe((result)=>{
       console.log("Negocio: ",result);
       this.negocioObj = result;
       this.SpinnerServices.hide("spinnerDetalleNegocio");
       this.settingChunks();
     }
     , (error)=>{
+      this.SpinnerServices.hide("spinnerDetalleNegocio");
       console.log("Ocurrio un error obteniendo el detalle del negocio: ",error);
     });
-  }*/
+  }
 
   //PARA PRUEBAS EN LOCAL
-  private getDetails(): void {
+  /*private getDetails(): void {
     console.log("Getting negocio: ", this.idNegocio);
     this.SpinnerServices.show("spinnerDetalleNegocio");
     this.negocioObj = {
@@ -167,6 +168,6 @@ export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit 
     setTimeout(() => {
       this.SpinnerServices.hide("spinnerDetalleNegocio");
     }, 5000);
-  }
+  }*/
 
 }
