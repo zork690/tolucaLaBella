@@ -1,7 +1,7 @@
-<div *ngIf="subcategoria">
-    <p>{{subcategoria.categoria}}/{{subcategoria.subcategoria}}</p>
-    <h3>{{subcategoria.subcategoria}}</h3>
-    <h4>{{subcategoria.metaDescripcion}}</h4>
+<div>
+    <p>{{subcategoria.categoria.nombre}}/{{subcategoria.nombre}}</p>
+    <h3>{{subcategoria.nombre}}</h3>
+    <!--<h4>{{subcategoria.metaDescripcion}}</h4>-->
 </div>
 
 <hr />
@@ -12,17 +12,20 @@
             type="ball-spin" [fullScreen]="false">
         </ngx-spinner>
 
-        <div class="negocio" *ngFor="let negocio of subcategoria.negocios">
-            <div class="negocioInfo"
-                [routerLink]="['/directorio-de-negocios', subcategoria.categoria, subcategoria.subcategoria,  negocio.idNegocio]">
-                <img *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}}
-                    class="negocioImage" />
-                <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg"
-                    class="negocioImage" />
-                <div class="detailInfo">
-                    <h3 class="negocioTitle">{{negocio.nombrEmpresa}}</h3>
+        
+            <div class="negocio" *ngFor="let negocio of negocios">
+                <div *ngIf="negocio.valid" class="negocioInfo"
+                    [routerLink]="['/directorio-de-negocios', subcategoria.categoria.nombre, subcategoria.nombre,  negocio.idNegocio]">
+                    <img *ngIf="negocio.imagenes.length > 0"
+                        src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} class="negocioImage" />
+                    <img *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg"
+                        class="negocioImage" />
+                    <div class="detailInfo">
+                        <h3 class="negocioTitle">{{negocio.nombrEmpresa}}</h3>
+                    </div>
                 </div>
             </div>
-        </div>
+       
+
     </div>
 </div>
