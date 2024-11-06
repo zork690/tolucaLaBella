@@ -61,7 +61,8 @@ export class CategoriasSociosComercialesComponent implements OnInit {
   private gettingSubCategorias(): void {
     this.SpinnerServices.show("spinnerSubCategorias");
     console.log("Obteniendo subcategorias de: ", this.categoria);
-    this.subCategoriaService.getSubCategoriasByCategoria(this.categoria).subscribe((result) => {
+    const c =  encodeURIComponent(encodeURIComponent(this.categoria));
+    this.subCategoriaService.getSubCategoriasByCategoria(c).subscribe((result) => {
       console.log("Subcategorias list: ", result);
       this.subcategorias = result;
       this.SpinnerServices.hide("spinnerSubCategorias");
