@@ -5,6 +5,7 @@ import {
 import { CategoriasService } from '../servicios/categorias/categorias.service';
 import { Meta } from '@angular/platform-browser';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-socios-comerciales',
@@ -19,6 +20,7 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
     private meta: Meta
     , private categoriaService: CategoriasService
     , private SpinnerService: NgxSpinnerService
+    , private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -35,6 +37,11 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
   }
 
   ngAfterViewInit(): void {
+  }
+
+  public sendToSubcategorias(categoria: any):void{
+    console.log("Buscando: ", categoria.categoria);
+    this.router.navigate(["directorio-de-negocios",categoria.categoria]);
   }
 
   // PARA PROBAR EN EL BACK
