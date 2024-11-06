@@ -43,8 +43,11 @@
 }
 
 .categoryCard{
-    text-align: center;
     margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .categoryCard:hover{
