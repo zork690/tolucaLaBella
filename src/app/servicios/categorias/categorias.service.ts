@@ -29,8 +29,8 @@ export class CategoriasService {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
   });
-    let url = this.categoriaUrl+'/categorias/crearCategoria';
-    //let url = this.baseUrl+'/categorias/crearCategoria';
+    let url = this.categoriaUrl+'/panel-socios/categorias/crearCategoria';
+    //let url = this.baseUrl+'/panel-socios/categorias/crearCategoria';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
         throw new Error(loginJson['m']);
