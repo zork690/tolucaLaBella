@@ -3,12 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { FontsIconosComponent } from './fonts-iconos/fonts-iconos.component';
 import { VentanasModalesComponent } from './ventanas-modales/ventanas-modales.component';
-//import { FormulariosComponent } from './formularios/formularios.component';
 import { ImagenesComponent } from './imagenes/imagenes.component';
 import { LayoutsComponent } from './layouts/layouts.component';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
-import { AuthSecureService } from './secure/auth-secure.service';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
 import { SociosComercialesComponent } from './socios-comerciales/socios-comerciales.component';
@@ -33,19 +31,16 @@ import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
 import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
 import { SubcategoriasSociosComercialesComponent } from './subcategorias-socios-comerciales/subcategorias-socios-comerciales.component';
 import { MisNoticiasSeccionesComponent } from './mis-noticias-secciones/mis-noticias-secciones.component';
-import { AuthValidRoleService } from './servicios/auth-valid-role/auth-valid-role.service';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutsComponent,
-    //canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'inicio', pathMatch: 'full' },
       { path: 'inicio', component: PaginaInicialComponent },
       { path: 'fonts', component: FontsIconosComponent },
       { path: 'modales', component: VentanasModalesComponent },
-      //{ path: 'formularios', component: FormulariosComponent },
       { path: 'imagenes', component: ImagenesComponent },
       { path: 'registro', component: RegistroComponent },
       { path: 'login', component: LoginComponent },
@@ -60,13 +55,13 @@ const routes: Routes = [
         canActivate: [AuthGuardService],
         children: [
           { path: '', redirectTo: 'mis-categorias', pathMatch: 'full' },
-          { path: 'mis-categorias', component: MisCategoriasComponent, canActivate: [AuthValidRoleService] },
-          { path: 'mis-subcategorias', component: MisSubcategoriasComponent, canActivate: [AuthValidRoleService] },
-          { path: 'mis-articulos', component: MisArticulosComponent, canActivate: [AuthValidRoleService] },
+          { path: 'mis-categorias', component: MisCategoriasComponent },
+          { path: 'mis-subcategorias', component: MisSubcategoriasComponent },
+          { path: 'mis-articulos', component: MisArticulosComponent },
           { path: 'mis-negocios', component: MisNegociosComponent },
-          { path: 'mis-historias-de-exito', component: MisHistoriasDeExitoComponent, canActivate: [AuthValidRoleService] },
-          { path: 'mis-noticias', component: MisNoticiasComponent, canActivate: [AuthValidRoleService] },
-          { path: 'mis-noticias-secciones', component: MisNoticiasSeccionesComponent, canActivate: [AuthValidRoleService] }
+          { path: 'mis-historias-de-exito', component: MisHistoriasDeExitoComponent },
+          { path: 'mis-noticias', component: MisNoticiasComponent },
+          { path: 'mis-noticias-secciones', component: MisNoticiasSeccionesComponent }
         ]
       },
       { path: 'sobre-nosotros', component: NosotrosComponent },
