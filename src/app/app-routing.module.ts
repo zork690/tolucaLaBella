@@ -33,6 +33,7 @@ import { MisNoticiasComponent } from './mis-noticias/mis-noticias.component';
 import { NoticiasArticulosComponent } from './noticias-articulos/noticias-articulos.component';
 import { SubcategoriasSociosComercialesComponent } from './subcategorias-socios-comerciales/subcategorias-socios-comerciales.component';
 import { MisNoticiasSeccionesComponent } from './mis-noticias-secciones/mis-noticias-secciones.component';
+import { AuthValidRoleService } from './servicios/auth-valid-role/auth-valid-role.service';
 
 const routes: Routes = [
   {
@@ -59,13 +60,13 @@ const routes: Routes = [
         canActivate: [AuthGuardService],
         children: [
           { path: '', redirectTo: 'mis-categorias', pathMatch: 'full' },
-          { path: 'mis-categorias', component: MisCategoriasComponent },
-          { path: 'mis-subcategorias', component: MisSubcategoriasComponent },
-          { path: 'mis-articulos', component: MisArticulosComponent },
+          { path: 'mis-categorias', component: MisCategoriasComponent, canActivate: [AuthValidRoleService] },
+          { path: 'mis-subcategorias', component: MisSubcategoriasComponent, canActivate: [AuthValidRoleService] },
+          { path: 'mis-articulos', component: MisArticulosComponent, canActivate: [AuthValidRoleService] },
           { path: 'mis-negocios', component: MisNegociosComponent },
-          { path: 'mis-historias-de-exito', component: MisHistoriasDeExitoComponent },
-          { path: 'mis-noticias', component: MisNoticiasComponent },
-          { path: 'mis-noticias-secciones', component: MisNoticiasSeccionesComponent }
+          { path: 'mis-historias-de-exito', component: MisHistoriasDeExitoComponent, canActivate: [AuthValidRoleService] },
+          { path: 'mis-noticias', component: MisNoticiasComponent, canActivate: [AuthValidRoleService] },
+          { path: 'mis-noticias-secciones', component: MisNoticiasSeccionesComponent, canActivate: [AuthValidRoleService] }
         ]
       },
       { path: 'sobre-nosotros', component: NosotrosComponent },
