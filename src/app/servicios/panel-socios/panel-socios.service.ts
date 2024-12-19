@@ -12,15 +12,25 @@ export class PanelSociosService {
 
   constructor(
     private config: AppConfig
-  ) { 
+  ) {
     this.helper = new JwtHelperService();
   }
 
 
-  public getTokenDecoded(): any{
+  public getTokenDecoded(): any {
     this.tokenDecoded = this.helper.decodeToken(this.config.getConfig('apiToken'));
     console.log("token Decoded: ", this.tokenDecoded);
     return this.tokenDecoded;
+  }
+
+  public getRoles(tokenDecoded: any): any {
+    let roles: String[];
+    if (tokenDecoded.resource_access["zorktech-login-app"]) {
+      roles = this.tokenDecoded.resource_access["zorktech-login-app"].roles;
+    } else {
+      roles = [];
+    }
+    return roles;
   }
 
 }
