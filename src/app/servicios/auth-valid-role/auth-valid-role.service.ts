@@ -7,18 +7,21 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AuthValidRoleService {
 
+  private roles: any;
+
   constructor(
     private panelService: PanelSociosService
     , private toastr: ToastrService
-  ) { }
+  ) {
 
-  hasValidRoles(): boolean {
+  }
+
+  public hasValidRoles(): boolean {
     console.log("validating roles ...");
     let isValid: boolean = false;
-    let roles = this.panelService.getRoles(this.panelService.getTokenDecoded());
-    if (roles.length > 0) {
-      if (roles.includes("admin") || roles.includes("user")) {
-        console.log("Es admin, user o ambos");
+    this.roles = this.panelService.getRoles(this.panelService.getTokenDecoded());
+    if (this.roles.length > 0) {
+      if (this.roles.includes("admin") || this.roles.includes("user")) {
         isValid = true;
       }
     } else {
@@ -26,6 +29,10 @@ export class AuthValidRoleService {
       this.toastr.error("Hay un problema con su usuario, favor de llamar a soporte técnico");
     }
     return isValid;
+  }
+
+  public canActivate(): boolean {
+    return this.roles.includes("admin");
   }
 
 }
