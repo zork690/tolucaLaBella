@@ -1,36 +1,37 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { AppConfig } from '../servicios/config/app.config';
 import { AuthService } from '../servicios/auth/auth.service';
 import { Router } from '@angular/router';
+import { PanelSociosService } from '../servicios/panel-socios/panel-socios.service';
+import { AuthValidRoleService } from '../servicios/auth-valid-role/auth-valid-role.service';
 
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.css']
 })
-export class PanelComponent implements OnInit, AfterViewInit  {
+export class PanelComponent implements OnInit, AfterViewInit {
 
   public tokenDecoded: any = {};
-  private helper: JwtHelperService;
+  public isAdmin: boolean = false;
 
   constructor(
-    private config: AppConfig
-    , private authService: AuthService
+    private authService: AuthService
     , private router: Router
+    , private panel: PanelSociosService
+    , private authValidRole: AuthValidRoleService
   ) {
-    this.helper = new JwtHelperService();
-   }
+  }
 
   ngOnInit(): void {
-    this.getTokenDecoded();
+    this.tokenDecoded = this.panel.getTokenDecoded();
+    this.isAdmin = this.authValidRole.canActivate();
   }
 
-  ngAfterViewInit(): void{
-    this.activingLinks();    
+  ngAfterViewInit(): void {
+    //this.activingLinks();
   }
 
-  public cerrarSesion(){
+  public cerrarSesion() {
     this.authService.logout();
     this.router.navigate(['/login']);
 
@@ -47,11 +48,6 @@ export class PanelComponent implements OnInit, AfterViewInit  {
         this.className += " active";
       });
     }
-  }
-
-  private getTokenDecoded(){
-    this.tokenDecoded = this.helper.decodeToken(this.config.getConfig('apiToken'));
-    console.log("token Decoded: ", this.tokenDecoded);
   }
 
 }
