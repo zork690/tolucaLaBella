@@ -18,6 +18,7 @@ export class AuthGuardService {
     if (this.authService.isAuthenticated() && this.authValidRoleService.hasValidRoles()) {
       return true;
     } else {
+      this.authService.logout();
       this.router.navigate(['/login']);
       return false;
     }
