@@ -31,8 +31,8 @@ export class SubcategoriasService {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
   });
-    let url = this.subCategoriaUrl+'/subcategorias/crear';
-    //let url = this.baseUrl+'/subcategorias/crear';
+    let url = this.subCategoriaUrl+'/panel-socios/subcategorias/crear';
+    //let url = this.baseUrl+'/panel-socios/subcategorias/crear';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
         throw new Error(loginJson['m']);
