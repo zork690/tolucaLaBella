@@ -436,7 +436,6 @@ export class FormularioNegociosComponent implements OnInit {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-      this.router.navigate(["/inicio"]);
     });
   }
 
