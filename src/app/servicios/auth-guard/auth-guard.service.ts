@@ -15,6 +15,10 @@ export class AuthGuardService {
   ) { }
 
   canActivate(): boolean {
+    if(this.router.url === "/registrate"){
+      console.log(this.router.url);
+      return true;
+    }
     if (this.authService.isAuthenticated() && this.authValidRoleService.hasValidRoles()) {
       return true;
     } else {
