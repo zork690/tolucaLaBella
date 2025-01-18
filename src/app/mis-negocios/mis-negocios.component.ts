@@ -6,6 +6,7 @@ import { NegociosService } from '../servicios/negocios/negocios.service';
 import { negociosInfo } from '../../assets/mockDemoNegociosInfo';
 import locations from '../../assets/locations.json';
 import { AppConfig } from '../../app/servicios/config/app.config';
+import { AuthValidRoleService } from '../servicios/auth-valid-role/auth-valid-role.service';
 
 export enum KEY_CODE {
   ENTER = 13
@@ -84,7 +85,8 @@ export class MisNegociosComponent implements OnInit {
     private SpinnerService: NgxSpinnerService,
     private toastr: ToastrService,
     private negocioService: NegociosService,
-    private configApp: AppConfig
+    private configApp: AppConfig,
+    private authRoleService: AuthValidRoleService
   ) {
 
     //this.apiEndPoint = this.config.getConfig('apiEndPoint');
@@ -238,19 +240,11 @@ export class MisNegociosComponent implements OnInit {
   /* PARA PROBAR EN EL BACK */
   private getNegocios(): void {
     this.SpinnerService.show();
-    this.negocioService.getNegociosTodos().subscribe((result: any[]) => {
-      console.log("Negocios: ", result);
-      this.config.totalItems = result.length;
-      this.collection.count = result.length;
-      this.collection.data = result;
-      this.backupNegocios = result;
-      this.SpinnerService.hide();
-    },
-      (responseError) => {
-        this.SpinnerService.hide();
-        this.toastr.error("Error obteniendo los negocios");
-        console.log("Error obteniendo los negocios: ", responseError);
-      });
+    if(this.authRoleService.canActivate()){
+      this.getNegociosTodos();
+    }else{
+      this.getNegociosUser();
+    }
   }
 
   private gettingMunicipios(): void {
@@ -535,6 +529,38 @@ export class MisNegociosComponent implements OnInit {
     }
     console.log("PAYLOAD: ", payload);
     return JSON.stringify(payload);
+  }
+
+  private getNegociosTodos(): void{
+    this.negocioService.getNegociosTodos().subscribe((result: any[]) => {
+      console.log("Negocios: ", result);
+      this.config.totalItems = result.length;
+      this.collection.count = result.length;
+      this.collection.data = result;
+      this.backupNegocios = result;
+      this.SpinnerService.hide();
+    },
+      (responseError) => {
+        this.SpinnerService.hide();
+        this.toastr.error("Error obteniendo los negocios");
+        console.log("Error obteniendo los negocios: ", responseError);
+      });
+  }
+
+  private getNegociosUser(): void{
+    this.negocioService.getNegociosByUser().subscribe((result: any[]) => {
+      console.log("Negocios: ", result);
+      this.config.totalItems = result.length;
+      this.collection.count = result.length;
+      this.collection.data = result;
+      this.backupNegocios = result;
+      this.SpinnerService.hide();
+    },
+      (responseError) => {
+        this.SpinnerService.hide();
+        this.toastr.error("Error obteniendo los negocios");
+        console.log("Error obteniendo los negocios: ", responseError);
+      });
   }
 
 }
