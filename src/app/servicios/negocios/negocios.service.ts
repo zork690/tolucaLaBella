@@ -143,4 +143,17 @@ export class NegociosService {
     })); 
   }
 
+  getNegociosByUser():Observable<any>{
+    this.authguard.canActivate();
+    let url = this.negocioUrl+'/panel-socios/listarNegocios';
+    //let url = this.baseUrl+'/panel-socios/listarNegocios';
+    return this.http.get(url).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
 }
