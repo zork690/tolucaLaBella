@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { negociosInfo } from 'src/assets/mockDemoNegociosInfo';
 import { SubcategoriasService } from '../servicios/subcategorias/subcategorias.service';
 import { Router } from '@angular/router';
+import { AppConfig } from '../servicios/config/app.config';
 
 @Component({
   selector: 'app-subcategorias-socios-comerciales',
@@ -16,6 +17,8 @@ export class SubcategoriasSociosComercialesComponent implements OnInit {
   subcategoria: any;
   subcategoriaString:string;
   negocios: any;
+  imagenesBasePath: string;
+  apiEndPoint: string;
 
   constructor(
     private route: ActivatedRoute
@@ -23,10 +26,14 @@ export class SubcategoriasSociosComercialesComponent implements OnInit {
     , private SpinnerServices: NgxSpinnerService
     , private subCategoriaService: SubcategoriasService
     , private router: Router
+    , private config: AppConfig
   ) {
     this.subCategoriaService.getSubcategoria.subscribe((subcategoria)=>{
       this.subcategoria = subcategoria
     });
+    //this.apiEndPoint = this.config.getConfig('apiEndPoint');
+    this.apiEndPoint = "https://backend.zorktech.com.mx";
+    this.imagenesBasePath = this.config.getConfig('pathImages');
    }
 
   ngOnInit(): void {
@@ -44,7 +51,7 @@ export class SubcategoriasSociosComercialesComponent implements OnInit {
     this.SpinnerServices.show("spinnerNegocioSubCategoria");
     console.log("Obteniendo negocios de: ", this.subcategoriaString);
     const s = encodeURIComponent(encodeURIComponent(this.subcategoriaString));
-    this.negocioService.getNegociosBySubCategoria(s).subscribe((result)=>{
+    this.negocioService.getNegociosBySubCategoria(s).subscribe((result)=>{ 
       console.log("Negocios list: ",result);
       this.negocios = result;
       this.SpinnerServices.hide("spinnerNegocioSubCategoria");
