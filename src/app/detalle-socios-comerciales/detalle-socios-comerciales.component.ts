@@ -54,10 +54,6 @@ export class DetalleSociosComercialesComponent implements OnInit, AfterViewInit 
   }
 
   ngAfterViewInit(): void {
-    if (this.chunks) {
-      const items = this.elem.nativeElement.querySelectorAll(".carousel-item");
-      this.renderer.addClass(items[0], "active");
-    }
     let top = document.getElementById('seccion1');
     if (top !== null) {
       top.scrollIntoView({ block: 'end',  behavior: 'smooth' });
