@@ -21,12 +21,19 @@
 }
 
 #seccion2 {
-    display: flex;
-    position: relative;
+    padding: 20px;
 }
 
 #seccion2_A {
     display: flex;
+}
+
+#seccion2_A div{
+    width: 50%;
+}
+
+#seccion2_A img{
+    max-width: 100%;
 }
 
 #contactoInfo {
@@ -104,11 +111,16 @@
     #seccion2 {
         flex-direction: column;
         text-align: center;
+        padding: 0px;
     }
 
     #seccion2_A {
         flex-direction: column;
         text-align: center;
+    }
+
+    #seccion2_A div{
+        width: 100%;
     }
 
     h4 {
