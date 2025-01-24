@@ -113,6 +113,22 @@ export class NegociosService {
       return result as any;
     })); 
   }
+  
+  createBusinessUserLogged(data: any): Observable<any>  {
+    this.authguard.canActivate();
+    const headers= new HttpHeaders({
+    'Content-Type': 'application/json'
+    });
+    let url = this.negocioUrl+'/negocios/insertarNegocioUserLogged';
+    //let url = this.baseUrl+'/negocios/insertarNegocioUserLogged';
+    return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
+      if (loginJson['s'] === 0) {
+        throw new Error(loginJson['m']);
+      }
+      const result = loginJson["r"]
+      return result as any;
+    })); 
+  }
 
   updateImages(data: any): Observable<any>  {
     this.authguard.canActivate();
