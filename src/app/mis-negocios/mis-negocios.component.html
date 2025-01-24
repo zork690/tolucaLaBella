@@ -185,12 +185,13 @@
                                 <option *ngIf="categoria.valid" [ngValue]="categoria.categoria">{{categoria.categoria}}</option>
                             </ng-container>
                         </select>
+                        <p id="categoriaValidacion" class="mensajes"></p>
 
-                        <label for="subcategoria"><a class="mandatoryPoint">*</a>Subcategoria</label>
+                        <label for="subcategoria"><a class="required">*</a>Subcategoria</label>
                         <select name="subcategoria" id="subcategoria" class="form-control"
                             [(ngModel)]="subcategoriaSelected">
                             <ng-container *ngFor="let subcategoria of subcategorias">
-                                <option *ngIf="subcategoria.valid" [ngValue]="subcategoria.nombre">{{subcategoria.nombre}}
+                                <option *ngIf="subcategoria.valid" [ngValue]="subcategoria.id">{{subcategoria.nombre}}
                                 </option>
                             </ng-container>
                         </select>
