@@ -7,6 +7,9 @@ import { negociosInfo } from '../../assets/mockDemoNegociosInfo';
 import locations from '../../assets/locations.json';
 import { AppConfig } from '../../app/servicios/config/app.config';
 import { AuthValidRoleService } from '../servicios/auth-valid-role/auth-valid-role.service';
+import { PanelSociosService } from '../servicios/panel-socios/panel-socios.service';
+import { SubcategoriasService } from '../servicios/subcategorias/subcategorias.service';
+import { CategoriasService } from '../servicios/categorias/categorias.service';
 
 export enum KEY_CODE {
   ENTER = 13
@@ -21,6 +24,7 @@ export enum KEY_CODE {
 export class MisNegociosComponent implements OnInit {
 
   backupNegocios: any[] = [];
+  private tokenDecoded: any = {};
 
   filterText = {
     "negocio": ""
@@ -39,12 +43,19 @@ export class MisNegociosComponent implements OnInit {
   maxSize = 7;
   negocio: any = {};
   ubicacionOriginal: any = {};
+  categoriaOriginal: any = {};
   imagenes: any[] = [];
 
   public municipioSelected: string;
   public coloniaSelected: string;
   public codigoPostalSelected: number;
 
+  public categoriaSelected: any;
+  public categorias: any[];
+  public subcategorias: any[];
+  public subcategoriaSelected: any;
+
+  public isToCreate: boolean = false;
 
   public municipios: String[];
   public colonias: any[];
@@ -86,7 +97,10 @@ export class MisNegociosComponent implements OnInit {
     private toastr: ToastrService,
     private negocioService: NegociosService,
     private configApp: AppConfig,
-    private authRoleService: AuthValidRoleService
+    private authRoleService: AuthValidRoleService,
+    private panel: PanelSociosService,
+    private subCategoriaService: SubcategoriasService,
+    private categoriasService: CategoriasService
   ) {
 
     //this.apiEndPoint = this.config.getConfig('apiEndPoint');
@@ -110,6 +124,7 @@ export class MisNegociosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNegocios();
+    this.tokenDecoded = this.panel.getTokenDecoded();
   }
 
   public municipioHasChanged(event: string): void {
@@ -123,15 +138,52 @@ export class MisNegociosComponent implements OnInit {
     this.gettingZipCode(event);
   }
 
+  public categoriaHasChanged(event: any): void {
+    this.gettingSubcategorias(event);
+  }
+
+  public addNegocio(content: any): void {
+    this.isToCreate = true;
+    this.municipioSelected = undefined;
+    this.coloniaSelected = undefined;
+    this.codigoPostalSelected = undefined;
+    this.negocio = {
+      idNegocio: 0,
+      email: this.tokenDecoded.email,
+      nombre: "",
+      telefono: "",
+      nombrEmpresa: "",
+      descripcion: "",
+      calle: "",
+      numeroExterior: "",
+      valid: false,
+      ubicacion: {
+        municipio: "",
+        colonia: "",
+        codigoPostal: "",
+        id: ""
+      }
+
+    };
+    this.ubicacionOriginal = { ...this.negocio.ubicacion };
+    this.gettingMunicipios();
+    this.open(content);
+  }
+
   public openUpdate(content, item): void {
+    this.isToCreate = false;
     console.log("ITEM: ", item);
     this.negocio = { ...item };
     this.imagenes = this.negocio.imagenes.map(object => ({ ...object }));
     this.ubicacionOriginal = { ...item.ubicacion };
+    this.categoriaOriginal = { ...item.subcategoria };
+    console.log("UBICACION ORIGINAL: ", this.ubicacionOriginal);
+    console.log("CATEGORIA ORIGINAL: ", this.categoriaOriginal);
     this.settingOriginaLocation();
     this.settingDefaultConteos();
     this.isFromOpenUpdate = true;
     this.gettingMunicipios();
+    this.gettingCategorias();
     this.municipioHasChanged(this.municipioSelected);
     this.open(content);
   }
@@ -150,19 +202,8 @@ export class MisNegociosComponent implements OnInit {
     this.negocio.ubicacion.colonia = this.coloniaSelected;
     this.negocio.ubicacion.codigoPostal = this.codigoPostalSelected;
     this.negocio.ubicacion.id = this.getIdUbicacion();
-    console.log("NUEVOS DATOS: ", this.negocio);
-    this.SpinnerService.show();
-    this.negocioService.updateBusiness(this.payload()).subscribe((resData) => {
-      this.toastr.success('Actualización exitosa.');
-      this.SpinnerService.hide();
-      this.cancelModal();
-      this.ngOnInit();
-    },
-      (jsonError) => {
-        this.SpinnerService.hide();
-        this.toastr.error("Error al tratar de actualizar el negocio.");
-        console.log("Error al actualizar negocio: ", jsonError);
-      });
+    (this.isToCreate) ? this.setCreate() : this.setUpdate()
+
   }
 
   public updateImages(): void {
@@ -170,7 +211,7 @@ export class MisNegociosComponent implements OnInit {
     this.SpinnerService.show();
     this.negocioService.updateImages(this.imagenes).subscribe((response) => {
       this.toastr.success('Actualización exitosa.');
-      console.log("Respuesta: ",response);
+      console.log("Respuesta: ", response);
       this.SpinnerService.hide();
       this.cancelModal();
       this.ngOnInit();
@@ -240,9 +281,9 @@ export class MisNegociosComponent implements OnInit {
   /* PARA PROBAR EN EL BACK */
   private getNegocios(): void {
     this.SpinnerService.show();
-    if(this.authRoleService.canActivate()){
+    if (this.authRoleService.canActivate()) {
       this.getNegociosTodos();
-    }else{
+    } else {
       this.getNegociosUser();
     }
   }
@@ -296,6 +337,18 @@ export class MisNegociosComponent implements OnInit {
       this.codigoPostalSelected = this.colonia[0].codigo_postal;
     }
     this.isFromOpenUpdate = false;
+  }
+
+  private gettingCategorias(): void {
+    this.categoriasService.getCategorias().subscribe((result: any[]) => {
+      console.log("Categorias: ", result);
+      this.categorias = result;
+      this.settingOriginalCategoria();
+      this.categoriaHasChanged(this.categoriaSelected);
+    },
+      (responseError) => {
+        console.log("Error obteniendo las categorias: ", responseError);
+      });
   }
 
   private open(content): void {
@@ -363,7 +416,7 @@ export class MisNegociosComponent implements OnInit {
         && location.colonia === this.coloniaSelected
         && location.codigo_postal === this.codigoPostalSelected;
     });
-    return locationSelected.id;
+    return locationSelected ? locationSelected.id : 0;
   }
 
   private settingOriginaLocation(): void {
@@ -376,6 +429,11 @@ export class MisNegociosComponent implements OnInit {
     this.negocio.ubicacion.codigoPostal = this.codigoPostalSelected;
     this.negocio.ubicacion.id = this.getIdUbicacion();
 
+  }
+
+  private settingOriginalCategoria(): void {
+    this.categoriaSelected = this.categoriaOriginal.categoria.nombre;
+    this.subcategoriaSelected = this.categoriaOriginal.nombre;
   }
 
   private settingDefaultConteos(): void {
@@ -394,10 +452,11 @@ export class MisNegociosComponent implements OnInit {
     const descripcionComercialValidacion = document.getElementById("descripcionComercialValidacion");
     const calleValidacion = document.getElementById("calleValidacion");
     const numeroValidacion = document.getElementById("numeroValidacion");
+    const municipioValidacion = document.getElementById("municipioValidacion");
 
     return {
       nombreClienteValidacion, telefonoMovilValidacion, correoValidacion
-      , nombreNegocioValidacion, descripcionComercialValidacion, calleValidacion, numeroValidacion
+      , nombreNegocioValidacion, descripcionComercialValidacion, calleValidacion, numeroValidacion, municipioValidacion
     };
   }
 
@@ -409,6 +468,7 @@ export class MisNegociosComponent implements OnInit {
     paragraphsObj.descripcionComercialValidacion.innerHTML = "";
     paragraphsObj.calleValidacion.innerHTML = "";
     paragraphsObj.numeroValidacion.innerHTML = "";
+    paragraphsObj.municipioValidacion.innerHTML = "";
   }
 
   private validaSoloAlfabeticos(inputStr: string): boolean {
@@ -467,6 +527,11 @@ export class MisNegociosComponent implements OnInit {
       paragraphsObj.numeroValidacion.innerText = this.fieldRequerido;
       return false
     };
+
+    if (!this.municipioSelected || this.municipioSelected == "") {
+      paragraphsObj.municipioValidacion.innerText = this.fieldRequerido;
+      return false;
+    }
 
 
     /* PARA VALIDAR */
@@ -531,7 +596,7 @@ export class MisNegociosComponent implements OnInit {
     return JSON.stringify(payload);
   }
 
-  private getNegociosTodos(): void{
+  private getNegociosTodos(): void {
     this.negocioService.getNegociosTodos().subscribe((result: any[]) => {
       console.log("Negocios: ", result);
       this.config.totalItems = result.length;
@@ -547,7 +612,7 @@ export class MisNegociosComponent implements OnInit {
       });
   }
 
-  private getNegociosUser(): void{
+  private getNegociosUser(): void {
     this.negocioService.getNegociosByUser().subscribe((result: any[]) => {
       console.log("Negocios: ", result);
       this.config.totalItems = result.length;
@@ -560,6 +625,39 @@ export class MisNegociosComponent implements OnInit {
         this.SpinnerService.hide();
         this.toastr.error("Error obteniendo los negocios");
         console.log("Error obteniendo los negocios: ", responseError);
+      });
+  }
+
+  private setUpdate(): void {
+    console.log("NUEVOS DATOS: ", this.negocio);
+    this.SpinnerService.show();
+    this.negocioService.updateBusiness(this.payload()).subscribe((resData) => {
+      this.toastr.success('Actualización exitosa.');
+      this.SpinnerService.hide();
+      this.cancelModal();
+      this.ngOnInit();
+    },
+      (jsonError) => {
+        this.SpinnerService.hide();
+        this.toastr.error("Error al tratar de actualizar el negocio.");
+        console.log("Error al actualizar negocio: ", jsonError);
+      });
+  }
+
+  private setCreate(): void {
+    console.log("PROXIMO LANZAMIENTO ESPERALOOOO !!!!!!");
+  }
+
+
+  private gettingSubcategorias(categoria: any): void {
+    console.log("Obteniendo subcategorias de: ", categoria);
+    const c = encodeURIComponent(encodeURIComponent(categoria));
+    this.subCategoriaService.getSubCategoriasByCategoria(c).subscribe((result) => {
+      console.log("Subcategorias list: ", result);
+      this.subcategorias = result;
+    }
+      , (error) => {
+        console.log("Ocurrio un error obteniendo las subcategorias: ", error);
       });
   }
 
