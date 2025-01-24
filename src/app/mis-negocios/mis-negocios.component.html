@@ -1,3 +1,4 @@
+<button type="button" class="btn btn-success" (click)="addNegocio(modalEditNegocio)">Agregar</button>
 <div class="row d-flex justify-content-center" id="tablestore2">
     <form class="form-inline">
         <div class="col-auto">
@@ -96,7 +97,8 @@
 
 <ng-template #modalEditNegocio let-modal>
     <div class="modal-header text-center">
-        <h4 class="modal-title" [hidden]="form">Actualizar Negocio</h4>
+        <h4 class="modal-title" [hidden]="form" *ngIf="!isToCreate">Actualizar Negocio</h4>
+        <h4 class="modal-title" [hidden]="form" *ngIf="isToCreate">Agregar Negocio</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -111,13 +113,6 @@
 
                     <fieldset>
                         <legend>Datos Generales</legend>
-                        <label for="nombreCliente"><a class="required">*</a>Tu nombre</label>
-                        <input class="form-control" id="nombreCliente" rows="3" name="nombreCliente" type="text"
-                            placeholder="Nombre" [(ngModel)]="negocio.nombre" (input)="countChars($event)"
-                            maxlength="{{maxNombre}}">
-                        <p class="conteoCaracteres">{{conteoNombre}}/{{maxNombre}}</p>
-                        <p id="nombreClienteValidacion" class="mensajes"></p>
-
                         <label for="telefonoMovil"><a class="required">*</a>Teléfono móvil</label>
                         <input class="form-control" id="telefonoMovil" rows="3" name="telefonoMovil" type="text"
                             placeholder="Teléfono móvil" [(ngModel)]="negocio.telefono">
@@ -125,7 +120,7 @@
 
                         <label for="correo"><a class="required">*</a>Correo electrónico</label>
                         <input class="form-control" id="correo" rows="3" type="text" name="correo"
-                            placeholder="Correo electrónico" [(ngModel)]="negocio.email">
+                            placeholder="Correo electrónico" [(ngModel)]="negocio.email" disabled>
                         <p id="correoValidacion" class="mensajes"></p>
 
                         <label for="nombreNegocio"><a class="required">*</a>Nombre comercial</label>
@@ -150,6 +145,7 @@
                             (ngModelChange)="municipioHasChanged($event)">
                             <option *ngFor="let municipio of municipios" [ngValue]="municipio">{{municipio}}</option>
                         </select>
+                        <p id="municipioValidacion" class="mensajes"></p>
 
                         <label for="colonia"><a class="required">*</a>Colonia</label>
                         <select name="colonia" id="colonia" class="form-control" [(ngModel)]="coloniaSelected"
@@ -179,6 +175,28 @@
                         <p id="numeroValidacion" class="mensajes"></p>
                     </fieldset>
 
+                    <fieldset id="categoriaFieldSet">
+                        <legend>Categoria</legend>
+                        <label for="categoria"><a class="required">*</a>Categoria</label>
+
+                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]="categoriaSelected"
+                            (ngModelChange)="categoriaHasChanged($event)">
+                            <ng-container *ngFor="let categoria of categorias">
+                                <option *ngIf="categoria.valid" [ngValue]="categoria.categoria">{{categoria.categoria}}</option>
+                            </ng-container>
+                        </select>
+
+                        <label for="subcategoria"><a class="mandatoryPoint">*</a>Subcategoria</label>
+                        <select name="subcategoria" id="subcategoria" class="form-control"
+                            [(ngModel)]="subcategoriaSelected">
+                            <ng-container *ngFor="let subcategoria of subcategorias">
+                                <option *ngIf="subcategoria.valid" [ngValue]="subcategoria.nombre">{{subcategoria.nombre}}
+                                </option>
+                            </ng-container>
+                        </select>
+                        <p id="subcategoriaValidacion" class="mensajes"></p>
+                    </fieldset>
+
                     <label for="checkValid"><a class="required">*</a>¿Es válido?</label>
                     <input type="checkbox" class="form-control" id="checkcpall" [(ngModel)]="negocio.valid" />
                 </div>
@@ -189,7 +207,10 @@
         <div class="col-md-12 text-center">
             <div id="mensajes" class="mensajes"></div>
             <button type="button" class="btn btn-info btn-sm" (click)="cancelModal()">Cancelar</button>&nbsp;
-            <button type="button" class="btn btn-warning btn-sm" (click)="updateNegocio()">Actualizar</button>
+            <button type="button" class="btn btn-warning btn-sm" (click)="updateNegocio()"
+                *ngIf="!isToCreate ">Actualizar</button>
+            <button type="button" class="btn btn-warning btn-sm" (click)="updateNegocio()"
+                *ngIf="isToCreate">Agregar</button>
         </div>
     </div>
 </ng-template>
