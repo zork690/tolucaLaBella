@@ -128,13 +128,11 @@ export class MisNegociosComponent implements OnInit {
   }
 
   public municipioHasChanged(event: string): void {
-    console.log("Municipio: ", event);
     this.gettingColonias(event);
     this.coloniaHasChanged(this.coloniaSelected);
   }
 
   public coloniaHasChanged(event: string): void {
-    console.log("COLONIA: ", event);
     this.gettingZipCode(event);
   }
 
@@ -147,6 +145,8 @@ export class MisNegociosComponent implements OnInit {
     this.municipioSelected = undefined;
     this.coloniaSelected = undefined;
     this.codigoPostalSelected = undefined;
+    this.categoriaSelected = undefined;
+    this.subcategoriaSelected = undefined;
     this.negocio = {
       idNegocio: 0,
       email: this.tokenDecoded.email,
@@ -167,6 +167,7 @@ export class MisNegociosComponent implements OnInit {
     };
     this.ubicacionOriginal = { ...this.negocio.ubicacion };
     this.gettingMunicipios();
+    this.gettingCategorias();
     this.open(content);
   }
 
@@ -177,8 +178,6 @@ export class MisNegociosComponent implements OnInit {
     this.imagenes = this.negocio.imagenes.map(object => ({ ...object }));
     this.ubicacionOriginal = { ...item.ubicacion };
     this.categoriaOriginal = { ...item.subcategoria };
-    console.log("UBICACION ORIGINAL: ", this.ubicacionOriginal);
-    console.log("CATEGORIA ORIGINAL: ", this.categoriaOriginal);
     this.settingOriginaLocation();
     this.settingDefaultConteos();
     this.isFromOpenUpdate = true;
@@ -343,8 +342,10 @@ export class MisNegociosComponent implements OnInit {
     this.categoriasService.getCategorias().subscribe((result: any[]) => {
       console.log("Categorias: ", result);
       this.categorias = result;
-      this.settingOriginalCategoria();
-      this.categoriaHasChanged(this.categoriaSelected);
+      if (!this.isToCreate) {
+        this.settingOriginalCategoria();
+        this.categoriaHasChanged(this.categoriaSelected);
+      }
     },
       (responseError) => {
         console.log("Error obteniendo las categorias: ", responseError);
@@ -433,7 +434,7 @@ export class MisNegociosComponent implements OnInit {
 
   private settingOriginalCategoria(): void {
     this.categoriaSelected = this.categoriaOriginal.categoria.nombre;
-    this.subcategoriaSelected = this.categoriaOriginal.nombre;
+    this.subcategoriaSelected = this.categoriaOriginal.id;
   }
 
   private settingDefaultConteos(): void {
@@ -445,7 +446,6 @@ export class MisNegociosComponent implements OnInit {
   }
 
   private fetchingIdsValidacionParagraph(): any {
-    const nombreClienteValidacion = document.getElementById("nombreClienteValidacion");
     const telefonoMovilValidacion = document.getElementById("telefonoMovilValidacion");
     const correoValidacion = document.getElementById("correoValidacion");
     const nombreNegocioValidacion = document.getElementById("nombreNegocioValidacion");
@@ -453,15 +453,16 @@ export class MisNegociosComponent implements OnInit {
     const calleValidacion = document.getElementById("calleValidacion");
     const numeroValidacion = document.getElementById("numeroValidacion");
     const municipioValidacion = document.getElementById("municipioValidacion");
+    const categoriaValidacion = document.getElementById("categoriaValidacion");
+    const subcategoriaValidacion = document.getElementById("subcategoriaValidacion");
 
     return {
-      nombreClienteValidacion, telefonoMovilValidacion, correoValidacion
-      , nombreNegocioValidacion, descripcionComercialValidacion, calleValidacion, numeroValidacion, municipioValidacion
+      telefonoMovilValidacion, correoValidacion
+      , nombreNegocioValidacion, descripcionComercialValidacion, calleValidacion, numeroValidacion, municipioValidacion, categoriaValidacion, subcategoriaValidacion
     };
   }
 
   private cleanValidations(paragraphsObj: any) {
-    paragraphsObj.nombreClienteValidacion.innerHTML = "";
     paragraphsObj.telefonoMovilValidacion.innerHTML = "";
     paragraphsObj.correoValidacion.innerHTML = "";
     paragraphsObj.nombreNegocioValidacion.innerHTML = "";
@@ -469,6 +470,8 @@ export class MisNegociosComponent implements OnInit {
     paragraphsObj.calleValidacion.innerHTML = "";
     paragraphsObj.numeroValidacion.innerHTML = "";
     paragraphsObj.municipioValidacion.innerHTML = "";
+    paragraphsObj.categoriaValidacion.innerHTML = "";
+    paragraphsObj.subcategoriaValidacion.innerHTML = "";
   }
 
   private validaSoloAlfabeticos(inputStr: string): boolean {
@@ -499,10 +502,6 @@ export class MisNegociosComponent implements OnInit {
   private isValid(): boolean {
     const paragraphsObj = this.fetchingIdsValidacionParagraph();
     this.cleanValidations(paragraphsObj);
-    if (!this.negocio.nombre.trim()) {
-      paragraphsObj.nombreClienteValidacion.innerText
-        = this.fieldRequerido; return false
-    };
     if (!this.negocio.telefono.trim()) {
       paragraphsObj.telefonoMovilValidacion.innerText
         = this.fieldRequerido; return false
@@ -533,13 +532,18 @@ export class MisNegociosComponent implements OnInit {
       return false;
     }
 
+    if (!this.categoriaSelected || this.categoriaSelected == "") {
+      paragraphsObj.categoriaValidacion.innerText = this.fieldRequerido;
+      return false;
+    }
+
+    if (!this.subcategoriaSelected || this.subcategoriaSelected == "") {
+      paragraphsObj.subcategoriaValidacion.innerText = this.fieldRequerido;
+      return false;
+    }
+
 
     /* PARA VALIDAR */
-
-    if (!this.validaSoloAlfabeticos(this.negocio.nombre)) {
-      paragraphsObj.nombreClienteValidacion.innerText
-        = this.fieldSoloAlfabeticos; return false;
-    }
 
     if (!this.validaSoloNumeros(this.negocio.telefono.trim())) {
       paragraphsObj.telefonoMovilValidacion.innerText
@@ -583,14 +587,13 @@ export class MisNegociosComponent implements OnInit {
     let payload = {
       id: this.negocio.idNegocio,
       calle: this.negocio.calle,
-      correo: this.negocio.email,
       descripcionComercial: this.negocio.descripcion,
       idUbicacion: this.negocio.ubicacion.id.toString(),
-      nombre: this.negocio.nombre,
       nombreEmpresa: this.negocio.nombrEmpresa,
       numeroExterior: this.negocio.numeroExterior,
       telefono: this.negocio.telefono,
-      valido: this.negocio.valid
+      valido: this.negocio.valid,
+      idSubcategoria: this.subcategoriaSelected.toString()
     }
     console.log("PAYLOAD: ", payload);
     return JSON.stringify(payload);
@@ -629,7 +632,6 @@ export class MisNegociosComponent implements OnInit {
   }
 
   private setUpdate(): void {
-    console.log("NUEVOS DATOS: ", this.negocio);
     this.SpinnerService.show();
     this.negocioService.updateBusiness(this.payload()).subscribe((resData) => {
       this.toastr.success('Actualización exitosa.');
@@ -645,12 +647,22 @@ export class MisNegociosComponent implements OnInit {
   }
 
   private setCreate(): void {
-    console.log("PROXIMO LANZAMIENTO ESPERALOOOO !!!!!!");
+    this.SpinnerService.show();
+    this.negocioService.createBusinessUserLogged(this.payload()).subscribe((resData) => {
+      this.toastr.success('Se creo negocio exitosamente.');
+      this.SpinnerService.hide();
+      this.cancelModal();
+      this.ngOnInit();
+    },
+      (jsonError) => {
+        this.SpinnerService.hide();
+        this.toastr.error("Error al tratar de crear el negocio.");
+        console.log("Error al crear negocio: ", jsonError);
+      });
   }
 
 
   private gettingSubcategorias(categoria: any): void {
-    console.log("Obteniendo subcategorias de: ", categoria);
     const c = encodeURIComponent(encodeURIComponent(categoria));
     this.subCategoriaService.getSubCategoriasByCategoria(c).subscribe((result) => {
       console.log("Subcategorias list: ", result);
