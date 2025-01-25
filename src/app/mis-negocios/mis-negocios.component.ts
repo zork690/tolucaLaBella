@@ -633,8 +633,7 @@ export class MisNegociosComponent implements OnInit {
   }
 
   private setUpdate(): void {
-    this.payload();
-    /*this.SpinnerService.show();
+    this.SpinnerService.show();
     this.negocioService.updateBusiness(this.payload()).subscribe((resData) => {
       this.toastr.success('Actualización exitosa.');
       this.SpinnerService.hide();
@@ -645,12 +644,11 @@ export class MisNegociosComponent implements OnInit {
         this.SpinnerService.hide();
         this.toastr.error("Error al tratar de actualizar el negocio.");
         console.log("Error al actualizar negocio: ", jsonError);
-      });*/
+      });
   }
 
   private setCreate(): void {
-    this.payload();
-    /*this.SpinnerService.show();
+    this.SpinnerService.show();
     this.negocioService.createBusinessUserLogged(this.payload()).subscribe((resData) => {
       this.toastr.success('Se creo negocio exitosamente.');
       this.SpinnerService.hide();
@@ -661,7 +659,7 @@ export class MisNegociosComponent implements OnInit {
         this.SpinnerService.hide();
         this.toastr.error("Error al tratar de crear el negocio.");
         console.log("Error al crear negocio: ", jsonError);
-      });*/
+      });
   }
 
 
