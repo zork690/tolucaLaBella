@@ -1,10 +1,9 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import locations from '../../assets/locations.json';
 import { NgbModal, NgbModalOptions, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { NegociosService } from '../servicios/negocios/negocios.service';
 import { Meta } from '@angular/platform-browser';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { CategoriasService } from '../servicios/categorias/categorias.service';
 import { SubcategoriasService } from '../servicios/subcategorias/subcategorias.service';
 
@@ -13,11 +12,12 @@ import { SubcategoriasService } from '../servicios/subcategorias/subcategorias.s
   templateUrl: './formulario-negocios.component.html',
   styleUrls: ['./formulario-negocios.component.css']
 })
-export class FormularioNegociosComponent implements OnInit {
+export class FormularioNegociosComponent implements OnInit, AfterViewInit {
 
   modalOptions: NgbModalOptions;
   closeResult: string;
   @ViewChild("modalcreatestore") ventanaModal: ElementRef<HTMLElement>;
+  @ViewChild('container') container: ElementRef<HTMLElement>;
 
   public municipios: String[];
   public municipioSelected: string;
@@ -71,12 +71,11 @@ export class FormularioNegociosComponent implements OnInit {
   private imagen: string;
 
   constructor(private modalService: NgbModal
-    , private router: Router
     , private negocioService: NegociosService
     , private meta: Meta
-    , private SpinnerService: NgxSpinnerService
     , private categoriasService: CategoriasService
     , private subCategoriaService: SubcategoriasService
+    , private activeRoute: ActivatedRoute
   ) {
 
     this.modalOptions = {
@@ -100,6 +99,15 @@ export class FormularioNegociosComponent implements OnInit {
     this.gettingCategorias();
     this.municipioSelected = "CALIMAYA";
     this.municipioHasChanged(this.municipioSelected);
+  }
+
+  ngAfterViewInit(): void {
+    this.activeRoute.params.subscribe(param => {
+      if(param.pageSec){
+        const section = this.container.nativeElement.querySelector(`#${param.pageSec}`);
+        section?.scrollIntoView();
+      }
+    });
   }
 
   public municipioHasChanged(event: string): void {
