@@ -1,40 +1,44 @@
-<div id="seccion2">
-    <div>
-        <h1>Encuentra tu negocio favorito en Toluca</h1>
-        <div><span>¡Búscalo ahora!</span></div>
+<div #container>
+    <div id="seccion2">
+        <div>
+            <h1>Encuentra tu negocio favorito en Toluca</h1>
+            <div><span>¡Búscalo ahora!</span></div>
+        </div>
+        <div>
+            <img src="../../assets/imagenes/21.png" alt="torre museo bicentenario" />
+        </div>
     </div>
-    <div>
-        <img src="../../assets/imagenes/21.png" alt="torre museo bicentenario" />
+    <hr />
+    <h3 id="categoriasH3">Categorías</h3>
+    <div id="seccion5">
+        <h2>Encuentra <strong>TODO LO QUE NECESITAS </strong>en Toluca con un solo clic</h2>
     </div>
-</div>
-<hr />
-<h3 id="categoriasH3">Categorías</h3>
-<div id="seccion5">
-    <h2>Encuentra <strong>TODO LO QUE NECESITAS </strong>en Toluca con un solo clic</h2>
-</div>
-<div id="seccion1">
-    <div class="categoriasDiv">
-        <ngx-spinner name="spinnerCategorias" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin" [fullScreen]="false">
-        </ngx-spinner>
-        <div *ngFor="let categoria of categoriasObj">
-            <div *ngIf="categoria.valid" class="categoryCard" (click)="sendToSubcategorias(categoria)">
-                <img src="{{'data:image/jpg;base64,' + categoria.imagen}}" alt="{{categoria.categoria}}" />
-                <span>{{categoria.categoria}}</span>
+    <div id="seccion1">
+        <div class="categoriasDiv">
+            <ngx-spinner name="spinnerCategorias" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
+                type="ball-spin" [fullScreen]="false">
+            </ngx-spinner>
+            <div *ngFor="let categoria of categoriasObj">
+                <div *ngIf="categoria.valid" class="categoryCard" (click)="sendToSubcategorias(categoria)">
+                    <img src="{{'data:image/jpg;base64,' + categoria.imagen}}" alt="{{categoria.categoria}}" />
+                    <span>{{categoria.categoria}}</span>
+                </div>
             </div>
         </div>
     </div>
+
+    <app-negocios-favoritos></app-negocios-favoritos>
+
+    <app-negocios-nuevos></app-negocios-nuevos>
+
+    <div id="footer">
+        <span><strong>Únete</strong> a Toluca la Bella y <strong>descubre</strong> cómo podemos ayudarte a
+            <strong>crecer en
+                el mundo digital</strong></span>
+        <button id="botonFooter">Botón</button>
+    </div>
+
+    <app-footer></app-footer>
 </div>
-
-<app-negocios-favoritos></app-negocios-favoritos>
-
-<app-negocios-nuevos></app-negocios-nuevos>
-
-<div id="footer">
-    <span><strong>Únete</strong> a Toluca la Bella y <strong>descubre</strong> cómo podemos ayudarte a <strong>crecer en
-            el mundo digital</strong></span>
-    <button id="botonFooter">Botón</button>
-</div>
-
-<app-footer></app-footer>
 
 <!--<app-ventana-modal-info [tituloModal]="tituloModal" [mensajeModal]="mensajeModal"></app-ventana-modal-info>-->
