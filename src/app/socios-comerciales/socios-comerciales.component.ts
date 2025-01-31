@@ -1,11 +1,13 @@
 import {
   Component, OnInit, AfterViewInit
-  , OnDestroy
+  , OnDestroy,
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 import { CategoriasService } from '../servicios/categorias/categorias.service';
 import { Meta } from '@angular/platform-browser';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-socios-comerciales',
@@ -15,12 +17,14 @@ import { Router } from '@angular/router';
 export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   categoriasObj: any[];
+  @ViewChild('container') container: ElementRef<HTMLElement>;
 
   constructor(
     private meta: Meta
     , private categoriaService: CategoriasService
     , private SpinnerService: NgxSpinnerService
     , private router: Router
+    , private activeRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +41,16 @@ export class SociosComercialesComponent implements OnInit, AfterViewInit, OnDest
   }
 
   ngAfterViewInit(): void {
+
+    this.activeRoute.params.subscribe(param => {
+      if(param.pageSec){
+        const section = this.container.nativeElement.querySelector(`#${param.pageSec}`)
+        console.log(section)
+        section?.scrollIntoView();
+      }
+    });
+
+
   }
 
   public sendToSubcategorias(categoria: any):void{
