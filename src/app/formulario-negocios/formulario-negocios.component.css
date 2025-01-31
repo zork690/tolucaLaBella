@@ -16,7 +16,7 @@
 
 #seccion2DivB{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     background-color: #F0F0F0;
     padding: 20px;
@@ -24,6 +24,13 @@
 
 #seccion2DivB > div{
     margin: 0px 20px;
+}
+
+#seccion2DivB > div > div > img{
+    border: 2px solid gray;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
 }
 
 form{
@@ -121,6 +128,10 @@ img{
         flex-direction: column;
         text-align:center;
     }
+
+    #seccion2DivB > div > div > img{
+        max-width: 50%;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -139,6 +150,10 @@ img{
 
     button{
         font-size: 4vw;
+    }
+
+    #seccion2DivB > div > div > img{
+        max-width: 25%;
     }
   }
   
