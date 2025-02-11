@@ -2,50 +2,75 @@
     text-align: center;
 }
 
-.negocioRow {
-    border: 0px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    position: relative;
-}
-
 .negocio {
     border: 1px solid none;
     margin: 0px 20px 20px 20px;
-    width: 20%;
+    text-align: center;
+    
+}
+
+h4{
+    display: inline;
 }
 
 .negocio:hover {
     cursor: pointer;
 }
 
-.negocioInfo img {
-    max-width: 100%;
-    height: auto;
-
+.carousel-indicators li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    /*border-radius: 50%;*/
+    background-color: rgb(218, 183, 143);
+    ;
+    /*box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);*/
 }
 
-.negocioImage {
-    width: 100%;
-    height: 100px;
+.carousel-indicators .active {
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    background-color: #a55233;
 }
 
-.negocioTitle {
-    text-align: center;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 20px;
+    width: 20px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 0px solid #a55233;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 35px;
+    font-weight: bolder;
+    color: #a55233;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 35px;
+    font-weight: bolder;
+    color: #a55233;
+}
+
+.containerGaleria {
+    display: flex;
 }
 
 @media (max-width:815px) {}
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .negocioRow {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .negocio {
         width: 100%;
         margin: 0px;
@@ -54,11 +79,6 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .negocioRow {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .negocio {
         width: 100%;
         margin: 0px;
@@ -67,30 +87,15 @@
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .negocioRow {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .negocio {
         width: 100%;
         margin: 10px 0px;
-    }
-
-    .negocioInfo {
-        display: flex;
-        align-items: stretch;
-
     }
 
     .negocioImage {
         width: 50%;
         height: 100%;
         display: inline-block;
-    }
-
-    .detailInfo {
-        width: 50%;
     }
 }
 
