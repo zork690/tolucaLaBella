@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { NegociosService } from '../servicios/negocios/negocios.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AppConfig } from '../servicios/config/app.config';
 
 @Component({
   selector: 'app-negocios-nuevos',
@@ -19,12 +20,20 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   public chunks: Array<any>;
   private imagesByRow: number;
 
+  public imagenesBasePath: string;
+  public apiEndPoint: string;
+
   constructor(
     private renderer: Renderer2
     , private elem: ElementRef
     , private SpinnerServices: NgxSpinnerService
     , private negocioService: NegociosService
-  ) { }
+    , private config: AppConfig
+  ) {
+    //this.apiEndPoint = this.config.getConfig('apiEndPoint');
+    this.apiEndPoint = "https://backend.zorktech.com.mx";
+    this.imagenesBasePath = this.config.getConfig('pathImages');
+  }
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
@@ -40,10 +49,7 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if(this.chunks){
-      const items = this.elem.nativeElement.querySelectorAll(".carousel-item");
-      this.renderer.addClass(items[0], "active");
-    }
+    
   }
 
   public gettingWithOfImage(chunks: any): any {
@@ -54,13 +60,13 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   }
 
   private getChunks(): Array<any> {
-    if(this.negociosNuevos){
+    if (this.negociosNuevos) {
       let numberOfImagesByRow = this.imagesByRow;
-      let numberOfNewNegocios = this.negociosNuevos.negocios.length;
+      let numberOfNewNegocios = this.negociosNuevos.length;
       let numberOfTotalRows = Math.ceil(numberOfNewNegocios / numberOfImagesByRow);
-      let chunks = Array.from({ length: numberOfTotalRows }, (_, i) => this.negociosNuevos.negocios.slice(i * numberOfImagesByRow, (i + 1) * numberOfImagesByRow));
+      let chunks = Array.from({ length: numberOfTotalRows }, (_, i) => this.negociosNuevos.slice(i * numberOfImagesByRow, (i + 1) * numberOfImagesByRow));
       return chunks;
-    }else{
+    } else {
       return undefined;
     }
   }
@@ -75,8 +81,9 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
     }
   }
 
+
   // PARA PROBAR EN EL BACK
-  /*private getNegociosNuevos():void{
+  private getNegociosNuevos(): void {
     this.SpinnerServices.show("spinnerNuevos");
     this.negocioService.getNegociosNuevos().subscribe((result) => {
       console.log("Negocios nuevos list: ", result);
@@ -86,10 +93,10 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
     }, (error) => {
       console.log("Ocurrió un error obteniendo los negocios nuevos: ", error);
     });
-  }*/
+  }
 
   // PARA PROBAR EN LOCAL
-  private getNegociosNuevos(): void {
+  /*private getNegociosNuevos(): void {
     this.SpinnerServices.show("spinnerNuevos");
     this.negociosNuevos = {
       negocios: [
@@ -139,6 +146,6 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.SpinnerServices.hide("spinnerNuevos");
     }, 5000);
-  }
+  }*/
 
 }
