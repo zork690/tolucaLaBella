@@ -1,13 +1,11 @@
 <div id="nuevosNegociosDiv">
     <h2>Negocios Nuevos</h2>
     <div id="nuevosNegocios" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <!--<ul class="carousel-indicators">
-            <li data-target="#nuevosNegocios" data-slide-to="0" class="active"></li>
-            <li data-target="#nuevosNegocios" data-slide-to="1"></li>
-            <li data-target="#nuevosNegocios" data-slide-to="2"></li>
-        </ul>-->
-        <!-- The slideshow -->
+
+        <ul class="carousel-indicators">
+            <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#nuevosNegocios" data-slide-to="i"
+                [ngClass]="{'active': i === 0}"></li>
+        </ul>
 
         <ngx-spinner name="spinnerNuevos" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin"
             [fullScreen]="false">
@@ -16,8 +14,8 @@
         <div *ngIf="chunks" class="container carousel-inner no-padding">
             <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let _ of [].constructor(chunks.length); index as i">
                 <div class="containerNegocios">
-                    <div *ngFor="let negocio of chunks[i]">
-                        <div class="negocioCard" [routerLink]="['/directorio-de-negocios'
+                    <div class="negocio" *ngFor="let negocio of chunks[i]">
+                        <div [routerLink]="['/directorio-de-negocios'
                         , negocio.subcategoria.categoria.nombre
                         , negocio.subcategoria.nombre
                         , negocio.idNegocio]">
