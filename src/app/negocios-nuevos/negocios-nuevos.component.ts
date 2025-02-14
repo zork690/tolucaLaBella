@@ -72,7 +72,7 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   }
 
   private settingChunks(): void {
-    if (this.getScreenWidth > 850) {
+    if (this.getScreenWidth > 575) {
       this.imagesByRow = 4;
       this.chunks = this.getChunks();
     } else {
