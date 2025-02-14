@@ -53,7 +53,8 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   }
 
   public gettingWithOfImage(chunks: any): any {
-    let width = (chunks.length * 100) / this.imagesByRow;
+    //let width = (chunks.length * 100) / this.imagesByRow;
+    let width = 100;
     return {
       "max-width": `${width}%`
     };
