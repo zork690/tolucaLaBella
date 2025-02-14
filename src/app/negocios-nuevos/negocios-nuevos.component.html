@@ -14,15 +14,16 @@
         </ngx-spinner>
 
         <div *ngIf="chunks" class="container carousel-inner no-padding">
-            <div class="carousel-item" *ngFor="let _ of [].constructor(chunks.length); index as i">
+            <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let _ of [].constructor(chunks.length); index as i">
                 <div class="containerNegocios">
                     <div *ngFor="let negocio of chunks[i]">
                         <div class="negocioCard" [routerLink]="['/directorio-de-negocios'
-                        , negocio.categoria
-                        , negocio.subcategoria
-                        , negocio.nombre]">
-                            <img [ngStyle]="gettingWithOfImage(chunks[i])" src="{{negocio.imagen}}">
-                            <div>{{negocio.nombre}}</div>
+                        , negocio.subcategoria.categoria.nombre
+                        , negocio.subcategoria.nombre
+                        , negocio.idNegocio]">
+                            <img [ngStyle]="gettingWithOfImage(chunks[i])" *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} />
+                            <img [ngStyle]="gettingWithOfImage(chunks[i])" *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg" />
+                            <div>{{negocio.nombrEmpresa}}</div>
                         </div>
                     </div>
                 </div>
