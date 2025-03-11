@@ -99,7 +99,7 @@ export class NegociosRelacionadosComponent implements OnInit {
     this.SpinnerServices.show("spinnerNegociosRelacionados");
     console.log("Subcategoria a buscar: ", this.subcategoria);
     const c = encodeURIComponent(encodeURIComponent(this.subcategoria));
-    this.negocioService.getNegociosRelacionados(this.subcategoria).subscribe((result) => {
+    this.negocioService.getNegociosRelacionados(c).subscribe((result) => {
       console.log("Negocios relacionados list: ", result);
       this.negociosRelacionados = result;
       this.SpinnerServices.hide("spinnerNegociosRelacionados");
