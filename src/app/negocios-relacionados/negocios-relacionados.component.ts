@@ -1,6 +1,8 @@
-import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { NegociosService } from '../servicios/negocios/negocios.service';
+import { AppConfig } from '../servicios/config/app.config';
 
 @Component({
   selector: 'app-negocios-relacionados',
@@ -15,13 +17,23 @@ export class NegociosRelacionadosComponent implements OnInit {
 
   public chunks: Array<any>;
   private imagesByRow: number;
+  public apiEndPoint: string;
+  public imagenesBasePath: string;
+
+  @Input() subcategoria:string;
 
   constructor(
     private renderer: Renderer2
     , private elem: ElementRef
     , private SpinnerServices: NgxSpinnerService
     , private router: Router
-  ) { }
+    , private negocioService: NegociosService
+    , private config: AppConfig
+  ) { 
+    //this.apiEndPoint = this.config.getConfig('apiEndPoint');
+    this.apiEndPoint = "https://backend.zorktech.com.mx";
+    this.imagenesBasePath = this.config.getConfig('pathImages');
+  }
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
@@ -44,7 +56,8 @@ export class NegociosRelacionadosComponent implements OnInit {
   }
 
   public gettingWithOfImage(chunks: any): any {
-    let width = (chunks.length * 100) / this.imagesByRow;
+    //let width = (chunks.length * 100) / this.imagesByRow;
+    let width = 100;
     return {
       "max-width": `${width}%`
     };
@@ -53,18 +66,18 @@ export class NegociosRelacionadosComponent implements OnInit {
   public getNegocioNuevo(negocio: any): void {
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
       this.router.navigate(["/directorio-de-negocios"
-        , negocio.categoria
-        , negocio.subcategoria
-        , negocio.nombre]);
+        , negocio.subcategoria.categoria.nombre
+        , negocio.subcategoria.nombre
+        , negocio.idNegocio]);
     });
   }
 
   private getChunks(): Array<any> {
     if (this.negociosRelacionados) {
       let numberOfImagesByRow = this.imagesByRow;
-      let numberOfNewNegocios = this.negociosRelacionados.negocios.length;
+      let numberOfNewNegocios = this.negociosRelacionados.length;
       let numberOfTotalRows = Math.ceil(numberOfNewNegocios / numberOfImagesByRow);
-      let chunks = Array.from({ length: numberOfTotalRows }, (_, i) => this.negociosRelacionados.negocios.slice(i * numberOfImagesByRow, (i + 1) * numberOfImagesByRow));
+      let chunks = Array.from({ length: numberOfTotalRows }, (_, i) => this.negociosRelacionados.slice(i * numberOfImagesByRow, (i + 1) * numberOfImagesByRow));
       return chunks;
     } else {
       return undefined;
@@ -82,20 +95,22 @@ export class NegociosRelacionadosComponent implements OnInit {
   }
 
   // PARA PROBAR EN EL BACK
-  /*private getNegociosRelacionados():void{
+  private getNegociosRelacionados():void{
     this.SpinnerServices.show("spinnerNegociosRelacionados");
-    this.negocioService.getNegociosNuevos().subscribe((result) => {
-      console.log("Negocios nuevos list: ", result);
-      this.negociosNuevos = result;
+    console.log("Subcategoria a buscar: ", this.subcategoria);
+    const c = encodeURIComponent(encodeURIComponent(this.subcategoria));
+    this.negocioService.getNegociosRelacionados(this.subcategoria).subscribe((result) => {
+      console.log("Negocios relacionados list: ", result);
+      this.negociosRelacionados = result;
       this.SpinnerServices.hide("spinnerNegociosRelacionados");
       this.settingChunks();
     }, (error) => {
-      console.log("Ocurrió un error obteniendo los negocios nuevos: ", error);
+      console.log("Ocurrió un error obteniendo los negocios relacionados: ", error);
     });
-  }*/
+  }
 
   // PARA PROBAR EN LOCAL
-  private getNegociosRelacionados(): void {
+  /*private getNegociosRelacionados(): void {
     this.SpinnerServices.show("spinnerNegociosRelacionados");
     this.negociosRelacionados = {
       negocios: [
@@ -165,5 +180,5 @@ export class NegociosRelacionadosComponent implements OnInit {
     setTimeout(() => {
       this.SpinnerServices.hide("spinnerNegociosRelacionados");
     }, 5000);
-  }
+  }*/
 }
