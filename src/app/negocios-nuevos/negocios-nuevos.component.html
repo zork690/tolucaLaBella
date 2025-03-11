@@ -2,7 +2,7 @@
     <h2>Negocios Nuevos</h2>
     <div id="nuevosNegocios" class="carousel slide" data-ride="carousel">
 
-        <ul class="carousel-indicators">
+        <ul *ngIf="chunks" class="carousel-indicators">
             <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#nuevosNegocios" data-slide-to="i"
                 [ngClass]="{'active': i === 0}"></li>
         </ul>
