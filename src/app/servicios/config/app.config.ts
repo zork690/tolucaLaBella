@@ -34,6 +34,9 @@ export class AppConfig {
 
     if ("pathImages" == key)
       return "/imagesNegociosTolucaLaBella/";
+
+    if ('refresh' == key)
+      return localStorage.getItem("refreshToken");
     
   }
 
