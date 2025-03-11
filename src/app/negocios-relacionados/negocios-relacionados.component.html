@@ -7,20 +7,20 @@
 
     <div id="negociosRelacionados" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-        <ul class="carousel-indicators">
+        <ul *ngIf="chunks" class="carousel-indicators">
             <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#negociosRelacionados"
                 data-slide-to="i" [ngClass]="{'active': i === 0}"></li>
         </ul>
         <!-- The slideshow -->
         <div *ngIf="chunks" class="container carousel-inner no-padding">
-            <div class="carousel-item" *ngFor="let _ of [].constructor(chunks.length); index as i">
+            <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let _ of [].constructor(chunks.length); index as i">
                 <div class="containerGaleriaNegociosRelacionados">
-                    <div *ngFor="let negocio of chunks[i]">
+                    <div class="negocio" *ngFor="let negocio of chunks[i]">
                         <div class="negocioCard"
                         (click)="getNegocioNuevo(negocio)">
-                            <p class="negocioNombre">{{negocio.nombre}}</p>
-                            <img [ngStyle]="gettingWithOfImage(chunks[i])"
-                                src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+                            <p class="negocioNombre">{{negocio.nombrEmpresa}}</p>
+                            <img [ngStyle]="gettingWithOfImage()" *ngIf="negocio.imagenes.length > 0" src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} />
+                            <img [ngStyle]="gettingWithOfImage()" *ngIf="negocio.imagenes.length == 0" src="../../assets/imagenes/unavailable.jpg" />
                         </div>
                     </div>
                 </div>
