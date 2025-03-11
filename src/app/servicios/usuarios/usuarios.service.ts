@@ -40,4 +40,16 @@ export class UsuariosService {
     })); 
   }
 
+  refresh(refreshToken: string): Observable<any>  {
+    //let url = this.baseUrl+'/usuarios/refresh';
+    let url = this.usuarioUrl+'/usuarios/refresh';
+    return this.http.post(url, refreshToken, {headers: this.headers}).pipe(map(loginJson => {
+      if (loginJson['s'] === 0) {
+        throw new Error(loginJson['m']);
+      }
+      const result = loginJson["r"]
+      return result as any;
+    })); 
+  }
+
 }
