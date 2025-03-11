@@ -1,13 +1,15 @@
 #mainContent{
     position: relative;
+    text-align: center;
 }
 
 .containerGaleriaNegociosRelacionados {
     display: flex;
 }
 
-.containerGaleriaNegociosRelacionados img {
-    padding: 0px 10px;
+img{
+    max-height: 293px;
+    max-width: 399px;
 }
 
 .negocioNombre{
@@ -62,4 +64,45 @@
     font-size: 35px;
     font-weight: bolder;
     color: #a55233;
+}
+
+@media (max-width:815px) {}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .negocio {
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .negocio {
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .negocio {
+        width: 100%;
+        margin: 10px 0px;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/*  X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+}
+
+/* XX-Large devices (larger desktops) */
+@media (min-width: 1400px) {
+
 }
