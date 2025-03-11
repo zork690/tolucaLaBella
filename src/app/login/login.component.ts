@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
         this.SpinnerService.hide();
         console.log("El resultado de inicio de sesión es ", result);
         localStorage.setItem('token', result.accessToken);
+        localStorage.setItem("refreshToken", result.refreshToken);
         this.router.navigate(['/panel-socios']);
       }, (responseError) => {
         this.SpinnerService.hide();
