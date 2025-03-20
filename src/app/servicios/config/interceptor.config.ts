@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, HttpErrorResponse, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { AppConfig } from '../config/app.config';
 import { catchError, filter, switchMap, take, tap } from 'rxjs/operators';
@@ -75,3 +75,7 @@ export class Interceptor implements HttpInterceptor {
   }
 
 }
+
+export const authInterceptorProviders = [
+  { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
+];
