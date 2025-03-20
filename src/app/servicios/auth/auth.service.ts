@@ -14,7 +14,7 @@ export class AuthService {
   //STORE SESSION TOKEN AT LOCAL STORAGE IS THE BEST PRACTICE RATHER THAN COOKIES
 
   isAuthenticated(): boolean {
-    if(this.isTokenExpired()) this.logout();
+    if(this.isTokenExpired()) console.log("TOKEN EXPIRADO"); //this.logout();
     return this.config.getConfig('apiToken') != null && !this.isTokenExpired();
   }
 
@@ -26,6 +26,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('refreshToken');
   }
 
 }
