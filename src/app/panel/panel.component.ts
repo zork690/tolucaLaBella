@@ -23,8 +23,13 @@ export class PanelComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.tokenDecoded = this.panel.getTokenDecoded();
-    this.isAdmin = this.authValidRole.canActivate();
+    try{
+      this.tokenDecoded = this.panel.getTokenDecoded();
+      this.isAdmin = this.authValidRole.canActivate();
+    }catch(error){
+      console.log("Error en el panel: ", error);
+      this.authService.logout();
+    }
   }
 
   ngAfterViewInit(): void {
