@@ -26,8 +26,8 @@ export class AppConfig {
 
     if ('apiEndPoint' == key)
       //return 'http://localhost:8082'
-      //return 'https://backend.zorktech.com.mx';
-      return this.config[key];
+      return 'https://backend.zorktech.com.mx';
+      //return this.config[key];
 
     if ('apiToken' == key)
       return localStorage.getItem("token");
