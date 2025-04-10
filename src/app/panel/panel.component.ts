@@ -38,7 +38,6 @@ export class PanelComponent implements OnInit, AfterViewInit {
 
   public cerrarSesion() {
     this.authService.logout();
-    this.router.navigate(['/login']);
 
   }
 
