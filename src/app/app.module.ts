@@ -55,6 +55,7 @@ import { SubcategoriasSociosComercialesComponent } from './subcategorias-socios-
 import { ComentariosSociosComercialesComponent } from './comentarios-socios-comerciales/comentarios-socios-comerciales.component';
 import { NegociosRelacionadosComponent } from './negocios-relacionados/negocios-relacionados.component';
 import { MisNoticiasSeccionesComponent } from './mis-noticias-secciones/mis-noticias-secciones.component';
+import { AcessInterceptor } from './servicios/config/access-interceptor.config';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -125,7 +126,10 @@ export function initConfig(config: AppConfig) {
   },
   { provide: HTTP_INTERCEPTORS, 
     useClass: Interceptor, 
-    multi: true }],
+    multi: true },
+    { provide: HTTP_INTERCEPTORS, 
+      useClass: AcessInterceptor, 
+      multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
