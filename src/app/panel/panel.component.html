@@ -10,7 +10,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <span><i class="fas fa-user"></i></span>
-                        <a class="actions dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a *ngIf="tokenDecoded" class="actions dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{tokenDecoded.email}}
                         </a>
