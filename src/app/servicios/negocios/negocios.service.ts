@@ -115,7 +115,7 @@ export class NegociosService {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
     });
-    let url = this.negocioUrl+'/negocios/actualizarNegocio';
+    let url = this.negocioUrl+'/panel-socios/negocios/actualizarNegocio';
     //let url = this.baseUrl+'/negocios/actualizarNegocio';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
@@ -131,7 +131,7 @@ export class NegociosService {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
     });
-    let url = this.negocioUrl+'/negocios/createNegocioUserLogged';
+    let url = this.negocioUrl+'/panel-socios/negocios/createNegocioUserLogged';
     //let url = this.baseUrl+'/negocios/createNegocioUserLogged';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
