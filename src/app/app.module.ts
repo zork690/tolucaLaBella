@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -21,7 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthSecureService } from './secure/auth-secure.service';
 import { APP_INITIALIZER } from '@angular/core';
 import { NgxSpinnerModule } from "ngx-spinner";
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ImagenesComponent } from './imagenes/imagenes.component';
 import { FormatoPagoComponent } from './formato-pago/formato-pago.component';
 import { FormularioNegociosComponent } from './formulario-negocios/formulario-negocios.component';
@@ -118,18 +118,22 @@ export function initConfig(config: AppConfig) {
     ToastrModule.forRoot()
   ],
   providers: [AuthSecureService, AppConfig,
-  { 
-    provide: APP_INITIALIZER,
-    useFactory: initConfig,
-    deps: [AppConfig],
-    multi: true 
-  },
-  { provide: HTTP_INTERCEPTORS, 
-    useClass: Interceptor, 
-    multi: true },
-    { provide: HTTP_INTERCEPTORS, 
-      useClass: AcessInterceptor, 
-      multi: true }],
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initConfig,
+      deps: [AppConfig],
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AcessInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
