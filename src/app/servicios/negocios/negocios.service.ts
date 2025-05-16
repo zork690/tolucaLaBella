@@ -174,6 +174,22 @@ export class NegociosService {
     })); 
   }
 
+  deleteImage(data: any): Observable<any>  {
+    this.authguard.canActivate();
+    const headers= new HttpHeaders({
+    'Content-Type': 'application/json'
+    });
+    let url = this.negocioUrl+'/panel-socios/negocios/imagenes/eliminar';
+    //let url = this.baseUrl+'/negocios/imagenes/eliminar';
+    return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
+      if (loginJson['s'] === 0) {
+        throw new Error(loginJson['m']);
+      }
+      const result = loginJson["r"]
+      return result as any;
+    })); 
+  }
+
   getNegociosTodos():Observable<any>{
     this.authguard.canActivate();
     let url = this.negocioUrl+'/negocios/listarNegociosTodos';
