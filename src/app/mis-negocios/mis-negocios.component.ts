@@ -254,6 +254,13 @@ export class MisNegociosComponent implements OnInit {
     }
   }
 
+  public receiveFromChild(event: string){
+    if(event === "1"){
+      this.cancelModal();
+      this.ngOnInit();
+    }
+  }
+
   /******** PARA PROBAR NEGOCIOS LOCALMENTE *********/
   /*private getNegocios(): void {
     //this.negocioService.getNegocios().subscribe((result: any[]) => {
