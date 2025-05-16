@@ -78,6 +78,11 @@
     </div>
     <div class="modal-body">
         <div class=" container-fluid">
+
+            <app-mis-negocios-add-images (messageFromChild)="receiveFromChild($event)" 
+            [negocio]="negocio"
+                ></app-mis-negocios-add-images>
+
             <div class="" *ngFor="let imagen of imagenes">
                 <div class="col-md-12">
                     <img src={{apiEndPoint+imagenesBasePath+imagen.nombre}} class="imagenFluid" />
