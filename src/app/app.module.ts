@@ -56,6 +56,7 @@ import { ComentariosSociosComercialesComponent } from './comentarios-socios-come
 import { NegociosRelacionadosComponent } from './negocios-relacionados/negocios-relacionados.component';
 import { MisNoticiasSeccionesComponent } from './mis-noticias-secciones/mis-noticias-secciones.component';
 import { AcessInterceptor } from './servicios/config/access-interceptor.config';
+import { MisNegociosAddImagesComponent } from './mis-negocios-add-images/mis-negocios-add-images.component';
 
 export function initConfig(config: AppConfig) {
   return () => config.load();
@@ -103,7 +104,8 @@ export function initConfig(config: AppConfig) {
     SubcategoriasSociosComercialesComponent,
     ComentariosSociosComercialesComponent,
     NegociosRelacionadosComponent,
-    MisNoticiasSeccionesComponent
+    MisNoticiasSeccionesComponent,
+    MisNegociosAddImagesComponent
   ],
   imports: [
     BrowserModule,
