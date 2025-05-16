@@ -25,6 +25,11 @@ a:hover{
     margin-bottom: 0px;
 }
 
+.deleteBtn{
+    border: none;
+    margin-left: 5px;
+}
+
 @media only screen and (max-width: 767px){
     .headerTable{
         display: none;
