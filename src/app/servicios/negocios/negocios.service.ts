@@ -163,7 +163,7 @@ export class NegociosService {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
     });
-    let url = this.negocioUrl+'/negocios/actualizarImagenes';
+    let url = this.negocioUrl+'/panel-socios/negocios/imagenes/actualizar';
     //let url = this.baseUrl+'/negocios/actualizarNegocio';
     return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
       if (loginJson['s'] === 0) {
