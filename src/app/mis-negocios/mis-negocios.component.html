@@ -82,12 +82,12 @@
             <app-mis-negocios-add-images (messageFromChild)="receiveFromChild($event)"
                 [negocio]="negocio"></app-mis-negocios-add-images>
 
-            <div class="" *ngFor="let imagen of imagenes">
+            <div class="" *ngFor="let imagen of imagenes; let i = index">
                 <div class="col-md-12">
                     <img src={{apiEndPoint+imagenesBasePath+imagen.nombre}} class="imagenFluid" />
                     <label for="checkValid"><a class="required">*</a>¿Es válida?</label>
                     <input type="checkbox" class="" id="checkValid" [(ngModel)]="imagen.valid" />
-                    <button class="deleteBtn" data-toggle="tooltip" title="Borrar" (click)="deleteImage(imagen)"><i
+                    <button class="deleteBtn" data-toggle="tooltip" title="Borrar" (click)="deleteImage(imagen, i)"><i
                             class="fas fa-trash-alt"></i></button>
                 </div>
             </div>
