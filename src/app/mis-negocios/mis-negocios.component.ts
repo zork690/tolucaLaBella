@@ -222,6 +222,22 @@ export class MisNegociosComponent implements OnInit {
       });
   }
 
+  public deleteImage(imagen:any): void{
+    console.log("borrando imagen: ", imagen);
+    this.SpinnerService.show();
+    this.negocioService.deleteImage(this.deleteImagenPayload(imagen)).subscribe((response) => {
+      this.toastr.success('Se borró exitosamente.');
+      console.log("Respuesta: ", response);
+      this.SpinnerService.hide();
+    },
+      (jsonError) => {
+        this.SpinnerService.hide();
+        this.toastr.error("Error al tratar de borrar la imágen.");
+        console.log("Error al borrar la imágen: ", jsonError);
+      });
+
+  }
+
   public cancelModal() {
     this.modalService.dismissAll();
     this.settingOriginaLocation();
@@ -679,6 +695,15 @@ export class MisNegociosComponent implements OnInit {
       , (error) => {
         console.log("Ocurrio un error obteniendo las subcategorias: ", error);
       });
+  }
+
+  private deleteImagenPayload(imagen: any): any {
+    let payload = {
+      idNegocio: imagen.idNegocio,
+      idImagen: imagen.id
+    };
+    console.log("Enviando: ", payload);
+    return JSON.stringify(payload);
   }
 
 }
