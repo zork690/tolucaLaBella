@@ -379,8 +379,10 @@ export class MisNegociosComponent implements OnInit {
   private open(content): void {
     this.modalService.open(content, this.modalOptions).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
+      this.ngOnInit();
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      this.ngOnInit();
     });
   }
 
