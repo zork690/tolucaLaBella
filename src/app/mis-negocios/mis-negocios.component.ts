@@ -222,13 +222,14 @@ export class MisNegociosComponent implements OnInit {
       });
   }
 
-  public deleteImage(imagen:any): void{
+  public deleteImage(imagen:any, index: any): void{
     console.log("borrando imagen: ", imagen);
     this.SpinnerService.show();
     this.negocioService.deleteImage(this.deleteImagenPayload(imagen)).subscribe((response) => {
       this.toastr.success('Se borró exitosamente.');
       console.log("Respuesta: ", response);
       this.SpinnerService.hide();
+      this.imagenes.splice(index, 1);
     },
       (jsonError) => {
         this.SpinnerService.hide();
