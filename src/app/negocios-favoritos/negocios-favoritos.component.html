@@ -1,41 +1,49 @@
-<h2 id="favoritosLabel">Favoritos</h2>
-<div>
+<div *ngIf="loading">
+    <div *ngIf="chunks.length > 0">
+        <h2 id="favoritosLabel">Favoritos</h2>
+        <div>
 
-    <ngx-spinner name="spinnerFavoritos" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black" type="ball-spin"
-        [fullScreen]="false">
-    </ngx-spinner>
+            <ngx-spinner name="spinnerFavoritos" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
+                type="ball-spin" [fullScreen]="false">
+            </ngx-spinner>
 
-    <div *ngIf="negociosInfo">
-        <div id="demo" class="carousel slide" data-ride="carousel">
+            <div *ngIf="negociosInfo">
+                <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <ul class="carousel-indicators">
-                <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#demo" data-slide-to="i"
-                    [ngClass]="{'active': i === 0}"></li>
-            </ul>
+                    <ul class="carousel-indicators">
+                        <li *ngFor="let _ of [].constructor(chunks.length); index as i" data-target="#demo"
+                            data-slide-to="i" [ngClass]="{'active': i === 0}"></li>
+                    </ul>
 
-            <div *ngIf="chunks" class="container carousel-inner no-padding">
-                <div class="carousel-item" [ngClass]="{'active': i === 0}"
-                    *ngFor="let _ of [].constructor(chunks.length); index as i">
-                    <div class="containerGaleria">
-                        <div class="negocio" *ngFor="let negocio of chunks[i]">
-                            <div
-                                [routerLink]="['/directorio-de-negocios', negocio.subcategoria.categoria.nombre, negocio.subcategoria.nombre, negocio.idNegocio]">
-                                <img [ngStyle]="gettingWithOfImage(chunks[i])" *ngIf="negocio.imagenes.length > 0"
-                                    src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} />
-                                <img [ngStyle]="gettingWithOfImage(chunks[i])" *ngIf="negocio.imagenes.length == 0"
-                                    src="../../assets/imagenes/unavailable.jpg" />
-                                <div><h4>{{negocio.nombrEmpresa}}</h4><span><i class="far fa-star"></i></span></div>
+                    <div *ngIf="chunks" class="container carousel-inner no-padding">
+                        <div class="carousel-item" [ngClass]="{'active': i === 0}"
+                            *ngFor="let _ of [].constructor(chunks.length); index as i">
+                            <div class="containerGaleria">
+                                <div class="negocio" *ngFor="let negocio of chunks[i]">
+                                    <div
+                                        [routerLink]="['/directorio-de-negocios', negocio.subcategoria.categoria.nombre, negocio.subcategoria.nombre, negocio.idNegocio]">
+                                        <img [ngStyle]="gettingWithOfImage(chunks[i])"
+                                            *ngIf="negocio.imagenes.length > 0"
+                                            src={{apiEndPoint+imagenesBasePath+negocio.imagenes[0].nombre}} />
+                                        <img [ngStyle]="gettingWithOfImage(chunks[i])"
+                                            *ngIf="negocio.imagenes.length == 0"
+                                            src="../../assets/imagenes/unavailable.jpg" />
+                                        <div>
+                                            <h4>{{negocio.nombrEmpresa}}</h4><span><i class="far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
         </div>
     </div>
 </div>
