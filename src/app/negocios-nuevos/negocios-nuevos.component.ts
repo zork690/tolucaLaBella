@@ -23,6 +23,8 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
   public imagenesBasePath: string;
   public apiEndPoint: string;
 
+  public loading: boolean = false;
+
   constructor(
     private renderer: Renderer2
     , private elem: ElementRef
@@ -91,6 +93,7 @@ export class NegociosNuevosComponent implements OnInit, AfterViewInit {
       this.negociosNuevos = result;
       this.SpinnerServices.hide("spinnerNuevos");
       this.settingChunks();
+      this.loading = true;
     }, (error) => {
       console.log("Ocurrió un error obteniendo los negocios nuevos: ", error);
     });
