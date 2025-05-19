@@ -22,6 +22,8 @@ export class NegociosFavoritosComponent implements OnInit {
   public chunks: Array<any>;
   private imagesByRow: number;
 
+  public loading: boolean = false;
+
   constructor(
     private SpinnerServices: NgxSpinnerService
     , private negocioService: NegociosService
@@ -61,6 +63,7 @@ export class NegociosFavoritosComponent implements OnInit {
       this.negociosInfo = result;
       this.SpinnerServices.hide("spinnerFavoritos");
       this.settingChunks();
+      this.loading = true;
     }, (error) => {
       console.log("Ocurrió un error obteniendo los negocios favoritos: ", error);
     });
