@@ -95,7 +95,6 @@ export class NegociosService {
   }
 
   createBusiness(data: any): Observable<any>  {
-    this.authguard.canActivate();
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
   });
