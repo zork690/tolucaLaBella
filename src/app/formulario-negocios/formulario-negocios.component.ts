@@ -433,8 +433,7 @@ export class FormularioNegociosComponent implements OnInit, AfterViewInit {
       (error) => {
         console.log("ocurrió un error enviando los datos", error);
         this.tituloModal = "¡DATOS NO ENVIADOS!";
-        this.mensajeModal = `TUS DATOS NO SE HAN PODIDO ENVIAR DEBIDO A UN PROBLEMA CON ELLOS,
-      POR FAVOR MANDANOS UN MENSAJE A LOS TELÉFONOS DE CONTACTO Y CON GUSTO TE AYUDAREMOS`;
+        this.mensajeModal = `${error.error.m}`;
         //this.abrirModal();
       });
   }
