@@ -44,7 +44,7 @@ export class MisNegociosAddImagesComponent implements OnInit {
     if (!file.type.match(pattern)) {
       document.getElementById(`imagen${index}Validacion`).innerText = this.onlyImagesMessage;
       this.imagesFormGroup.controls.imagenesArray.setErrors(Validators.required);
-    } else if (file.size > 300000) {
+    } else if (file.size > 5000000) { // 5 MB MAXIMO
       document.getElementById(`imagen${index}Validacion`).innerText = this.sizeOfImageMessage;
       this.imagesFormGroup.controls.imagenesArray.setErrors(Validators.required);
     } else {
