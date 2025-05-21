@@ -1,0 +1,16 @@
+<div *ngIf="isLoaded">
+    <h4>Reseñas({{comentariosList.length}})</h4>
+    <div id="mainContent">
+
+        <ngx-spinner name="spinnerComentarios" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
+            type="ball-spin" [fullScreen]="false">
+        </ngx-spinner>
+
+        <div *ngFor="let comentario of comentariosList">
+            <span>{{comentario.nickName}} :</span>
+            <p>{{comentario.comentario}}</p>
+        </div>
+
+    </div>
+
+</div>
