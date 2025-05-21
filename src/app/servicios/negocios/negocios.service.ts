@@ -94,6 +94,18 @@ export class NegociosService {
     })); 
   }
 
+  getNegocioComentarios(idNegocio:string):Observable<any>{
+    let url = this.negocioUrl+'/negocios/listarComentarios/';
+    //let url = this.baseUrl+'/negocios/listarComentarios/';
+    return this.http.get(url+idNegocio).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
   createBusiness(data: any): Observable<any>  {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
