@@ -1,3 +1,8 @@
-#mainContent{
+#mainContent {
     position: relative;
+}
+
+.mensajes {
+    color: red;
+    font-weight: bold;
 }
