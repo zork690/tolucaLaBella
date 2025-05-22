@@ -24,6 +24,9 @@ export class ComentariosSociosComercialesComponent implements OnInit {
 
   private valorComentario: string;
 
+  public conteoComentario: number = 0;
+  public maxComentario: number = 350;
+
   constructor(
     private negocioService: NegociosService
     , private SpinnerServices: NgxSpinnerService
@@ -51,6 +54,7 @@ export class ComentariosSociosComercialesComponent implements OnInit {
 
   public abrirModal(content) {
     this.comentarioNegocioFormGroup.reset();
+    this.conteoComentario = 0;
     this.modalService.open(content, this.modalOptions).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
@@ -66,7 +70,7 @@ export class ComentariosSociosComercialesComponent implements OnInit {
     if (this.comentarioNegocioFormGroup.valid) {
       if (!this.auth.isAuthenticated()) {
         console.log("Mandando pantalla para que se loguie...");
-        this.abrirModal();
+        //this.abrirModal();
       }
       console.log("Enviando comentario: ", this.payloadForAddComment());
       /*this.SpinnerService.show();
@@ -82,6 +86,10 @@ export class ComentariosSociosComercialesComponent implements OnInit {
           this.toastr.error("Error al enviar las imágenes: ", responseError.error.m)
         });*/
     }
+  }
+
+  public countChars(): void {
+    this.conteoComentario = this.comentarioNegocioFormGroup.controls.comentarioFormField.value.length;
   }
 
 
