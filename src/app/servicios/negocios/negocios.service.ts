@@ -106,6 +106,22 @@ export class NegociosService {
     })); 
   }
 
+  createNegocioComentario(data: any): Observable<any>  {
+    this.authguard.canActivate();
+    const headers= new HttpHeaders({
+    'Content-Type': 'application/json'
+  });
+    let url = this.negocioUrl+'/panel-socios/negocios/comentario/insertar';
+    //let url = this.baseUrl+'/panel-socios/negocios/comentario/insertar';
+    return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
+      if (loginJson['s'] === 0) {
+        throw new Error(loginJson['m']);
+      }
+      const result = loginJson["r"]
+      return result as any;
+    })); 
+  }
+
   createBusiness(data: any): Observable<any>  {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'
