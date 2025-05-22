@@ -2,6 +2,10 @@
     <h4>Reseñas({{comentariosList.length}})</h4>
     <div id="mainContent">
 
+        <button type="button" class="btn btn-secondary" class="btn btn-secondary"
+            (click)="abrirModal(modalCreateComment)">
+            Agregar reseña</button>
+
         <ngx-spinner name="spinnerComentarios" bdOpacity=0.9 bdColor="#f4f4f9" size="small" color="black"
             type="ball-spin" [fullScreen]="false">
         </ngx-spinner>
@@ -14,3 +18,44 @@
     </div>
 
 </div>
+
+<ng-template #modalCreateComment let-modal>
+    <form [formGroup]="comentarioNegocioFormGroup" method="post" (ngSubmit)="onSubmitForm()">
+        <div class="modal-header text-center">
+            <h4 class="modal-title ">Agregar Reseña</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <div class=" container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+
+                            <textarea id="comentarioFormField" formControlName="comentarioFormField" 
+                            rows="4" cols="50" (input)="countChars()" maxlength="{{maxComentario}}">
+
+                            </textarea>
+                            <p class="conteoCaracteres">{{conteoComentario}}/{{maxComentario}}</p>
+                            <p id="validacion" class="mensajes"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-footer">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-plus btn-sm"
+                    (click)="modal.dismiss('Cross click')">Cancelar</button>&nbsp;
+                <button type="submit" class="btn btn-delete btn-sm btn-style">Enviar</button>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+
+    
