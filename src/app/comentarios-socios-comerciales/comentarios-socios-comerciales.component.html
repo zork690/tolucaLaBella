@@ -34,8 +34,8 @@
                     <div class="col-md-12">
                         <div class="form-group">
 
-                            <textarea id="comentarioFormField" formControlName="comentarioFormField" 
-                            rows="4" cols="50" (input)="countChars()" maxlength="{{maxComentario}}">
+                            <textarea id="comentarioFormField" formControlName="comentarioFormField" rows="4" cols="50"
+                                (input)="countChars()" maxlength="{{maxComentario}}">
 
                             </textarea>
                             <p class="conteoCaracteres">{{conteoComentario}}/{{maxComentario}}</p>
@@ -58,4 +58,8 @@
 </ng-template>
 
 
-    
+
+<ng-template #loginModal let-modal>
+    <app-login-perform-outside-panel [modal]="modal"
+        (messageFromChild)="receiveFromChild($event)"></app-login-perform-outside-panel>
+</ng-template>
