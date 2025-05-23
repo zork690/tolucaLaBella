@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NegociosService } from '../servicios/negocios/negocios.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ModalDismissReasons, NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
@@ -14,6 +14,7 @@ export class ComentariosSociosComercialesComponent implements OnInit {
 
   @Input() idNegocio: any = {};
   public comentariosList: Array<any>;
+  public modal: any;
 
   public isLoaded: boolean = false;
   modalOptions: NgbModalOptions;
@@ -26,6 +27,7 @@ export class ComentariosSociosComercialesComponent implements OnInit {
 
   public conteoComentario: number = 0;
   public maxComentario: number = 350;
+  @ViewChild('loginModal') loginModal: any;
 
   constructor(
     private negocioService: NegociosService
@@ -64,32 +66,30 @@ export class ComentariosSociosComercialesComponent implements OnInit {
 
   public onSubmitForm() {
 
-    //this.enviado = true;
     this.validacionesComentarioForm();
 
     if (this.comentarioNegocioFormGroup.valid) {
       if (!this.auth.isAuthenticated()) {
         console.log("Mandando pantalla para que se loguie...");
-        //this.abrirModal();
+        const buttonElement = document.activeElement as HTMLElement; // Get the currently focused element
+        buttonElement.blur(); // Remove focus from the button
+        this.modal = this.abrirModal(this.loginModal);
+      } else {
+        this.enviarComentario();
       }
-      console.log("Enviando comentario: ", this.payloadForAddComment());
-      /*this.SpinnerService.show();
-      this.misArticulosService.createImages(this.payloadForAddingImages())
-        .subscribe((result: any) => {
-          this.SpinnerService.hide();
-          console.log("Enviando imagenes: ", result);
-          this.toastr.success("Imagenes enviadas exitosamente.");
-          this.messageFromChild.emit("1");
-        }, (responseError) => {
-          this.SpinnerService.hide();
-          console.log("ocurrio un error enviando las imágenes ", responseError);
-          this.toastr.error("Error al enviar las imágenes: ", responseError.error.m)
-        });*/
+
     }
   }
 
   public countChars(): void {
     this.conteoComentario = this.comentarioNegocioFormGroup.controls.comentarioFormField.value.length;
+  }
+
+  public receiveFromChild(data: string): void {
+    console.log("From child: ", data);
+    if (data == "success") {
+      this.enviarComentario();
+    }
   }
 
 
@@ -138,12 +138,32 @@ export class ComentariosSociosComercialesComponent implements OnInit {
 
   }
 
+  private enviarComentario(): void {
+    console.log("Enviando comentario: ", this.payloadForAddComment());
+    this.SpinnerServices.show();
+    this.negocioService.createNegocioComentario(this.payloadForAddComment())
+      .subscribe((result: any) => {
+        this.SpinnerServices.hide();
+        console.log("Enviando comentario: ", result);
+        this.cancelModal();
+        this.getComentarios();
+      }, (responseError) => {
+        this.SpinnerServices.hide();
+        console.log("ocurrio un error enviando el comentario: ", responseError);
+        this.cancelModal();
+      });
+  }
+
   private payloadForAddComment() {
     let payload = {
       idNegocio: this.idNegocio,
       comentario: this.valorComentario
     };
     return JSON.stringify(payload);
+  }
+
+  private cancelModal() {
+    this.modalService.dismissAll();
   }
 
 }
