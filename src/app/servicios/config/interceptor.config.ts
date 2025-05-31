@@ -5,6 +5,7 @@ import { AppConfig } from '../config/app.config';
 import { catchError, switchMap } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { UsuariosService } from '../usuarios/usuarios.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -51,8 +52,8 @@ export class Interceptor implements HttpInterceptor {
 
     return this.usuarioService.refresh(refreshT).pipe(
       switchMap((refreshT: any) => {
-        localStorage.setItem('token', refreshT.r.accessToken);
-        localStorage.setItem('refreshToken', refreshT.r.refreshToken);
+        localStorage.setItem(environment.tokenStorage, refreshT.r.accessToken);
+        localStorage.setItem(environment.refreshTokenStorage, refreshT.r.refreshToken);
         console.log("se setio el token y el refresh nuevo");
         return next.handle(this.addTokenHeader(request, refreshT.r.accessToken));
       })

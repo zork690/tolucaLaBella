@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 @Injectable()
@@ -27,17 +27,17 @@ export class AppConfig {
     if ('apiEndPoint' == key)
       //return 'http://localhost:8082'
       return 'https://backend.zorktech.com.mx';
-      //return this.config[key];
+    //return this.config[key];
 
     if ('apiToken' == key)
-      return localStorage.getItem("token");
+      return localStorage.getItem(environment.tokenStorage);
 
     if ("pathImages" == key)
       return "/imagesNegociosTolucaLaBella/";
 
     if ('refresh' == key)
-      return localStorage.getItem("refreshToken");
-    
+      return localStorage.getItem(environment.refreshTokenStorage);
+
   }
 
   /**
