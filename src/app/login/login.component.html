@@ -1,7 +1,7 @@
 <!--Reactive forms are best practice rather than template-driven forms-->
 <h1>Iniciar sesión</h1>
 <div>
-    <form [formGroup]="formGroup" action="" method="post" (ngSubmit)="onSubmit(formGroup)">
+    <form [formGroup]="formGroup" action="" method="post" (ngSubmit)="onSubmit()">
         <label for="usuario"><a class="mandatoryPoint">*</a>Usuario</label>:
         <input type="text" class="form-control" formControlName="usuario" id="usuario" name="usuario" aria-describedby="emailHelp" placeholder="Email o celular" />
         <p id="usuarioValidacion" class="mensajes">{{usuarioValidacion}}</p>
