@@ -8,6 +8,6 @@ export const environment = {
   permiso: 'permisosPerfiles',
   cliente: "",
   pathImages: "imagesNegociosTolucaLaBella",
-  tokenStorage: "tokenApp",
-  refreshTokenStorage: "refreshTokenApp"
+  tokenStorage: "token",
+  refreshTokenStorage: "refreshToken"
 };
