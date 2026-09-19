@@ -4,8 +4,6 @@ import { ModalDismissReasons, NgbModal, NgbModalOptions } from '@ng-bootstrap/ng
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { articulosInfo } from '../../assets/mockDemoArticulosInfo';
-import { noticiasInfo } from 'src/assets/mockDemoNoticiasInfo';
 import { MisNoticiasService } from '../servicios/mis-noticias/mis-noticias.service';
 
 @Component({

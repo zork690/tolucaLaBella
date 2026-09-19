@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MisNoticiasService } from '../servicios/mis-noticias/mis-noticias.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
-import { noticiasInfo } from 'src/assets/mockDemoNoticiasInfo';
 import { NgbModal, NgbModalOptions, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({

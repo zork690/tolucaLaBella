@@ -3,8 +3,6 @@ import { NgbModal, NgbModalOptions, ModalDismissReasons } from '@ng-bootstrap/ng
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CategoriasService } from '../servicios/categorias/categorias.service';
 import { ToastrService } from 'ngx-toastr';
-import { categoriasInfo } from '../../assets/mockDemoCategoriasInfo';
-import { subCategoriasInfo } from '../../assets/mockDemoSubCategoriasInfo';
 import { SubcategoriasService } from '../servicios/subcategorias/subcategorias.service';
 
 @Component({
