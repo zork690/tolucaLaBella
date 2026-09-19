@@ -3,7 +3,7 @@ export const negociosInfo = [
     "id": 1,
     "idNegocio": "1714097862223",
     "nombre": "césar alberto soto reyes",
-    "telefono": "7224304100",
+    "telefono": "0000000000",
     "email": "zork_690@hotmail.com",
     "ubicacion": {
       "id": 577,
@@ -93,7 +93,7 @@ export const negociosInfo = [
     "id": 1,
     "idNegocio": "1714097862223",
     "nombre": "césar alberto soto reyes",
-    "telefono": "7224304100",
+    "telefono": "0000000000",
     "email": "zork_690@hotmail.com",
     "ubicacion": {
       "id": 577,

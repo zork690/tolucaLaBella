@@ -57,7 +57,7 @@ export class PaginaInicialComponent implements OnInit, AfterViewInit, OnDestroy 
   private whatsAppChat(){
     $("#WAButton")
     .floatingWhatsApp({
-    phone: '5217224304100', //WhatsApp Business phone number
+    phone: '5210000000000', //WhatsApp Business phone number
              headerTitle: 'Platica con nosotros via WhatsApp!', //Popup Title
              popupMessage: 'Hola, mándanos un mensaje', //Popup Message
              showPopup: true, //Enables popup display
