@@ -7,5 +7,7 @@ export const environment = {
   usuario: 'usuarios',
   permiso: 'permisosPerfiles',
   cliente: "",
-  pathImages: "imagesNegociosTolucaLaBella"
+  pathImages: "imagesNegociosTolucaLaBella",
+  tokenStorage: "token",
+  refreshTokenStorage: "refreshToken"
 };

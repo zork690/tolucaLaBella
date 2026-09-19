@@ -1,17 +1,19 @@
-<!--Reactive forms are best practice rather than template-driven forms-->
 <h1>Iniciar sesión</h1>
 <div>
+    <button type="button" class="close" aria-label="Close" (click)="cerrarModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
     <form [formGroup]="formGroup" action="" method="post" (ngSubmit)="onSubmit()">
         <label for="usuario"><a class="mandatoryPoint">*</a>Usuario</label>:
-        <input type="text" class="form-control" formControlName="usuario" id="usuario" name="usuario" aria-describedby="emailHelp" placeholder="Email o celular" />
+        <input type="text" class="form-control" formControlName="usuario" id="usuario" name="usuario"
+            aria-describedby="emailHelp" placeholder="Email o celular" />
         <p id="usuarioValidacion" class="mensajes">{{usuarioValidacion}}</p>
         <label for="password"><a class="mandatoryPoint">*</a>Contraseña</label>:
-        <input type="password" class="form-control" formControlName="password" id="password" name="password" placeholder="Contraseña" />
+        <input type="password" class="form-control" formControlName="password" id="password" name="password"
+            placeholder="Contraseña" />
         <p id="passwordValidacion" class="mensajes">{{passwordValidacion}}</p>
         <button type="submit">Entrar</button>
     </form>
-    <p><a routerLink="/reset-password">¿Olvidaste la contraseña?</a></p>
-    <p>¿Aún no te has registrado?<a routerLink="/registrate">Registrate aquí</a></p>
 </div>
 
 <ngx-spinner>

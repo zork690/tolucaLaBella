@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-layouts',
@@ -8,16 +7,19 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class LayoutsComponent implements OnInit {
 
+  public anio: number = 2024;
+
   constructor(
-    private spinnerService: NgxSpinnerService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
 
+    this.getAnio();
+
   }
 
-  public logout(){
-    
+  private getAnio(): void {
+    this.anio = new Date().getFullYear();
   }
 
 }

@@ -94,6 +94,34 @@ export class NegociosService {
     })); 
   }
 
+  getNegocioComentarios(idNegocio:string):Observable<any>{
+    let url = this.negocioUrl+'/negocios/listarComentarios/';
+    //let url = this.baseUrl+'/negocios/listarComentarios/';
+    return this.http.get(url+idNegocio).pipe(map(response => {
+      if (response['s'] === 0) {
+        throw new Error(response['m']);
+      }
+      const result = response["r"]
+      return result as any;
+    })); 
+  }
+
+  createNegocioComentario(data: any): Observable<any>  {
+    this.authguard.canActivate();
+    const headers= new HttpHeaders({
+    'Content-Type': 'application/json'
+  });
+    let url = this.negocioUrl+'/panel-socios/negocios/comentario/insertar';
+    //let url = this.baseUrl+'/panel-socios/negocios/comentario/insertar';
+    return this.http.post(url, data, {headers: headers}).pipe(map(loginJson => {
+      if (loginJson['s'] === 0) {
+        throw new Error(loginJson['m']);
+      }
+      const result = loginJson["r"]
+      return result as any;
+    })); 
+  }
+
   createBusiness(data: any): Observable<any>  {
     const headers= new HttpHeaders({
     'Content-Type': 'application/json'

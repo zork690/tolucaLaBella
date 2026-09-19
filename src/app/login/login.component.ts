@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
 import { UsuariosService } from '../../app/servicios/usuarios/usuarios.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from '../servicios/auth/auth.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
     , private usuarioService: UsuariosService
     , private SpinnerService: NgxSpinnerService
     , private toastr: ToastrService
-    , private authService: AuthService
     , private router: Router
     , private modalService: NgbModal
   ) {
@@ -40,15 +39,15 @@ export class LoginComponent implements OnInit {
   }
 
 
-  onSubmit(form: FormGroup) {
+  onSubmit() {
     this.validaciones();
     if (this.formGroup.valid) {
       this.SpinnerService.show();
       this.usuarioService.login(this.payload()).subscribe((result: any) => {
         this.SpinnerService.hide();
         console.log("El resultado de inicio de sesión es ", result);
-        localStorage.setItem('token', result.accessToken);
-        localStorage.setItem("refreshToken", result.refreshToken);
+        localStorage.setItem(environment.tokenStorage, result.accessToken);
+        localStorage.setItem(environment.refreshTokenStorage, result.refreshToken);
         this.router.navigate(['/panel-socios']);
       }, (responseError) => {
         this.SpinnerService.hide();
