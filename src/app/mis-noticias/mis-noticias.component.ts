@@ -24,7 +24,7 @@ export class MisNoticiasComponent implements OnInit {
   private isValidImage: boolean = false;
 
   backupNoticias: any[] = [];
-  noticiasInfo: any = noticiasInfo;
+  noticiasInfo: any = [];
 
   checkstatus: boolean = false;
 

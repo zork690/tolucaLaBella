@@ -12,7 +12,7 @@ import { NgbModal, NgbModalOptions, ModalDismissReasons } from '@ng-bootstrap/ng
 export class MisNoticiasSeccionesComponent implements OnInit {
 
   backupSeccionesNoticia: any[] = [];
-  seccionesNoticiaInfo: any = seccionesNoticiaInfo;
+  seccionesNoticiaInfo: any = [];
 
   collection = { count: 0, data: [] };
   config = {
