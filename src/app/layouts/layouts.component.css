@@ -1,25 +1,47 @@
-.titleNav, .footerNav{
-    background-color: bisque;
-    text-align: center;
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Fuerza al componente a ocupar exactamente el alto de la pantalla */
 }
 
-.titleNav{
-    height: 10vh;
+.titleNav, .footerNav {
+  background-color: bisque;
+  text-align: center;
 }
 
-.titleNav h1{
-    display: inline-block;
+.titleNav {
+  height: 10vh;
 }
 
-#tolucaLaBellaImg{
-    height: 10vh;
+.titleNav h1 {
+  display: inline-block;
 }
 
-.footerNav{
-    height: 5vh;
+#tolucaLaBellaImg {
+  height: 10vh;
 }
 
-.mainContent{
-    height: 85vh;
-    overflow: auto;
+.footerNav {
+  height: 5vh;
+  background-color: bisque;
+  text-align: center;
+  
+  /* 1. Elimina cualquier padding residual en la nav */
+  padding: 0; 
+  
+  /* 2. Convierte el footer en Flexbox para centrar perfectamente el texto */
+  display: flex;
+  align-items: center;     /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+}
+
+.footerNav p {
+  /* 3. Elimina el margen por defecto del párrafo que causa el espacio/padding no deseado */
+  margin: 0;
+  padding: 0;
+}
+
+.mainContent {
+  flex: 1;
+  overflow-y: auto;
 }
